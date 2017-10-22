@@ -34,4 +34,4 @@ class StacksDemo {
 
 // W pliku StacksDemo zmianie uległy linie 26 - 29
 // Usunięto błędy formatowania
-// Skrót klawiszowy "alt + <-" pozwala na przechodzenie pomiędzy kartami 
+// Skrót klawiszowy "alt + <-" pozwala na przechodzenie pomiędzy kartami
