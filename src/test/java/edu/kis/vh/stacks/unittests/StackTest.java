@@ -7,14 +7,17 @@ import edu.kis.vh.stacks.Stack;
 
 public class StackTest {
 
+	private static final int DEFAULT_TEST_VALUE = 4;
+	private static final int EMPTY_STACK_VALUE = -1;
+	private static final int STACK_CAPACITY = 12;
+
 	@Test
 	public void testPush() {
 		Stack stackObj = new Stack();
-		int testValue = 4;
-		stackObj.push(testValue);
+		stackObj.push(DEFAULT_TEST_VALUE);
 
 		int result = stackObj.top();
-		Assert.assertEquals(testValue, result);
+		Assert.assertEquals(DEFAULT_TEST_VALUE, result);
 	}
 
 	@Test
@@ -32,7 +35,6 @@ public class StackTest {
 	@Test
 	public void testIsFull() {
 		Stack stackObj = new Stack();
-		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();
 			Assert.assertEquals(false, result);
@@ -46,33 +48,29 @@ public class StackTest {
 	@Test
 	public void testTop() {
 		Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = -1;
 
 		int result = stackObj.top();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
-		int testValue = 4;
-		stackObj.push(testValue);
+		stackObj.push(DEFAULT_TEST_VALUE);
 
 		result = stackObj.top();
-		Assert.assertEquals(testValue, result);
+		Assert.assertEquals(DEFAULT_TEST_VALUE, result);
 		result = stackObj.top();
-		Assert.assertEquals(testValue, result);
+		Assert.assertEquals(DEFAULT_TEST_VALUE, result);
 	}
 
 	@Test
 	public void testPop() {
 		Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = -1;
 
 		int result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 
-		int testValue = 4;
-		stackObj.push(testValue);
+		stackObj.push(DEFAULT_TEST_VALUE);
 
 		result = stackObj.pop();
-		Assert.assertEquals(testValue, result);
+		Assert.assertEquals(DEFAULT_TEST_VALUE, result);
 		result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
