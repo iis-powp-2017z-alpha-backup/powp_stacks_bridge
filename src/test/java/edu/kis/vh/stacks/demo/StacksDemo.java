@@ -11,7 +11,7 @@ class StacksDemo {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 		final int NUMBER_OF_VALUES = 15;
 		final int NUMBER_OF_LEVELS = 3;
-		final int NUMBER = 20;
+		final int NUMBER = 20; 
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
 

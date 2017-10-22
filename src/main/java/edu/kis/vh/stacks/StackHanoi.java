@@ -14,4 +14,12 @@ public class StackHanoi extends Stack {
 		else
 			super.push(in);
 	}
+
+	private int getTotalRejected() {
+		return totalRejected;
+	}
+
+	private void setTotalRejected(int totalRejected) {
+		this.totalRejected = totalRejected;
+	}
 }
