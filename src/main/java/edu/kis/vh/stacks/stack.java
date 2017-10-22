@@ -1,5 +1,5 @@
 package edu.kis.vh.stacks;
-
+//test 22.10.2017
 public class stack {
 
 	private int[] ITEMS = new int[12];	
