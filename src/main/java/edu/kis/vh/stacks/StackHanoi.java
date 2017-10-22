@@ -1,5 +1,9 @@
 package edu.kis.vh.stacks;
 
+/**
+ * @author student
+ *
+ */
 public class StackHanoi extends Stack {
 
 	private int totalRejected = 0;
