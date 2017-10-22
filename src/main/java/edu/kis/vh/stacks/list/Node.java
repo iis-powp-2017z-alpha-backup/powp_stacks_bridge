@@ -2,8 +2,8 @@ package edu.kis.vh.stacks.list;
 
 public class Node {
 
-	private int value;
-	private Node prev;
+	private final int value;
+	private  Node prev;
 	private Node next;
 
 	public Node(int i) {
