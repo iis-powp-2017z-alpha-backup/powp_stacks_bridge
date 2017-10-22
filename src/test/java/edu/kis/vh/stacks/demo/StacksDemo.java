@@ -32,4 +32,4 @@ class StacksDemo {
 	}
 	
 }
-//żle sformatowane były liniki od 26 do 29
+//3.1.1  żle sformatowane były liniki od 26 do 29
