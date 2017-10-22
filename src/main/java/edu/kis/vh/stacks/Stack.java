@@ -21,7 +21,7 @@ public class Stack {
 			return total == EMPTY_STACK;
 		}
 		
-			public boolean isFull() {
+		public boolean isFull() {
 				return total == FULL_STUCK;
 			}
 			
