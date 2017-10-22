@@ -2,7 +2,8 @@ package edu.kis.vh.stacks;
 
 public class StackHanoi extends Stack {
 
-int totalRejected = 0;
+private static final int TOTAL_REJ = 0;
+int totalRejected = TOTAL_REJ;
 
 	public int reportRejected() {
 	return totalRejected;

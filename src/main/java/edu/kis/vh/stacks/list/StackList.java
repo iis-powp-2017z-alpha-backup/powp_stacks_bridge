@@ -2,6 +2,7 @@ package edu.kis.vh.stacks.list;
 
 public class StackList {
 
+	private static final int RETURN_NUMBER = -1;
 	Node last;
 	int i;
 
@@ -25,13 +26,13 @@ public class StackList {
 
 	public int peek() {
 		if (empty())
-			return -1;
+			return RETURN_NUMBER;
 		return last.value;
 	}
 
 	public int pop() {
 		if (empty())
-			return -1;
+			return RETURN_NUMBER;
 		int ret = last.value;
 		last = last.prev;
 		return ret;

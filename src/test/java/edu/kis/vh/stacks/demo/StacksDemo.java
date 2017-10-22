@@ -6,14 +6,19 @@ import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 class StacksDemo {
 
+	private static final int NEXT_NUMBER = 3;
+	private static final int BETWEEN_NUMBER = 3;
+	private static final int MAX_NUMBER = 15;
+	private static final int MIN_NUMBER = 1;
+
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
 		Stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
 				factory.GetHanoiStack() };
 
-		for (int i = 1; i < 15; i++)
-			for (int j = 0; j < 3; j++)
+		for (int i = MIN_NUMBER; i < MAX_NUMBER; i++)
+			for (int j = 0; j < BETWEEN_NUMBER; j++)
 				stacks[j].push(i);
 
 		java.util.Random rn = new java.util.Random();
@@ -26,7 +31,7 @@ class StacksDemo {
 			System.out.println();
 		}
 
-		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
+		System.out.println("total rejected is " + ((StackHanoi) stacks[NEXT_NUMBER]).reportRejected());
 
 	}
 

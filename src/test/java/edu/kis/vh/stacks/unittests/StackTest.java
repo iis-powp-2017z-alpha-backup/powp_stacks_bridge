@@ -7,6 +7,9 @@ import edu.kis.vh.stacks.Stack;
 
 public class StackTest {
 	
+	private static final int STACK_NUMB = -1;
+	private static final int CAPACITY_NUMBER = 12;
+
 	@Test
 	public void testPush() {
 		Stack stackObj = new Stack();
@@ -32,7 +35,7 @@ public class StackTest {
 	@Test
 	public void testIsFull() {
 		Stack stackObj = new Stack();
-		final int STACK_CAPACITY = 12;
+		final int STACK_CAPACITY = CAPACITY_NUMBER;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();		
 			Assert.assertEquals(false, result);
@@ -46,7 +49,7 @@ public class StackTest {
 	@Test
 	public void testTop() {
 		Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = STACK_NUMB;
 		
 		int result = stackObj.top();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -63,7 +66,7 @@ public class StackTest {
 	@Test
 	public void testPop() {
 		Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = STACK_NUMB;
 		
 		int result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
