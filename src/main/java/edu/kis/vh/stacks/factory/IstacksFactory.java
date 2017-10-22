@@ -1,18 +1,18 @@
 package edu.kis.vh.stacks.factory;
 
-import edu.kis.vh.stacks.stack;
+import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
 
 public interface IstacksFactory {
 
-	public stack GetStandardStack();
+	public Stack getStandardStack();
 
-	public stack GetFalseStack();
+	public Stack getFalseStack();
 
-	public StackFIFO GetFIFOStack();
+	public StackFIFO getFIFOStack();
 
-	public StackHanoi GetHanoiStack();
+	public StackHanoi getHanoiStack();
 
 }
 // alt + -> to kolejny plik a alt + <- to poprzedni
