@@ -10,7 +10,7 @@ public class Stack {
 
 	private int[] ITEMS = new int[TABLESIZE];	
 
-	public int total = EMPTYSTACK;
+	public int total = -1;
 	
 	public int getTotal() {
 		return total;
@@ -46,3 +46,4 @@ public class Stack {
 					}
 				
 }
+

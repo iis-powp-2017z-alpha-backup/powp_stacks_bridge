@@ -24,7 +24,7 @@ public class StackList {
 		return false;
 	}
 
-	public int peek() {
+	private int peek() {
 		if (empty())
 			return EMPTY_STACK;
 		return last.getValue();
