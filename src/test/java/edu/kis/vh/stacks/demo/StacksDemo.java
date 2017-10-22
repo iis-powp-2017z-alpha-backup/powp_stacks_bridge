@@ -33,3 +33,4 @@ class StacksDemo {
 }
 
 // 3.1.1 Źle sformatowane linie to: 26,27,28,29
+//3.1.3 Alt + <- oraz alt + -> powodują przejścia między ostatnio aktywnymi plikami
