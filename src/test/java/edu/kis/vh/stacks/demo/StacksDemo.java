@@ -33,4 +33,4 @@ class StacksDemo {
 	
 }
 
-//Źle sformatowane linie to: 26,27,28,29
+//3.1.1 Źle sformatowane linie to: 26,27,28,29
