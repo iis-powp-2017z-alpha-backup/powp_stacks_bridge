@@ -2,31 +2,31 @@ package edu.kis.vh.stacks;
 
 public class stack {
 
-	private StackArray stackArray;
+	private StackArray stackList;
 
 	public stack(StackArray stackArray) {
 		super();
-		this.stackArray = stackArray;
+		this.stackList = stackArray;
 	}
 
 	public void push(int i) {
-		stackArray.push(i);
+		stackList.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stackList.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stackList.isFull();
 	}
 
 	public int top() {
-		return stackArray.top();
+		return stackList.top();
 	}
 
 	public int pop() {
-		return stackArray.pop();
+		return stackList.pop();
 	}
 	
 }
