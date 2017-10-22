@@ -32,4 +32,4 @@ class StacksDemo {
 	}
 	
 }
-// 
+//3.1 zle byly sformatowane wiersze 26,27,28,29
