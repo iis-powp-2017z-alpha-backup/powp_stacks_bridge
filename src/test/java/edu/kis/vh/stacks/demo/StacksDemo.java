@@ -23,12 +23,14 @@ class StacksDemo {
 			for (int i = 0; i < stacks.length; i++) {
 				while (!stacks[i].isEmpty())
 					System.out.print(stacks[i].pop() + "  ");
-					System.out.println();
-			}
-		
-		System.out.println("total rejected is "
+				System.out.println();
+		}
+	
+	System.out.println("total rejected is "
 				+ ((StackHanoi) stacks[3]).reportRejected());
 		
 	}
 	
 }
+
+//Źle sformatowane linie to: 26,27,28,29
