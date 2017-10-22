@@ -25,7 +25,7 @@ class StacksDemo {
 		for (int i = MIN; i < MAX; i++)
 			stacks[3].push(rn.nextInt(20));
 
-		for (int i = MIN-1; i < stacks.length; i++) {
+		for (int i = MIN - 1; i < stacks.length; i++) {
 			while (!stacks[i].isEmpty())
 				System.out.print(stacks[i].pop() + "  ");
 			System.out.println();
@@ -38,4 +38,5 @@ class StacksDemo {
 }
 
 // 3.1.1 Źle sformatowane linie to: 26,27,28,29
-//3.1.3 Alt + <- oraz alt + -> powodują przejścia między ostatnio aktywnymi plikami
+// 3.1.3 Alt + <- oraz alt + -> powodują przejścia między ostatnio aktywnymi
+// plikami

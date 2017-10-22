@@ -3,7 +3,7 @@ package edu.kis.vh.stacks.list;
 public class Node {
 
 	private final int value;
-	private  Node prev;
+	private Node prev;
 	private Node next;
 
 	public Node(int i) {
@@ -29,5 +29,5 @@ public class Node {
 	public void setNext(Node next) {
 		this.next = next;
 	}
-	
+
 }
