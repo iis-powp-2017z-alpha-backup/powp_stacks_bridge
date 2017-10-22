@@ -32,3 +32,4 @@ public class stack {
 					}
 				
 }
+// zmiany wprowadzamy i zobaczymy jak to bedzie
