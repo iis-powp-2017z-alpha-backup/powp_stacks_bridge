@@ -2,33 +2,36 @@ package edu.kis.vh.stacks;
 
 public class stack {
 
-	private int[] ITEMS = new int[12];
+	private StackInterface stackArray = new StackArray();
 
-	public int total = -1;
+	public stack(StackInterface stackArray) { //przez utworzony obiekt będzie można przekazać dowolny obiekt implementujący interfejs StackInterface
+		super();
+		this.stackArray = stackArray;
+	}
+
+	public stack() {
+		super();
+	}
 
 	public void push(int i) {
-		if (!isFull())
-			ITEMS[++total] = i;
+		stackArray.push(i);
 	}
 
 	public boolean isEmpty() {
-		return total == -1;
+		return stackArray.isEmpty();
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return stackArray.isFull();
 	}
 
 	public int top() {
-		if (isEmpty())
-			return -1;
-		return ITEMS[total];
+		return stackArray.top();
 	}
 
 	public int pop() {
-		if (isEmpty())
-			return -1;
-		return ITEMS[total--];
+		return stackArray.pop();
 	}
+
 
 }
