@@ -1,6 +1,8 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.collect;
 
-public class StackArray {
+import edu.kis.vh.stacks.stackable;
+
+public class StackArray implements stackable{
 
 	private int[] ITEMS = new int[12];
 
