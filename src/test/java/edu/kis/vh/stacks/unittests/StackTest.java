@@ -17,6 +17,7 @@ public class StackTest {
 		Assert.assertEquals(testValue, result);
 	}
 
+	
 	@Test
 	public void testIsEmpty() {
 		Stack stackObj = new Stack();
