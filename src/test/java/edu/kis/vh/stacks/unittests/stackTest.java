@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class stackTest {
+
+	//TODO : Dorobic troche testów za ++++;
 	
 	@Test
 	public void testPush() {
