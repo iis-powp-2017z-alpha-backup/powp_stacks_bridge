@@ -8,7 +8,7 @@ public class Stack {
 
 	private int[] ITEMS = new int[twelve];
 
-	public int total = minusOne;
+	private int total = minusOne;
 
 	public void push(int i) {
 		if (!isFull())

@@ -15,7 +15,7 @@ public class StackList {
 		}
 	}
 
-	public boolean empty() {
+	private boolean empty() {
 		return last == null;
 	}
 
@@ -23,7 +23,7 @@ public class StackList {
 		return false;
 	}
 
-	public int peek() {
+	private int peek() {
 		if (empty())
 			return -1;
 		return last.value;
