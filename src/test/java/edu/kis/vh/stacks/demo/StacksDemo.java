@@ -6,14 +6,19 @@ import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 class StacksDemo {
 
+	private static final int MAXIMUM_J = 3;
+	private static final int MINIMUM_J = 0;
+	private static final int MINIMUM = 1;
+	private static final int MAXIMUM = 15;
+
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
 		Stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
 				factory.GetHanoiStack() };
 
-		for (int i = 1; i < 15; i++)
-			for (int j = 0; j < 3; j++)
+		for (int i = MINIMUM; i < MAXIMUM; i++)
+			for (int j = MINIMUM_J; j < MAXIMUM_J; j++)
 				stacks[j].push(i);
 
 		java.util.Random rn = new java.util.Random();
