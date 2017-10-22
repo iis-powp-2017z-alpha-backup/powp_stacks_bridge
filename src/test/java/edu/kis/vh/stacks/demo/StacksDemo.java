@@ -32,9 +32,11 @@ class StacksDemo {
 
 }
 
-// StackDecom: linie 19, 20, 21, 23, 24, 25, 26, 27, 29
+// StackDecom: linie 11-14, 19, 20, 21, 23, 24, 25, 26, 27, 29
 // stackTest: linia 15
 // StackHanoi: linie 5, 8, 12, 13
 // StackFIFO: linie 11, 17
 // stack: linie 11-37
 // IstacksFactory: linie 7-17
+
+//alt + -> lub alt + <- cofa sie do poprzednich otworzonych okienek, lub gdy cofniemy sie wracamy spowrotem.
