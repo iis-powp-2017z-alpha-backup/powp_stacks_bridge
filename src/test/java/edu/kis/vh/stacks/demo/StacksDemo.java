@@ -1,24 +1,27 @@
 package edu.kis.vh.stacks.demo;
 
+import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackHanoi;
-import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+
 
 class StacksDemo {
 
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
+		final int NUMBER_OF_VALUES = 15;
+		final int NUMBER_OF_LEVELS = 3;
+		final int NUMBER = 20;
+		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
+				factory.getHanoiStack() };
 
-		stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
-				factory.GetHanoiStack() };
-
-		for (int i = 1; i < 15; i++)
-			for (int j = 0; j < 3; j++)
+		for (int i = 1; i < NUMBER_OF_VALUES; i++)
+			for (int j = 0; j < NUMBER_OF_LEVELS; j++)
 				stacks[j].push(i);
 
 		java.util.Random rn = new java.util.Random();
-		for (int i = 1; i < 15; i++)
-			stacks[3].push(rn.nextInt(20));
+		for (int i = 1; i < NUMBER_OF_VALUES; i++)
+			stacks[NUMBER_OF_LEVELS].push(rn.nextInt(NUMBER));
 
 		for (int i = 0; i < stacks.length; i++) {
 			while (!stacks[i].isEmpty())
@@ -26,7 +29,7 @@ class StacksDemo {
 			System.out.println();
 		}
 
-		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
+		System.out.println("total rejected is " + ((StackHanoi) stacks[NUMBER_OF_LEVELS]).reportRejected());
 
 	}
 
