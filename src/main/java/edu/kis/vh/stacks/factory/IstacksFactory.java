@@ -15,3 +15,4 @@ public interface IstacksFactory {
 	public StackHanoi GetHanoiStack();
 
 }
+// alt + -> to kolejny plik a alt + <- to poprzedni
