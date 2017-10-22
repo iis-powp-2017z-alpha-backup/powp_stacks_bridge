@@ -2,40 +2,46 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 
-	private static final int TOTAL_NUMBER = 11;
-
-	private static final int STACK_MINUS = -1;
+	private static final int NUMB_NNEXT = 11;
 
 	private static final int TABLE_SIZE = 12;
 
-	private int[] ITEMS = new int[TABLE_SIZE];	
+	private int[] ITEMS = new int[TABLE_SIZE];
 
-	public int total = STACK_MINUS;
-	
+	private int total = -1;
+
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
 	public void push(int i) {
 		if (!isFull())
-		ITEMS[++total] = i;
+			ITEMS[++total] = i;
 	}
-	
-		public boolean isEmpty() {
-			return total == STACK_MINUS;
-		}
-		
-			public boolean isFull() {
-				return total == TOTAL_NUMBER;
-			}
-			
-				public int top() {
-					if (isEmpty())
-						return STACK_MINUS;
-					return ITEMS[total];
-				}
-				
-					public int pop() {
-						if (isEmpty())
-							return STACK_MINUS;
-						return ITEMS[total--];
-					}
-				
+
+	public boolean isEmpty() {
+		return total == -1;
+	}
+
+	public boolean isFull() {
+		return total == NUMB_NNEXT;
+	}
+
+	public int top() {
+		if (isEmpty())
+			return -1;
+		return ITEMS[total];
+	}
+
+	public int pop() {
+		if (isEmpty())
+			return -1;
+		return ITEMS[total--];
+	}
+
 }
 // zmiany wprowadzamy i zobaczymy jak to bedzie
