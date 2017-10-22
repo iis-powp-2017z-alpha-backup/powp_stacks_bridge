@@ -5,12 +5,12 @@ public class Stack {
 	final private int STACK_EMPTY = -1;
 	final private int STACK_FULL = 11;
 	
-	private int[] ITEMS = new int[12]; 
+	private int[] items = new int[12]; 
 	private int total = STACK_EMPTY;
 
 	public void push(int i) {
 		if (!isFull())
-			ITEMS[++total] = i;
+			items[++total] = i;
 	}
 
 	public boolean isEmpty() {
@@ -24,13 +24,17 @@ public class Stack {
 	public int top() {
 		if (isEmpty())
 			return STACK_EMPTY;
-		return ITEMS[total];
+		return items[total];
 	}
 
 	public int pop() {
 		if (isEmpty())
 			return STACK_EMPTY;
-		return ITEMS[total--];
+		return items[total--];
+	}
+
+	public int getTotal() {
+		return total;
 	}
 
 }
