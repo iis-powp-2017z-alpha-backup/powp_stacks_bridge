@@ -32,3 +32,4 @@ class StacksDemo {
 
 }
 // 3.1.1 zle byly sformatowane wiersze 26,27,28,29
+//3.1.3 Alt ze strzalka w lewo zmienia karte na inna, w moim przypadku na pierwsza otwarta czyli StackFIFO, strzalka w prawo zmienia w prawo karte
