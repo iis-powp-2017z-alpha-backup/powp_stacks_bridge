@@ -33,3 +33,4 @@ class StacksDemo {
 }
 // 3.1.1 żle sformatowane były liniki od 26 do 29
 //3.1.2 wykonany
+//3.1.3 po zastosowaniu komend z instrukcji w pliku StackFIFO pojawiły się znaki specjalne. Przy drugiej komendzie wrociło do pliku StacksDemo i też pojawił się znak specjalny
