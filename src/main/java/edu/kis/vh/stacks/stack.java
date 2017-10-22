@@ -4,8 +4,12 @@ public class stack {
 
 	private int[] ITEMS = new int[12];	
 
-	public int total = -1;
+	private int total = -1;
 	
+	public int getTotal() {
+		return total;
+	}
+
 	public void push(int i) {
 		if (!isFull())
 		ITEMS[++total] = i;
@@ -29,6 +33,10 @@ public class stack {
 						if (isEmpty())
 							return -1;
 						return ITEMS[total--];
+					}
+
+					public void setTotal(int total) {
+						this.total = total;
 					}
 				
 }
