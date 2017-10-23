@@ -1,5 +1,5 @@
 package edu.kis.vh.stacks;
-
+//komentarz dla sprawdzenia commita
 public class stack {
 
 	private int[] ITEMS = new int[12];	
