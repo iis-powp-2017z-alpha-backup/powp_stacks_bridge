@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-public interface stackable {
+public interface Stackable {
 
 	void push(int i);
 

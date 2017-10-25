@@ -2,17 +2,16 @@ package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.collect.StackArray;
 
-public class stack {
+public class Stack {
 
-	private stackable stackArray = new StackArray();
-	
-	
-	public stack(stackable stackArray) {
+	private Stackable stackArray = new StackArray();
+
+	public Stack(Stackable stackArray) {
 		super();
 		this.stackArray = stackArray;
 	}
 
-	public stack() {
+	public Stack() {
 		// TODO Auto-generated constructor stub
 	}
 

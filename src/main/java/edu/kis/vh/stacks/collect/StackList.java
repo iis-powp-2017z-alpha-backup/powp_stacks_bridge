@@ -1,11 +1,10 @@
 package edu.kis.vh.stacks.collect;
 
-import edu.kis.vh.stacks.stackable;
+import edu.kis.vh.stacks.Stackable;
 
-public class StackList implements stackable{
+public class StackList implements Stackable {
 
-	Node last;
-	int i;
+	private Node last;
 
 	public void push(int i) {
 		if (last == null)
