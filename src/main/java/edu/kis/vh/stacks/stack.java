@@ -1,34 +1,40 @@
 package edu.kis.vh.stacks;
 
-public class stack {
+import edu.kis.vh.stacks.list.StackList;
 
-	private StackArray stackArray;
+public class stack {
+	/*Punkt 7
+	Dokonana modyfikacja pozwala na wykorzystanie jako atrybutu obiektu dowolnej klasy implementującej interfejs
+	StackInterface. Dzięki temu zmieniając przekazany obiekt możemy szybko zmienić wykorzystywaną implementacje stosu.
+	 */
+
+	private StackInterface stackInterface;
 
 	public stack () {
-		this.stackArray = new StackArray();
+		this.stackInterface = new StackList();
 	}
 
-	public stack(StackArray stackArray) {
-		this.stackArray = stackArray;
+	public stack(StackInterface stackInterface) {
+		this.stackInterface = stackInterface;
 	}
 
 	public void push(int i) {
-		stackArray.push(i);
+		stackInterface.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stackInterface.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stackInterface.isFull();
 	}
 
 	public int top() {
-		return stackArray.top();
+		return stackInterface.top();
 	}
 
 	public int pop() {
-		return stackArray.pop();
+		return stackInterface.pop();
 	}
 }

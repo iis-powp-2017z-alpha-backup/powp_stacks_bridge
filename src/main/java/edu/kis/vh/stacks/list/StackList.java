@@ -1,7 +1,11 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.StackInterface;
 
+public class StackList implements StackInterface{
+	/* komentarz do punktu4.
+	Nie korzystam z Eclipsa tylko z ItelliJ. Nie wykorzystałem opcji innych niz podpowiedzi w trakcie pisnaia.
+	 */
 	Node last;
 	int i;
 
@@ -15,18 +19,38 @@ public class StackList {
 		}
 	}
 
-	public boolean empty() {
+	private boolean empty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	private boolean full() {
 		return false;
 	}
 
-	public int peek() {
+	private int peek() {
 		if (empty())
 			return -1;
 		return last.value;
+	}
+
+	@Override
+	public void push(int i) {
+		this.pushElement(i);
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return this.empty();
+	}
+
+	@Override
+	public boolean isFull() {
+		return this.full();
+	}
+
+	@Override
+	public int top() {
+		return this.peek();
 	}
 
 	public int pop() {
