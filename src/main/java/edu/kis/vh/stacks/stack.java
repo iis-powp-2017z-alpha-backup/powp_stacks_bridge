@@ -2,7 +2,7 @@ package edu.kis.vh.stacks;
 
 public class stack {
 
-	private StackInterface stackArray = new StackArray();
+	private StackInterface stackArray = new StackArray(); // FILIP
 
 	public stack(StackInterface stackArray) { //przez utworzony obiekt będzie można przekazać dowolny obiekt implementujący interfejs StackInterface
 		super();
