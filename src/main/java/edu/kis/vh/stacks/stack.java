@@ -51,7 +51,5 @@ public class stack {
 	public int pop() {
 		return mLocalStack.pop();
 	}
-	
-	
-				
+
 }

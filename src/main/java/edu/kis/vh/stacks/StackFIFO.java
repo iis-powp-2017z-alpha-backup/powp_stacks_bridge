@@ -2,6 +2,12 @@ package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.implementations.StackList;
 
+/*
+ * Komentarz do zadania 14 :
+ * Postaniowiłem zaminieć poprzedni atrybut(teraz jego nazwa to mLocalStackList) na stos oparty na implementacji
+ * listą - Zrobiłe tak, gdyż realizujac punkt 4 wydawało mi się to najlepszym wyborem.
+ * 
+ */
 public class StackFIFO extends stack {
 
 	private StackIf mLocalStackList;
