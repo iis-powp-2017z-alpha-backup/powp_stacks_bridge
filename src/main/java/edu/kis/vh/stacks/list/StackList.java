@@ -1,5 +1,14 @@
 package edu.kis.vh.stacks.list;
 
+/*
+ * Wykorzystane metody przy rozwiązywania zadania 4 :
+ * Source -> Override/ImplementMethods
+ * Source -> Generate C-tor using fields
+ * Source -> format
+ * ctrl + space -> autouzupełnianie
+ * 
+ */
+
 public class StackList {
 
 	Node last;
