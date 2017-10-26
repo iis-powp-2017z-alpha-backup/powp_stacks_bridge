@@ -4,42 +4,29 @@ import edu.kis.vh.stacks.list.StackList;
 
 public class StackFIFO extends stack {
 
-	private StackList mLocalStackList;
+	private StackIf mLocalStackList;
 
 	public StackFIFO() {
 		super();
 		mLocalStackList = new StackList();
 	}
 
-	public StackFIFO(StackList mLocalStackList) {
+	public StackFIFO(StackIf mLocalStackList) {
 		super();
 		this.mLocalStackList = mLocalStackList;
 	}
 
 	@Override
 	public int pop() {
-		return mLocalStackList.pop();
-	}
+		while (!isEmpty())
+			mLocalStackList.push(super.pop());
 
-	@Override
-	public void push(int i) {
-		mLocalStackList.pushElement(i);
-	}
+		int ret = mLocalStackList.pop();
 
-	@Override
-	public boolean isEmpty() {
-		return mLocalStackList.empty();
-	}
-
-	@Override
-	public boolean isFull() {
-		return mLocalStackList.full();
-	}
-
-	@Override
-	public int top() {
-		return mLocalStackList.peek();
+		while (!mLocalStackList.isEmpty())
+			push(mLocalStackList.pop());
+		return ret;
 	}
 	
-	
+
 }

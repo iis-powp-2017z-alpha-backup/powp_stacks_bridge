@@ -2,13 +2,13 @@ package edu.kis.vh.stacks;
 
 public class stack {
 
-	private StackArray mLocalStack;
+	private StackIf mLocalStack;
 
 	public stack() {
 		mLocalStack = new StackArray();
 	}
 
-	public stack(StackArray mLocalStack) {
+	public stack(StackIf mLocalStack) {
 		super();
 		this.mLocalStack = mLocalStack;
 	}

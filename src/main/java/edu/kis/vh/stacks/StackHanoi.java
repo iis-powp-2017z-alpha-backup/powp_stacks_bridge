@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.list.StackList;
 
 public class StackHanoi extends stack {
 
-	private StackList mLocalStackList;
+	private StackIf mLocalStackList;
 	int totalRejected = 0;
 
 	public StackHanoi() {
@@ -12,7 +12,7 @@ public class StackHanoi extends stack {
 		mLocalStackList = new StackList();
 	}
 
-	public StackHanoi(StackList mLocalStackList) {
+	public StackHanoi(StackIf mLocalStackList) {
 		super();
 		this.mLocalStackList = mLocalStackList;
 	}
@@ -26,22 +26,22 @@ public class StackHanoi extends stack {
 		if (!isEmpty() && in > top())
 			totalRejected++;
 		else
-			mLocalStackList.pushElement(in);
+			mLocalStackList.push(in);
 	}
 
 	@Override
 	public boolean isEmpty() {
-		return mLocalStackList.empty();
+		return mLocalStackList.isEmpty();
 	}
 
 	@Override
 	public boolean isFull() {
-		return mLocalStackList.full();
+		return mLocalStackList.isFull();
 	}
 
 	@Override
 	public int top() {
-		return mLocalStackList.peek();
+		return mLocalStackList.top();
 	}
 
 	@Override
