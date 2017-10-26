@@ -14,7 +14,7 @@ import edu.kis.vh.stacks.StackIf;
 public class StackList implements StackIf {
 
 	Node last;
-	int i;
+	//int i;
 
 	public void push(int i) {
 		if (last == null)
@@ -36,13 +36,13 @@ public class StackList implements StackIf {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return errorCode;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return errorCode;
 		int ret = last.value;
 		last = last.prev;
 		return ret;

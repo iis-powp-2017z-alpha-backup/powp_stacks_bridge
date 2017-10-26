@@ -8,48 +8,34 @@ public class StackArray implements StackIf {
 
 	public int total = -1;
 
-	/* (non-Javadoc)
-	 * @see edu.kis.vh.stacks.StackIf#push(int)
-	 */
+
 	@Override
 	public void push(int i) {
 		if (!isFull())
 			ITEMS[++total] = i;
 	}
 
-	/* (non-Javadoc)
-	 * @see edu.kis.vh.stacks.StackIf#isEmpty()
-	 */
 	@Override
 	public boolean isEmpty() {
 		return total == -1;
 	}
 
-	/* (non-Javadoc)
-	 * @see edu.kis.vh.stacks.StackIf#isFull()
-	 */
 	@Override
 	public boolean isFull() {
 		return total == 11;
 	}
 
-	/* (non-Javadoc)
-	 * @see edu.kis.vh.stacks.StackIf#top()
-	 */
 	@Override
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return errorCode;
 		return ITEMS[total];
 	}
 
-	/* (non-Javadoc)
-	 * @see edu.kis.vh.stacks.StackIf#pop()
-	 */
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return errorCode;
 		return ITEMS[total--];
 	}
 
