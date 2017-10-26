@@ -1,37 +1,34 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackList;
-
 public class StackArray {
 
-	//private int[] ITEMS = new int[12];
-	private StackList mArray = new StackList(); 
+	private int[] ITEMS = new int[12];
 
-	//public int total = -1;
+	public int total = -1;
 
 	public void push(int i) {
 		if (!isFull())
-			mArray.pushElement(i);
+			ITEMS[++total] = i;
 	}
 
 	public boolean isEmpty() {
-		return mArray.empty();
+		return total == -1;
 	}
 
 	public boolean isFull() {
-		return mArray.full();
+		return total == 11;
 	}
 
 	public int top() {
 		if (isEmpty())
 			return -1;
-		return mArray.peek();
+		return ITEMS[total];
 	}
 
 	public int pop() {
 		if (isEmpty())
 			return -1;
-		return mArray.pop();
+		return ITEMS[total--];
 	}
 
 }
