@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.implementations.StackArray;
+
 /*
  * Konstruktor parametrowy klasy Stack od teraz przyjmuje interfejs StackIf jako parametr.
  * Pole prywatne mLocalStack również jest typu StackIf.
