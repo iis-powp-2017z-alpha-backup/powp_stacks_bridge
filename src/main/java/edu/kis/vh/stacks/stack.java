@@ -1,5 +1,12 @@
 package edu.kis.vh.stacks;
 
+/*
+ * Konstruktor parametrowy klasy Stack od teraz przyjmuje interfejs StackIf jako parametr.
+ * Pole prywatne mLocalStack również jest typu StackIf.
+ * Konsekwencją tego zachowania jest to iż do tego konstruktora mogę przekazać obiekty 
+ * należące do klas implementujących ten interfejs(StackList,StackArray)
+ * Od teraz klasa Stack może korzystać  z implementacji stosu opartej na tablicy bądź liście
+ */
 public class stack {
 
 	private StackIf mLocalStack;
