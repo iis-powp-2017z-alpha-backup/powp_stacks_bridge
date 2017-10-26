@@ -12,9 +12,9 @@ public class StackHanoi extends stack {
 		mLocalStackList = new StackList();
 	}
 
-	public StackHanoi(StackIf mLocalStackList) {
-		super();
-		this.mLocalStackList = mLocalStackList;
+	public StackHanoi(StackIf mLocalStack) {
+		super(mLocalStack);
+		mLocalStackList = new StackList();
 	}
 
 	public int reportRejected() {
@@ -48,6 +48,5 @@ public class StackHanoi extends stack {
 	public int pop() {
 		return mLocalStackList.pop();
 	}
-	
-	
+
 }

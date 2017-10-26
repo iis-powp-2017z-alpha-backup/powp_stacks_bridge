@@ -11,9 +11,9 @@ public class StackFIFO extends stack {
 		mLocalStackList = new StackList();
 	}
 
-	public StackFIFO(StackIf mLocalStackList) {
-		super();
-		this.mLocalStackList = mLocalStackList;
+	public StackFIFO(StackIf mLocalStack) {
+		super(mLocalStack);
+		mLocalStackList = new StackList();
 	}
 
 	@Override
@@ -27,6 +27,5 @@ public class StackFIFO extends stack {
 			push(mLocalStackList.pop());
 		return ret;
 	}
-	
 
 }
