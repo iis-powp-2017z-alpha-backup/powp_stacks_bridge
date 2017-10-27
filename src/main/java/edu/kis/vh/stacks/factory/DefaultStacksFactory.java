@@ -4,16 +4,17 @@ import edu.kis.vh.stacks.factory.IstacksFactory;
 import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.StackI;
 
 public class DefaultStacksFactory implements IstacksFactory {
 
 	@Override
-	public stack GetStandardStack() {
+	public StackI GetStandardStack() {
 		return new stack();
 	}
 
 	@Override
-	public stack GetFalseStack() {
+	public StackI GetFalseStack() {
 		return new stack();
 	}
 
