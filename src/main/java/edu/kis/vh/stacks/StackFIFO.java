@@ -1,30 +1,33 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.implementations.StackArray;
 import edu.kis.vh.stacks.implementations.StackList;
 
+/*
+ * Najlepszym eyborem będzie pójście w ślady starej implementacji i zmienić parametr temp na stos z implementacją
+ * tablicową (wcześniej stos korzystał z implementacji stosu z klasy stack (StackArray))
+ */
 public class StackFIFO extends stack {
 
-	private StackIf mLocalStackList;
+	public StackIf temp = new StackArray();
 
 	public StackFIFO() {
-		super();
-		mLocalStackList = new StackList();
+		super(new StackList());
 	}
 
 	public StackFIFO(StackIf mLocalStack) {
 		super(mLocalStack);
-		mLocalStackList = new StackList();
 	}
 
 	@Override
 	public int pop() {
 		while (!isEmpty())
-			mLocalStackList.push(super.pop());
+			temp.push(super.pop());
 
-		int ret = mLocalStackList.pop();
+		int ret = temp.pop();
 
-		while (!mLocalStackList.isEmpty())
-			push(mLocalStackList.pop());
+		while (!temp.isEmpty())
+			push(temp.pop());
 		return ret;
 	}
 

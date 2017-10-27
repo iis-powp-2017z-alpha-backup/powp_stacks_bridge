@@ -4,17 +4,14 @@ import edu.kis.vh.stacks.implementations.StackList;
 
 public class StackHanoi extends stack {
 
-	private StackIf mLocalStackList;
 	int totalRejected = 0;
 
 	public StackHanoi() {
-		super();
-		mLocalStackList = new StackList();
+		super(new StackList());
 	}
 
 	public StackHanoi(StackIf mLocalStack) {
 		super(mLocalStack);
-		mLocalStackList = new StackList();
 	}
 
 	public int reportRejected() {
@@ -26,27 +23,7 @@ public class StackHanoi extends stack {
 		if (!isEmpty() && in > top())
 			totalRejected++;
 		else
-			mLocalStackList.push(in);
-	}
-
-	@Override
-	public boolean isEmpty() {
-		return mLocalStackList.isEmpty();
-	}
-
-	@Override
-	public boolean isFull() {
-		return mLocalStackList.isFull();
-	}
-
-	@Override
-	public int top() {
-		return mLocalStackList.top();
-	}
-
-	@Override
-	public int pop() {
-		return mLocalStackList.pop();
+			super.push(in);
 	}
 
 }

@@ -8,7 +8,6 @@ public class StackArray implements StackIf {
 
 	public int total = -1;
 
-
 	@Override
 	public void push(int i) {
 		if (!isFull())
