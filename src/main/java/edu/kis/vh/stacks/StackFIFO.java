@@ -8,9 +8,20 @@ import edu.kis.vh.stacks.implementations.StackList;
  * ponieważ w jednym z wcześniejszych punktów trzeba było tak zmienić implementację klasy StackFifo, aby
  * zaczęła korzystać z implementacji stosu z listą
  */
-public class StackFIFO extends stack {
 
-	public StackIf temp = new StackList();
+/*
+ * Odpowiedź do zadania 17 :
+ * klasa StackFIFO łamie zasadę izolacji, prywatne plole temp wczesniej było obiektem klasy stack - klasy po której
+ * klasa StackFIFO dziedziczyła.
+ * Realizując postawione mi zadania doszedłem do wniosku, iż najlepszym wyjściem będzie zmienienie 
+ * typu obiektu temp z stack na StackIf(StackList)
+ * Można by również usunąć obiekt temp, utworzyc nowy tymczasowy kontener w metodzie pop i zastąpić 
+ * wywołnia odpowiednich metod  
+ */
+
+public class StackFIFO extends Stack {
+
+	private StackIf temp = new StackList();
 
 	public StackFIFO() {
 		super(new StackArray());

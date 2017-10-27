@@ -19,16 +19,16 @@ import edu.kis.vh.stacks.implementations.StackArray;
  * punkt 1 , Open implementation daje wyniki jak w punkcie 2
  */
 
-public class stack {
+public class Stack {
 
 	private StackIf mLocalStack;
 
-	public stack() {
+	public Stack() {
 		super();
 		mLocalStack = new StackArray();
 	}
 
-	public stack(StackIf mLocalStack) {
+	public Stack(StackIf mLocalStack) {
 		super();
 		this.mLocalStack = mLocalStack;
 	}

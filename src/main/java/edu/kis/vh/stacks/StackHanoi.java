@@ -2,7 +2,7 @@ package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.implementations.StackList;
 
-public class StackHanoi extends stack {
+public class StackHanoi extends Stack {
 
 	int totalRejected = 0;
 
