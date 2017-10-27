@@ -17,6 +17,12 @@ public class StackFIFO extends stack {
 		temp = new StackList();
 	}
 
+	// poprawka punktu 12
+	public StackFIFO(StackInterface stackInterface){
+		super(stackInterface);
+		temp = new StackList();
+	}
+
 	@Override
 	public int pop() {
 		while (!isEmpty())
