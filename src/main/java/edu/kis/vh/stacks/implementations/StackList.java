@@ -1,9 +1,9 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.implementations;
 
 import edu.kis.vh.stacks.StackInterface;
 
 public class StackList implements StackInterface{
-	/* komentarz do punktu4.
+	/* Punkt 4.
 	Nie korzystam z Eclipsa tylko z ItelliJ. Nie wykorzystałem opcji innych niz podpowiedzi w trakcie pisnaia.
 	 */
 	Node last;
