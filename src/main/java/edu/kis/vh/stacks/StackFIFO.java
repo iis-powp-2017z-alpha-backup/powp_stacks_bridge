@@ -4,19 +4,16 @@ import edu.kis.vh.stacks.implementations.StackArray;
 import edu.kis.vh.stacks.implementations.StackList;
 
 /*
- * Najlepszym eyborem będzie pójście w ślady starej implementacji i zmienić parametr temp na stos z implementacją
- * tablicową (wcześniej stos korzystał z implementacji stosu z klasy stack (StackArray))
+ * obiekt temp może być i oniektem klasy StackArray i klasy StackList, postanowiłem jednak wybrać obiekt StackList
+ * ponieważ w jednym z wcześniejszych punktów trzeba było tak zmienić implementację klasy StackFifo, aby
+ * zaczęła korzystać z implementacji stosu z listą
  */
 public class StackFIFO extends stack {
 
-	public StackIf temp = new StackArray();
+	public StackIf temp = new StackList();
 
 	public StackFIFO() {
-		super(new StackList());
-	}
-
-	public StackFIFO(StackIf mLocalStack) {
-		super(mLocalStack);
+		super(new StackArray());
 	}
 
 	@Override

@@ -10,10 +10,6 @@ public class StackHanoi extends stack {
 		super(new StackList());
 	}
 
-	public StackHanoi(StackIf mLocalStack) {
-		super(mLocalStack);
-	}
-
 	public int reportRejected() {
 		return totalRejected;
 	}

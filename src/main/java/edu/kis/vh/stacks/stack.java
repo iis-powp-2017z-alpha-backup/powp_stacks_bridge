@@ -24,6 +24,7 @@ public class stack {
 	private StackIf mLocalStack;
 
 	public stack() {
+		super();
 		mLocalStack = new StackArray();
 	}
 
