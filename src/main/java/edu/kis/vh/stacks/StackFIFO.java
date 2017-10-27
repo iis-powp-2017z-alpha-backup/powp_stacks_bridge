@@ -16,6 +16,10 @@ public class StackFIFO extends stack {
 		super(new StackArray());
 	}
 
+	public StackFIFO(StackIf mLocalStack) {
+		super(mLocalStack);
+	}
+
 	@Override
 	public int pop() {
 		while (!isEmpty())
