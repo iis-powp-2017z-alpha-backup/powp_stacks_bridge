@@ -1,4 +1,6 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.types;
+
+import edu.kis.vh.stacks.StackInterface;
 
 public class StackArray implements StackInterface {
 
@@ -38,7 +40,7 @@ public class StackArray implements StackInterface {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return emptyStack;
 		return ITEMS[total];
 	}
 
@@ -48,7 +50,7 @@ public class StackArray implements StackInterface {
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return emptyStack;
 		return ITEMS[total--];
 	}
 

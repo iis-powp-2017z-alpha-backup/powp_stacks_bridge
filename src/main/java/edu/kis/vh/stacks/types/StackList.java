@@ -1,6 +1,8 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.types;
 
-public class StackList {
+import edu.kis.vh.stacks.StackInterface;
+
+public class StackList implements StackInterface {
 
 	Node last;
 	int i;
@@ -25,13 +27,13 @@ public class StackList {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return emptyStack;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return emptyStack;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
