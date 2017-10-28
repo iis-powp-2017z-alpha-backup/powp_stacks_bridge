@@ -14,7 +14,7 @@ import edu.kis.vh.stacks.StackIf;
 public class StackList implements StackIf {
 
 	Node last;
-	int i;
+	int i; // TODO delete
 
 	public void push(int i) {
 		if (last == null)
