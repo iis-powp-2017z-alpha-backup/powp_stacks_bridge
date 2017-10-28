@@ -8,9 +8,10 @@ import edu.kis.vh.stacks.StackIf;
 
 public class StackArray implements StackIf {
 
-	private int[] ITEMS = new int[12];
-
-	public int total = -1;
+	private static final int stackMinimumValue = -1;
+	private static final int stackCapacity = 12;
+	private int[] ITEMS = new int[stackCapacity];
+	private int total = stackMinimumValue;
 
 	@Override
 	public void push(int i) {
@@ -20,12 +21,12 @@ public class StackArray implements StackIf {
 
 	@Override
 	public boolean isEmpty() {
-		return total == -1;
+		return total == stackMinimumValue;
 	}
 
 	@Override
 	public boolean isFull() {
-		return total == 11;
+		return total == (stackCapacity - 1);
 	}
 
 	@Override

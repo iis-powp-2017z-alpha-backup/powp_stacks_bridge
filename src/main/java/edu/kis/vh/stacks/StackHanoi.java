@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.implementations.StackList;
 
 public class StackHanoi extends Stack {
 
-	int totalRejected = 0;
+	private int totalRejected = 0;
 
 	public StackHanoi() {
 		super(new StackList());
