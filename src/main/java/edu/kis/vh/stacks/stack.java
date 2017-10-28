@@ -2,11 +2,14 @@ package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.list.StackList;
 import edu.kis.vh.stacks.list.Node;
+//Pkt 7 - konsekwencje są takie, że obydwie klasy StackArray i StackList implementują ten sam interfejs
+//z którego korzystamy wywołując metody w klasie stack
+
 
 //komentarz dla sprawdzenia commita
 public class stack implements StackI {
 
-	StackI stackArray; //= new Object();   //// WTF
+	private StackI stackArray = new StackArray(); // Przyjety do inicjalizacji StackArray, w celu uniknięcia null pointera.
 
 	//public stack(StackArray stackArray) {
 	//	super();
