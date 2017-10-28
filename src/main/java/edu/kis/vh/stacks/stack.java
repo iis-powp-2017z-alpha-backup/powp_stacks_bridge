@@ -1,9 +1,8 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackList;
-import edu.kis.vh.stacks.list.Node;
-//Pkt 7 - konsekwencje są takie, że obydwie klasy StackArray i StackList implementują ten sam interfejs
-//z którego korzystamy wywołując metody w klasie stack
+import edu.kis.vh.stacks.stackIImpl.Node;
+import edu.kis.vh.stacks.stackIImpl.StackArray;
+import edu.kis.vh.stacks.stackIImpl.StackList;
 
 
 //komentarz dla sprawdzenia commita
