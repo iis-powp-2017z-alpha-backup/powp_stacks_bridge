@@ -2,6 +2,10 @@ package edu.kis.vh.stacks.implementations;
 
 import edu.kis.vh.stacks.StackIf;
 
+/*
+ * Klawisze alt + strzałka pozwalają się przemieszczać między plikami
+ */
+
 public class StackArray implements StackIf {
 
 	private int[] ITEMS = new int[12];

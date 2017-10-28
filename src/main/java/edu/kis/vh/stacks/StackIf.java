@@ -1,8 +1,5 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.implementations.StackList;
-
-
 /*
  * Odpowiedź Do zadania 11 :
  * Realizacja zadania 10 mi pomogła w wykonaniu zadania 11, gdyż wystarczyło zmienić jedną
@@ -11,7 +8,7 @@ import edu.kis.vh.stacks.implementations.StackList;
 public interface StackIf {
 
 	public final static int errorCode = 0;
-	
+
 	void push(int i);
 
 	boolean isEmpty();
