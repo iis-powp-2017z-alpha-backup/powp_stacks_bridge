@@ -1,6 +1,8 @@
 package edu.kis.vh.stacks;
 
 
+import edu.kis.vh.stacks.list.StackArray;
+
 public class Stack  {
 
     /**
@@ -14,37 +16,43 @@ public class Stack  {
     private final static int FULL_STACK = 11;
 
     private int[] ITEMS = new int[ITEMS_SIZE];
+    private StackArray stackArray = new StackArray();
+
+    public Stack(int[] ITEMS, int total) {
+        super();
+        this.ITEMS = ITEMS;
+        this.total = total;
+    }
+
+    public Stack() {
+
+    }
 
     //wygenrowany geter 3.7
-    public int getTotal() {
+    private int getTotal() {
         return total;
     }
 
     private int total = -1;
 
     public void push(int i) {
-        if (!isFull())
-            ITEMS[++total] = i;
+        stackArray.push(i);
     }
 
     public boolean isEmpty() {
-        return total == EMPTY_STACK;
+        return stackArray.isEmpty();
     }
 
     public boolean isFull() {
-        return total == FULL_STACK;
+        return stackArray.isFull();
     }
 
     public int top() {
-        if (isEmpty())
-            return EMPTY_STACK;
-        return ITEMS[total];
+        return stackArray.top();
     }
 
     public int pop() {
-        if (isEmpty())
-            return EMPTY_STACK;
-        return ITEMS[total--];
+        return stackArray.pop();
     }
 
 }

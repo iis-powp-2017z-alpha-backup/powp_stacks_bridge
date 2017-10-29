@@ -15,7 +15,7 @@ public class StackList {
         }
     }
 
-    private boolean empty() {
+    public boolean empty() {
         return last == null;
     }
 
