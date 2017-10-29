@@ -10,7 +10,7 @@ import edu.kis.vh.stacks.StackFIFO;
 public class StackFIFOTest {
 
 	private StackFIFO stackFIFO;
-	
+
 	@Before
 	public void setUp() throws Exception {
 		stackFIFO = new StackFIFO();
@@ -21,6 +21,4 @@ public class StackFIFOTest {
 		stackFIFO.push(1);
 		assertEquals(1, stackFIFO.pop());
 	}
-	
-
 }

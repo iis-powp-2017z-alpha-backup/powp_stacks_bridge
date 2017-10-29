@@ -14,7 +14,7 @@ public class StackHanoiTest {
 	public void setUp() throws Exception {
 		stackHanoi = new StackHanoi();
 	}
-	
+
 	@Test
 	public void reportRejectedShouldReturnZero() {
 		stackHanoi.push(1);
@@ -27,6 +27,4 @@ public class StackHanoiTest {
 		stackHanoi.push(2);
 		assertEquals(1, stackHanoi.reportRejected());
 	}
-	
-
 }

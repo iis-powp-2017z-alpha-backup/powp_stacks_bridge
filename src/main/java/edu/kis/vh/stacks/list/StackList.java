@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks.list;
 
-class StackList {
+public class StackList {
 
 	private Node last;
 
@@ -22,13 +22,13 @@ class StackList {
 		return false;
 	}
 
-	private int peek() {
+	public int peek() {
 		if (empty())
 			return -1;
 		return last.value;
 	}
 
-	private int pop() {
+	public int pop() {
 		if (empty())
 			return -1;
 		int ret = last.value;
