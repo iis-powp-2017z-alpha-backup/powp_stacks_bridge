@@ -4,13 +4,19 @@ import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
+
 class StacksDemo {
 
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
+		testStacks(factory);
+
+	}
+
+	private static void testStacks(DefaultStacksFactory factory) {
 		final int NUMBER_OF_VALUES = 15;
 		final int NUMBER_OF_LEVELS = 3;
-		final int NUMBER = 20;
+		final int NUMBER = 20; 
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
 
@@ -29,7 +35,6 @@ class StacksDemo {
 		}
 
 		System.out.println("total rejected is " + ((StackHanoi) stacks[NUMBER_OF_LEVELS]).reportRejected());
-
 	}
 
 }
@@ -41,5 +46,4 @@ class StacksDemo {
 // stack: linie 11-37
 // IstacksFactory: linie 7-17
 
-// alt + -> lub alt + <- cofa sie do poprzednich otworzonych okienek, lub gdy
-// cofniemy sie wracamy spowrotem.
+//alt + -> lub alt + <- cofa sie do poprzednich otworzonych okienek, lub gdy cofniemy sie wracamy spowrotem.

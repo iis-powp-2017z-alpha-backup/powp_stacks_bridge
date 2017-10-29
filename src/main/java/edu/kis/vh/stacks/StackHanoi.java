@@ -16,11 +16,15 @@ public class StackHanoi extends Stack {
 			super.push(in);
 	}
 
-	private int getTotalRejected() {
+	public int getTotalRejected() {
 		return totalRejected;
 	}
 
-	private void setTotalRejected(int totalRejected) {
+	public void setTotalRejected(int totalRejected) {
 		this.totalRejected = totalRejected;
 	}
+
+	
+
+	
 }

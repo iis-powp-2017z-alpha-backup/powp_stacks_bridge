@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import edu.kis.vh.stacks.Stack;
 
-public class StackTest {
+class StackTest {
 
 	@Test
 	public void testPush() {
