@@ -1,6 +1,10 @@
 package edu.kis.vh.stacks;
 
 //test 22.10.2017
+/**
+ * @author Bartłomiej Kubicki 199106
+ *
+ */
 public class Stack {
 
 	private static final int STACK_FULL = 11;
