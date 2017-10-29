@@ -1,5 +1,10 @@
 package edu.kis.vh.stacks;
 
+
+/**
+ * @author Piotr Nitecki 199111
+ * 29.10.2017
+ */
 public class Stack {
 
 	private static final int FULL_STUCK = 11;
@@ -42,3 +47,5 @@ public class Stack {
 	}
 
 }
+
+
