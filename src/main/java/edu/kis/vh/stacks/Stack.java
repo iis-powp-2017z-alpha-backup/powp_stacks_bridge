@@ -1,9 +1,10 @@
 package edu.kis.vh.stacks;
 
 
+import edu.kis.vh.stacks.factory.Bridge;
 import edu.kis.vh.stacks.list.StackArray;
 
-public class Stack  {
+public class Stack {
 
     /**
      * Radoslaw Subczynski 3.3.2
@@ -16,16 +17,16 @@ public class Stack  {
     private final static int FULL_STACK = 11;
 
     private int[] ITEMS = new int[ITEMS_SIZE];
-    private StackArray stackArray = new StackArray();
 
-    public Stack(int[] ITEMS, int total) {
+    private Bridge bridge;
+
+    public Stack(Bridge bridge) {
         super();
-        this.ITEMS = ITEMS;
-        this.total = total;
+        this.bridge = bridge;
     }
 
     public Stack() {
-
+        bridge = new StackArray();
     }
 
     //wygenrowany geter 3.7
@@ -36,23 +37,23 @@ public class Stack  {
     private int total = -1;
 
     public void push(int i) {
-        stackArray.push(i);
+        bridge.push(i);
     }
 
     public boolean isEmpty() {
-        return stackArray.isEmpty();
+        return bridge.isEmpty();
     }
 
     public boolean isFull() {
-        return stackArray.isFull();
+        return bridge.isFull();
     }
 
     public int top() {
-        return stackArray.top();
+        return bridge.top();
     }
 
     public int pop() {
-        return stackArray.pop();
+        return bridge.pop();
     }
 
 }

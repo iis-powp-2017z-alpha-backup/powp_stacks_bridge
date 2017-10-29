@@ -1,6 +1,8 @@
 package edu.kis.vh.stacks.list;
 
-public class StackArray {
+import edu.kis.vh.stacks.factory.Bridge;
+
+public class StackArray implements Bridge {
 
     /**
      * Radoslaw Subczynski 3.3.2
@@ -21,6 +23,7 @@ public class StackArray {
 
     private int total = -1;
 
+    @Override
     public void push(int i) {
         if (!isFull())
             ITEMS[++total] = i;
@@ -44,6 +47,11 @@ public class StackArray {
         if (isEmpty())
             return EMPTY_STACK;
         return ITEMS[total--];
+    }
+
+    @Override
+    public boolean empty() {
+        return false;
     }
 
 }
