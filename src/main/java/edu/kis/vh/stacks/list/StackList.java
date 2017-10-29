@@ -32,18 +32,14 @@ public class StackList implements Bridge {
         return last.getValue();
     }
 
-<<<<<<< HEAD
-    private int pop() {
-=======
-
     @Override
     public void push(int i) {
-        push(i);
+        pushElement(i);
     }
 
     @Override
     public boolean isEmpty() {
-       return isEmpty();
+       return empty();
     }
 
     @Override
@@ -58,7 +54,6 @@ public class StackList implements Bridge {
 
     @Override
     public int pop() {
->>>>>>> 41e1df3177ccfcb27d6f8b8a62003ed1e6cbbcce
         if (empty())
             return -1;
         int ret = last.getValue();
