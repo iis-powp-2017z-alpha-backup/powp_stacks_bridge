@@ -11,7 +11,7 @@ class StacksDemo {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 		testStacks(factory);
 	}
-	
+	//TODO throw this code into garbage can
 	private static void testStacks(IstacksFactory factory){
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), // wczesne zalamanie tekstu
 				factory.getFIFOStack(), factory.getHanoiStack() };// brakujaca spacja
