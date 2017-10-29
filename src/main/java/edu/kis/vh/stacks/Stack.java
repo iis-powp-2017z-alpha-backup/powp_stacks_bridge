@@ -6,7 +6,7 @@ public class Stack {
 
 	private static final int TABLE_SIZE = 12;
 
-	private int[] ITEMS = new int[TABLE_SIZE];
+	private final int[] ITEMS = new int[TABLE_SIZE];
 
 	private int total = -1;
 
