@@ -12,7 +12,9 @@ class StacksDemo {
     //Punkt 3.8 dokonałem zminy hermetyzacji, gdzie mogłem to zmieniłem, dorobiłem settery w klasie node
     //3.9 usunąlem niepotrzebne settery w klasie node
 
-
+    /**
+     * Radoslaw Subczynski 3.3.2
+     */
 
     public static void main(String[] args) {
         initApp();
