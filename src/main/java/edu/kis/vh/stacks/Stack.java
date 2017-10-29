@@ -8,7 +8,7 @@ public class Stack {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 
-	private int[] items = new int[STACK_SIZE];
+	private final int[] items = new int[STACK_SIZE];
 
 	private int total = EMPTY_STACK_VALUE;
 
