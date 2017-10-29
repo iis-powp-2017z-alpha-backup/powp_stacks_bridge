@@ -7,8 +7,8 @@ public class StackHanoi extends Stack {
 	public int reportRejected() {
 		return totalRejected;
 	}
-
-	public void push(int in) {
+		@Override
+		public void push(int in) {
 		if (!isEmpty() && in > top())
 			totalRejected++;
 		else

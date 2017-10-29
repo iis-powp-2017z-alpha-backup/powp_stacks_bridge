@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackList;
+
 //test 22.10.2017
 /**
  * @author Bartłomiej Kubicki 19910
@@ -8,11 +10,11 @@ package edu.kis.vh.stacks;
 public class Stack {
 
 	private StackArray stackArray = new StackArray();
+	private StackList stackList = new StackList();
+	
 	
 	public Stack(int[] iTEMS, int total) {
-		super();
-		ITEMS = iTEMS;
-		this.total = total;
+		
 	}
 	
 	public Stack(){
