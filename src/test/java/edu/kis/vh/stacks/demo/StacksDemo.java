@@ -12,11 +12,13 @@ import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 class StacksDemo {
 
+	private static final String TOTAL_REJECTED_IS = "total rejected is ";
+
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
-		Stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
-				factory.GetHanoiStack() };
+		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
+				factory.getHanoiStack() };
 
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
@@ -32,7 +34,7 @@ class StacksDemo {
 			System.out.println();
 		}
 
-		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
+		System.out.println(TOTAL_REJECTED_IS + ((StackHanoi) stacks[3]).reportRejected());
 
 	}
 

@@ -4,9 +4,13 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 
-	private int[] ITEMS = new int[12];	
+	private static final int INITIAL_MAX_STACK_SIZE = 12;
 
-	public int total = -1;
+	private static final int STACK_INTERATOR_EMPTY_STACK = -1;
+
+	private int[] ITEMS = new int[INITIAL_MAX_STACK_SIZE];	
+
+	private int total = STACK_INTERATOR_EMPTY_STACK;
 	
 	public void push(int i) {
 		if (!isFull())
@@ -14,7 +18,7 @@ public class Stack {
 	}
 	
 	public boolean isEmpty() {
-		return total == -1;
+		return total == STACK_INTERATOR_EMPTY_STACK;
 	}
 		
 	public boolean isFull() {
@@ -23,13 +27,13 @@ public class Stack {
 			
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return STACK_INTERATOR_EMPTY_STACK;
 		return ITEMS[total];
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return STACK_INTERATOR_EMPTY_STACK;
 		return ITEMS[total--];
 	}
 
