@@ -6,9 +6,13 @@ public class Stack {
 	private static final int TOTAL_EMPTY = -1;
 	private static final int ITEMS_SIZE = 12;
 
-	private int[] ITEMS = new int[ITEMS_SIZE];
+	private final int[] ITEMS = new int[ITEMS_SIZE];
 
-	public int total = TOTAL_EMPTY;
+	private int total = TOTAL_EMPTY;
+
+	public int getTotal() {
+		return total;
+	}
 
 	public void push(int i) {
 		if (!isFull())

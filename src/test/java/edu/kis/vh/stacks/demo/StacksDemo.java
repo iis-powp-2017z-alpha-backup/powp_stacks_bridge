@@ -5,7 +5,6 @@ import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 class StacksDemo {
-	private static final int RAND_MAX = 20;
 	private static final int STACKS_QUANTITY = 3;
 
 	// zmiany zaszły w liniach: 11-14, 18-30, 32
@@ -13,6 +12,11 @@ class StacksDemo {
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
+		testStacks(factory);
+
+	}
+
+	private static void testStacks(DefaultStacksFactory factory) {
 		Stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
 				factory.GetHanoiStack() };
 
@@ -22,7 +26,7 @@ class StacksDemo {
 
 		java.util.Random rn = new java.util.Random();
 		for (int i = 1; i < 15; i++)
-			stacks[3].push(rn.nextInt(RAND_MAX));
+			stacks[3].push(rn.nextInt(20));
 
 		for (int i = 0; i < stacks.length; i++) {
 			while (!stacks[i].isEmpty())
@@ -31,7 +35,6 @@ class StacksDemo {
 		}
 
 		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
-
 	}
 
 }
