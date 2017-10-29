@@ -44,9 +44,4 @@ public class Stack {
 	private int[] getItems() {
 		return items;
 	}
-
-	private void setItems(int[] items) {
-		this.items = items;
-	}
-
 }
