@@ -1,16 +1,18 @@
 package edu.kis.vh.stacks;
 
-public class StackHanoi extends stack {
+public class StackHanoi extends Stack {
 
-int totalRejected = 0;
+	private static final int TOTAL_REJECTED = 0;
+	int totalRejected = TOTAL_REJECTED;
 
 	public int reportRejected() {
-	return totalRejected;
+		return totalRejected;
 	}
 
+	@Override
 	public void push(int in) {
-	if (!isEmpty() && in > top())
-		totalRejected++;
+		if (!isEmpty() && in > top())
+			totalRejected++;
 		else
 			super.push(in);
 	}
