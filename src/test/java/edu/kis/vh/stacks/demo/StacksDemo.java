@@ -3,12 +3,16 @@ package edu.kis.vh.stacks.demo;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.IstacksFactory;
 
 class StacksDemo {
 
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
-
+		testStacks(factory);
+	}
+	
+	private static void testStacks(IstacksFactory factory){
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), // wczesne zalamanie tekstu
 				factory.getFIFOStack(), factory.getHanoiStack() };// brakujaca spacja
 
@@ -28,7 +32,6 @@ class StacksDemo {
 
 		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());// przedwczesne zalamanie
 																								// lini
-
 	}
 
 }
