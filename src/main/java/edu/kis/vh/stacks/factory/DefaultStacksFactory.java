@@ -3,17 +3,18 @@ package edu.kis.vh.stacks.factory;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.list.StackArray;
 
 public class DefaultStacksFactory implements IstacksFactory {
     //Poprawa formatu całości 3.1
     @Override
     public Stack GetStandardStack() {
-        return new Stack();
+        return new Stack(new StackArray());
     }
 
     @Override
     public Stack GetFalseStack() {
-        return new Stack();
+        return new Stack(new StackArray());
     }
 
     @Override

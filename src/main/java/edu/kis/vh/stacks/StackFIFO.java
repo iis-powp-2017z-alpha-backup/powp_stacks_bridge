@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackArray;
+
 public class StackFIFO extends Stack {
     //Poprawa formatu całości 3.1
 
