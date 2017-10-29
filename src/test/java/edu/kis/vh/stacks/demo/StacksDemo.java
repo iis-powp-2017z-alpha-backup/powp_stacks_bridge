@@ -7,6 +7,8 @@ import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 class StacksDemo {
 
+	private static final String TOTAL_REJECTED_IS = "total rejected is ";
+
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 		testStacks(factory);
@@ -34,7 +36,7 @@ class StacksDemo {
 			System.out.println();
 		}
 
-		System.out.println("total rejected is " + ((StackHanoi) stacks[NUMBER_OF_LEVELS]).reportRejected());
+		System.out.println(TOTAL_REJECTED_IS + ((StackHanoi) stacks[NUMBER_OF_LEVELS]).reportRejected());
 	}
 
 }
