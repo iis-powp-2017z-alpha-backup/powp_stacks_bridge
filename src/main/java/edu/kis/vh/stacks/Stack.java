@@ -6,7 +6,7 @@ public class Stack {
 
 	private static final int minusOne = -1;
 
-	private int[] ITEMS = new int[twelve];
+	private final int[] ITEMS = new int[twelve];
 
 	private int total = minusOne;
 
