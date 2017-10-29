@@ -18,7 +18,7 @@ public class Stack {
 
 	public void push(int i) {
 		if (!isFull())
-			items[++total] = i;
+			getItems()[++total] = i;
 	}
 
 	public boolean isEmpty() {
@@ -32,13 +32,21 @@ public class Stack {
 	public int top() {
 		if (isEmpty())
 			return EMPTY_STACK_VALUE;
-		return items[total];
+		return getItems()[total];
 	}
 
 	public int pop() {
 		if (isEmpty())
 			return EMPTY_STACK_VALUE;
-		return items[total--];
+		return getItems()[total--];
+	}
+
+	private int[] getItems() {
+		return items;
+	}
+
+	private void setItems(int[] items) {
+		this.items = items;
 	}
 
 }
