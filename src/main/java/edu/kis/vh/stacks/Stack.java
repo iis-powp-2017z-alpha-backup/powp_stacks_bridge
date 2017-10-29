@@ -6,6 +6,18 @@ package edu.kis.vh.stacks;
  * 29.10.2017
  */
 public class Stack {
+	
+	private StackArray stackArray = new StackArray();
+
+	public Stack(int[] iTEMS, int total) {
+		super();
+		ITEMS = iTEMS;
+		this.total = total;
+	}
+	
+	
+	public Stack()
+	{}
 
 	private static final int FULL_STUCK = 11;
 
@@ -15,35 +27,31 @@ public class Stack {
 
 	private int[] ITEMS = new int[TAB_SIZE];
 
-	public int total = -1;
+	private int total = -1;
 
 	public int getTotal() {
 		return total;
 	}
 
+	
 	public void push(int i) {
-		if (!isFull())
-			ITEMS[++total] = i;
+		stackArray.push(i); 
 	}
 
 	public boolean isEmpty() {
-		return total == EMPTY_STACK;
+		return stackArray.isEmpty();
 	}
 
 	public boolean isFull() {
-		return total == FULL_STUCK;
+		return stackArray.isFull();
 	}
 
 	public int top() {
-		if (isEmpty())
-			return EMPTY_STACK;
-		return ITEMS[total];
+		return stackArray.top();
 	}
 
 	public int pop() {
-		if (isEmpty())
-			return EMPTY_STACK;
-		return ITEMS[total--];
+		return stackArray.pop();
 	}
 
 }
