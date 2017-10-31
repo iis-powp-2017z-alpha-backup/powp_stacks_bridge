@@ -1,8 +1,8 @@
 package edu.kis.vh.stacks.list;
 
-import edu.kis.vh.stacks.factory.Bridge;
+import edu.kis.vh.stacks.factory.BridgeInterface;
 
-public class StackList implements Bridge {
+public class StackList implements BridgeInterface {
     //Poprawa formatu całości 3.1
     // Pole Node moze byc prywane i int 3.6
     // Moim zdaniem i nie jest konieczny.

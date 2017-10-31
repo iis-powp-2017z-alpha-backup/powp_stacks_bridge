@@ -1,7 +1,6 @@
 package edu.kis.vh.stacks.demo;
 
 import edu.kis.vh.stacks.Stack;
-import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 //import edu.kis.vh.stacks.factory.DefaultStacksFactory;
@@ -13,8 +12,6 @@ class StacksDemo {
     //Ctrl + . / Ctrl + , odpowiednik z intelij ide F2 / Shift + F2	- nastepny wyrozniony blad przez kompilator 3.3
     //Punkt 3.8 dokonałem zminy hermetyzacji, gdzie mogłem to zmieniłem, dorobiłem settery w klasie node
     //3.9 usunąlem niepotrzebne settery w klasie node
-
-
 
     public static void main(String[] args) {
         initApp();

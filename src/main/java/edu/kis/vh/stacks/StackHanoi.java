@@ -10,9 +10,10 @@ public class StackHanoi extends Stack {
     }
 
     public void push(int in) {
-        if (!isEmpty() && in > top())
+        if (!isEmpty() && in > top()) {
             totalRejected++;
-        else
+        } else {
             super.push(in);
+        }
     }
 }

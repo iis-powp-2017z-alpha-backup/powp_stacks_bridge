@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks.factory;
 
-public interface Bridge {
+public interface BridgeInterface {
      void push(int i );
 
      boolean isEmpty();
