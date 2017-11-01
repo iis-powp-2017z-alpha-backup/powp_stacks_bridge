@@ -1,41 +1,68 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.StackVector;
+
+public class StackList implements StackVector {
 
 	private static final int EMPTY_STACK = -1;
-	private Node last;
-	public int i;
 
-	public void pushElement(int i) {
+	private class Node{
+		final int value;
+		Node prev, next;
+
+		protected Node(int i) {
+			value = i;
+		}
+	}
+	
+	private Node last;
+	private int i = EMPTY_STACK;
+	
+	@Override
+	public void push(int i) {
+		this.i += 1;
 		if (last == null)
 			last = new Node(i);
 		else {
-			last.setNext(new Node(i));
-			last.getNext().setPrev(last);
-			last = last.getNext();
+			last.next = new Node(i);
+			last.next.prev = last;
+			last = last.next;
 		}
 	}
 
-	private boolean empty() {
+	@Override
+	public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	@Override
+	public boolean isFull() {
 		return false;
 	}
 
+	@Override
 	public int peek() {
-		if (empty())
+		if (isEmpty())
 			return EMPTY_STACK;
-		return last.getValue();
+		return last.value;
 	}
 
+	@Override
 	public int pop() {
-		if (empty())
+		if (isEmpty())
 			return EMPTY_STACK;
-		int ret = last.getValue();
-		last = last.getPrev();
+		this.i -= 1;
+		int ret = last.value;
+		last = last.prev;
 		return ret;
+	}
+	
+	@Override
+	public int getTotal() {
+		return i;
 	}
 
 }
+//Generate Delegate Methods
+//alt + shift + r 
+//generacja metod z klasy StackList nastepnie zamiana ich nazw

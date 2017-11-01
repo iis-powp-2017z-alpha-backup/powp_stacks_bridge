@@ -4,39 +4,35 @@ import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
-class StacksDemo {
+public class StacksDemo {
 
-	private static final int MAXIMUM_J = 3;
-	private static final int MINIMUM_J = 0;
-	private static final int MINIMUM = 1;
 	private static final int MAXIMUM = 15;
+	private static final int SIZE = 3;
+	private static final int RANDOM_TOP = 20;
 
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
+		DefaultStacksFactory defaultStacksFactory = new DefaultStacksFactory();
+		Stack[] stacks = { defaultStacksFactory.getStandardStack(), defaultStacksFactory.getFalseStack(),
+				defaultStacksFactory.getFIFOStack(), defaultStacksFactory.getHanoiStack() };
 
-		testStacks(factory);
-
+		testStacks(stacks);
 	}
 
-	private static void testStacks(DefaultStacksFactory factory) {
-		Stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
-				factory.GetHanoiStack() };
-
-		for (int i = MINIMUM; i < MAXIMUM; i++)
-			for (int j = MINIMUM_J; j < MAXIMUM_J; j++)
+	public static void testStacks(Stack[] stacks) {
+		for (int i = 1; i < MAXIMUM; i++)
+			for (int j = 0; j < SIZE; j++)
 				stacks[j].push(i);
 
-		java.util.Random rn = new java.util.Random();
-		for (int i = MINIMUM; i < MAXIMUM; i++)
-			stacks[3].push(rn.nextInt(20));
-
+		java.util.Random random = new java.util.Random();
+		for (int i = 1; i < MAXIMUM; i++)
+			stacks[SIZE].push(random.nextInt(RANDOM_TOP));
+		
 		for (int i = 0; i < stacks.length; i++) {
 			while (!stacks[i].isEmpty())
 				System.out.print(stacks[i].pop() + "  ");
 			System.out.println();
 		}
-
-		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
+		System.out.println("total rejected is " + ((StackHanoi) stacks[SIZE]).reportRejected());
 	}
 
 }

@@ -9,50 +9,39 @@ import edu.kis.vh.stacks.list.StackList;
  */
 public class Stack {
 
-	private StackArray stackArray = new StackArray();
-	private StackList stackList = new StackList();
+	private StackList stackList;
 	
-	
-	public Stack(int[] iTEMS, int total) {
-		
+	public Stack(StackList stackArray) {
+		super();
+		this.stackList = stackArray;
 	}
 	
 	public Stack(){
+		this.stackList = new StackList();
 	}
-	
-	private static final int STACK_FULL = 11;
-
-	private static final int EMPTYSTACK = -1;
-
-	private static final int TABLESIZE = 12;
-
-	private int[] ITEMS = new int[TABLESIZE];
-
-	private int total = -1;
 
 	public int getTotal() {
-		return total;
+		return stackList.getTotal();
 	}
-
 	
 	public void push(int i) {
-		stackArray.push(i);
+		stackList.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stackList.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stackList.isFull();
 	}
 
 	public int top() {
-		return stackArray.top();
+		return stackList.top();
 	}
 
 	public int pop() {
-		return stackArray.pop();
+		return stackList.pop();
 	}
 
 }
