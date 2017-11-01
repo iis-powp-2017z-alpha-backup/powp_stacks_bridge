@@ -1,5 +1,5 @@
 package edu.kis.vh.stacks.demo;
-
+//test dom 1.11.2017
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
