@@ -1,10 +1,10 @@
 package edu.kis.vh.stacks;
 
-class StackArray {
+public class StackArray {
 
 	final private int STACK_EMPTY = -1;
 	final private int STACK_FULL = 11;
-	
+
 	private int[] items = new int[STACK_FULL + 1];
 	private int total = STACK_EMPTY;
 

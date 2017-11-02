@@ -2,13 +2,13 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 
-	StackArray stackArray ;
+	StackArray stackArray;
 
 	public Stack() {
 		super();
 		this.stackArray = new StackArray();
 	}
-	
+
 	public Stack(StackArray stackArray) {
 		super();
 		this.stackArray = stackArray;
@@ -41,13 +41,5 @@ public class Stack {
 	public void setTotal(int total) {
 		stackArray.setTotal(total);
 	}
-
-	
-	
-
-
-
-
-
 
 }
