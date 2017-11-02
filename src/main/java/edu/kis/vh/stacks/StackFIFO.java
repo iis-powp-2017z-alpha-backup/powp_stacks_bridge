@@ -8,11 +8,11 @@ public class StackFIFO extends StackList {
 
 	@Override
 	public int pop() {
-		while (!empty()) {
+		while (!isEmpty()) {
 			temp.push(super.pop());
 		}
 		int ret = temp.pop();
-		while (!temp.empty()) {
+		while (!temp.isEmpty()) {
 			push(temp.pop());
 		}
 		return ret;

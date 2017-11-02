@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-public class StackArray {
+public class StackArray implements StackInterface {
 
 	final private int STACK_EMPTY = -1;
 	final private int STACK_FULL = 11;

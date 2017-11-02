@@ -12,7 +12,7 @@ public class StackHanoi extends StackList {
 
 	@Override
 	public void push(int in) {
-		if (!empty() && in > top())
+		if (!isEmpty() && in > top())
 			totalRejected++;
 		else
 			super.push(in);

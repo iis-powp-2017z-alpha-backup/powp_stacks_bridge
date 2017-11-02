@@ -8,7 +8,7 @@ public class Node {
 	public Node(int i) {
 		this.setValue(i);
 	}
-	
+
 	public int getValue() {
 		return value;
 	}
