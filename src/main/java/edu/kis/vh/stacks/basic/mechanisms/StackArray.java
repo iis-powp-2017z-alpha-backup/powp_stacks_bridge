@@ -4,7 +4,6 @@ import edu.kis.vh.stacks.StackInterface;
 
 public class StackArray implements StackInterface {
 
-	final private int STACK_EMPTY = -1;
 	final private int STACK_FULL = 11;
 
 	private int[] items = new int[STACK_FULL + 1];

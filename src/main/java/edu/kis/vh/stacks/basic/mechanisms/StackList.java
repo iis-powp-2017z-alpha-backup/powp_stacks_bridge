@@ -28,13 +28,13 @@ public class StackList extends Stack implements StackInterface {
 
 	public int peek() {
 		if (isEmpty())
-			return -1;
+			return STACK_EMPTY;
 		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return STACK_EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
