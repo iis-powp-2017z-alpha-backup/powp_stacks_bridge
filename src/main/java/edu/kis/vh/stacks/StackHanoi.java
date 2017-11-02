@@ -1,6 +1,8 @@
 package edu.kis.vh.stacks;
 
-public class StackHanoi extends Stack {
+import edu.kis.vh.stacks.list.StackList;
+
+public class StackHanoi extends StackList {
 
 	private int totalRejected = 0;
 
@@ -10,7 +12,7 @@ public class StackHanoi extends Stack {
 
 	@Override
 	public void push(int in) {
-		if (!isEmpty() && in > top())
+		if (!empty() && in > top())
 			totalRejected++;
 		else
 			super.push(in);

@@ -1,11 +1,12 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
-
+import edu.kis.vh.stacks.Stack;
+public class StackList extends Stack{
+	// 3.1.4 - Open Declaration, Open Call Hierarchy, Open Type Hierarchy, Rename
 	// int i - nie jest potrzebne
 	private Node last;
 
-	public void pushElement(int i) {
+	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
