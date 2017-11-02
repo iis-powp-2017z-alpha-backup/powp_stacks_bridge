@@ -1,8 +1,11 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.basic.mechanisms.StackArray;
+
 public class Stack {
 
-	StackArray stackArray;
+	//3.1.6 Konsekwencją zmiany typu na interfejs jest to, że wszystkie metody muszą należeć do interfejsu, oraz to że będzie można łatwiej podmienić StackArray na StackList
+	private StackInterface stackArray = new StackArray();
 
 	public Stack() {
 		super();
@@ -32,14 +35,6 @@ public class Stack {
 
 	public int pop() {
 		return stackArray.pop();
-	}
-
-	public int getTotal() {
-		return stackArray.getTotal();
-	}
-
-	public void setTotal(int total) {
-		stackArray.setTotal(total);
 	}
 
 }

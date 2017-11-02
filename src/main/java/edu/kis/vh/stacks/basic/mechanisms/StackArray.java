@@ -1,4 +1,6 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.basic.mechanisms;
+
+import edu.kis.vh.stacks.StackInterface;
 
 public class StackArray implements StackInterface {
 
@@ -31,14 +33,6 @@ public class StackArray implements StackInterface {
 		if (isEmpty())
 			return STACK_EMPTY;
 		return items[total--];
-	}
-
-	public int getTotal() {
-		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
 	}
 
 }

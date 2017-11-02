@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.factory.StacksFactory;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
-import edu.kis.vh.stacks.StackArray;
+import edu.kis.vh.stacks.basic.mechanisms.StackArray;
 
 public class DefaultStacksFactory implements StacksFactory {
 

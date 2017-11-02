@@ -1,4 +1,4 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.basic.mechanisms;
 
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackInterface;
