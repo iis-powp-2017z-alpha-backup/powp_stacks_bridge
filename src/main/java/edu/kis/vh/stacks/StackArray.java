@@ -4,21 +4,9 @@ class StackArray {
 
 	final private int STACK_EMPTY = -1;
 	final private int STACK_FULL = 11;
-
-	private int[] items;
-	private int total;
-
-	public StackArray() {
-		super();
-		this.items = new int[STACK_FULL + 1];
-		this.total = STACK_EMPTY;
-	}
-
-	public StackArray(int[] items, int total) {
-		super();
-		this.items = items;
-		this.total = total;
-	}
+	
+	private int[] items = new int[STACK_FULL + 1];
+	private int total = STACK_EMPTY;
 
 	public void push(int i) {
 		if (!isFull())
