@@ -6,7 +6,6 @@ public class StackFIFO extends Stack {
 
 	@Override
 	public int pop() {
-
 		while (!isEmpty())
 			temp.push(super.pop());
 
