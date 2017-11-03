@@ -42,8 +42,8 @@ public class StackList {
 		return i;
 	}
 
-	void setI(int i) {
-		this.i = i;
-	}
+//	void setI(int i) {
+//		this.i = i;
+//	}
 
 }
