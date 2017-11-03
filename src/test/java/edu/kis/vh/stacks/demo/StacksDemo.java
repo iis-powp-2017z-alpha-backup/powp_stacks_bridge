@@ -22,8 +22,8 @@ class StacksDemo {
 	}
 
 	private static void testStacks(DefaultStacksFactory factory) {
-		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
-				factory.getHanoiStack() };
+		Stack[] stacks = { factory.createStandardStack(), factory.createFalseStack(), factory.createFIFOStack(),
+				factory.createHanoiStack() };
 
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
