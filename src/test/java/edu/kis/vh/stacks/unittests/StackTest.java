@@ -46,10 +46,10 @@ public class StackTest {
 	@Test
 	public void testTop() {
 		Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTYSTACK = 0;
 
 		int result = stackObj.top();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(EMPTYSTACK, result);
 
 		int testValue = 4;
 		stackObj.push(testValue);
@@ -63,10 +63,10 @@ public class StackTest {
 	@Test
 	public void testPop() {
 		Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTYSTACK = 0;
 
 		int result = stackObj.pop();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(EMPTYSTACK, result);
 
 		int testValue = 4;
 		stackObj.push(testValue);
@@ -74,7 +74,25 @@ public class StackTest {
 		result = stackObj.pop();
 		Assert.assertEquals(testValue, result);
 		result = stackObj.pop();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(EMPTYSTACK, result);
 	}
 
+	@Test
+	public void testGetTotal() {
+		Stack stackObj = new Stack();
+		final int EMPTYSTACK = 0;
+		int result = stackObj.getTotal();
+
+		Assert.assertEquals(EMPTYSTACK, result);
+		int pushValue = 4;
+		stackObj.push(pushValue);
+		int testValue = 1;
+		result = stackObj.getTotal();
+		
+		Assert.assertEquals(testValue, result);
+		stackObj.pop();
+		result = stackObj.getTotal();
+
+		Assert.assertEquals(EMPTYSTACK, result);
+	}
 }

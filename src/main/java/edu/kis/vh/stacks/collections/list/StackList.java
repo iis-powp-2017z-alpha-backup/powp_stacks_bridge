@@ -1,23 +1,21 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.collections.list;
 
-import edu.kis.vh.stacks.StackVector;
+public class StackList implements StackVector{
 
-public class StackList implements StackVector {
-
-	private static final int EMPTY_STACK = -1;
-
-	private class Node{
+	private class Node {
+		
 		final int value;
 		Node prev, next;
 
 		protected Node(int i) {
 			value = i;
 		}
-	}
+
+	}	
 	
 	private Node last;
-	private int i = EMPTY_STACK;
-	
+	private int i = StackVector.EMPTYSTACK;
+
 	@Override
 	public void push(int i) {
 		this.i += 1;
@@ -41,28 +39,26 @@ public class StackList implements StackVector {
 	}
 
 	@Override
-	public int peek() {
+	public int top() {
 		if (isEmpty())
-			return EMPTY_STACK;
+			return StackVector.EMPTYSTACK;
 		return last.value;
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_STACK;
+			return StackVector.EMPTYSTACK;
 		this.i -= 1;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
 	}
-	
+
 	@Override
 	public int getTotal() {
 		return i;
 	}
 
 }
-//Generate Delegate Methods
-//alt + shift + r 
-//generacja metod z klasy StackList nastepnie zamiana ich nazw
+
