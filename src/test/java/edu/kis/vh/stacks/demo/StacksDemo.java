@@ -17,6 +17,11 @@ class StacksDemo {
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
+		testStacks(factory);
+
+	}
+
+	private static void testStacks(DefaultStacksFactory factory) {
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
 
@@ -35,7 +40,6 @@ class StacksDemo {
 		}
 
 		System.out.println(TOTAL_REJECTED_IS + ((StackHanoi) stacks[3]).reportRejected());
-
 	}
 
 }
