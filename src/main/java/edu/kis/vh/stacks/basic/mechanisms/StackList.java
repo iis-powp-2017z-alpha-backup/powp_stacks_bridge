@@ -41,8 +41,9 @@ public class StackList implements StackInterface {
 
 	@Override
 	public int top() {
-		// TODO Auto-generated method stub
-		return 0;
+		if (isEmpty())
+			return STACK_EMPTY;
+		return last.getValue();
 	}
 
 }

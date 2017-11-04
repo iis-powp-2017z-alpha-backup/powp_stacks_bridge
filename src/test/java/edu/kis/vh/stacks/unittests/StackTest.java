@@ -11,17 +11,16 @@ public class StackTest {
 
 	@Test
 	public void testPush() {
-		Stack stackObj = new Stack(new StackArray());
+		Stack stackObj = new Stack();
 		final int TEST_VALUE = 4;
 		stackObj.push(TEST_VALUE);
-
 		int result = stackObj.top();
 		Assert.assertEquals(TEST_VALUE, result);
 	}
 
 	@Test
 	public void testIsEmpty() {
-		Stack stackObj = new Stack(new StackList());
+		Stack stackObj = new Stack();
 		boolean result = stackObj.isEmpty();
 		Assert.assertEquals(true, result);
 		final int TEST_VALUE = 888;
