@@ -4,12 +4,14 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.basic.mechanisms.StackArray;
+import edu.kis.vh.stacks.basic.mechanisms.StackList;
 
 public class StackTest {
 
 	@Test
 	public void testPush() {
-		Stack stackObj = new Stack();
+		Stack stackObj = new Stack(new StackArray());
 		final int TEST_VALUE = 4;
 		stackObj.push(TEST_VALUE);
 
@@ -19,7 +21,7 @@ public class StackTest {
 
 	@Test
 	public void testIsEmpty() {
-		Stack stackObj = new Stack();
+		Stack stackObj = new Stack(new StackList());
 		boolean result = stackObj.isEmpty();
 		Assert.assertEquals(true, result);
 		final int TEST_VALUE = 888;

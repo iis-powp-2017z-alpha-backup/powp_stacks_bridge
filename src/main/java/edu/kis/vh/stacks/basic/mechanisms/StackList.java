@@ -3,7 +3,7 @@ package edu.kis.vh.stacks.basic.mechanisms;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackInterface;
 
-public class StackList extends Stack implements StackInterface {
+public class StackList implements StackInterface {
 	// 3.1.4 - Open Declaration, Open Call Hierarchy, Open Type Hierarchy, Rename
 	// int i - nie jest potrzebne
 	private Node last;
@@ -38,6 +38,12 @@ public class StackList extends Stack implements StackInterface {
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
+	}
+
+	@Override
+	public int top() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

@@ -2,7 +2,7 @@ package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.basic.mechanisms.StackList;
 
-public class StackHanoi extends StackList {
+public class StackHanoi extends StackList implements StackInterface {
 
 	private int totalRejected = 0;
 
@@ -25,8 +25,5 @@ public class StackHanoi extends StackList {
 	public void setTotalRejected(int totalRejected) {
 		this.totalRejected = totalRejected;
 	}
-
-	
-
 	
 }

@@ -11,7 +11,7 @@ public class StackListFactory implements StacksFactory {
 	@Override
 	public Stack getStandardStack() {
 		// TODO Auto-generated method stub
-		return new StackList();
+		return new Stack(new StackList());
 	}
 
 	@Override
