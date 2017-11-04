@@ -11,7 +11,7 @@ public class StackArray implements StackInterface {
 
 	public void push(int i) {
 		if (!isFull())
-			items[++total] = i;
+			items[total++] = i;
 	}
 
 	public boolean isEmpty() {
@@ -19,19 +19,19 @@ public class StackArray implements StackInterface {
 	}
 
 	public boolean isFull() {
-		return total == STACK_FULL;
+		return total == STACK_FULL + 1;
 	}
 
 	public int top() {
 		if (isEmpty())
 			return STACK_EMPTY;
-		return items[total];
+		return items[total - 1];
 	}
 
 	public int pop() {
 		if (isEmpty())
 			return STACK_EMPTY;
-		return items[total--];
+		return items[--total];
 	}
 
 }
