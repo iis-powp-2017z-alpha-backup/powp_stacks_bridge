@@ -1,15 +1,15 @@
 package edu.kis.vh.stacks.factory;
 
-import edu.kis.vh.stacks.StackInterface;
+import edu.kis.vh.stacks.Stack;
 
 public interface StacksFactory {
 
-	public StackInterface getStandardStack();
+	public Stack getStandardStack();
 
-	public StackInterface getFalseStack();
+	public Stack getFalseStack();
 
-	public StackInterface getFIFOStack();
+	public Stack getFIFOStack();
 
-	public StackInterface getHanoiStack();
+	public Stack getHanoiStack();
 
 }

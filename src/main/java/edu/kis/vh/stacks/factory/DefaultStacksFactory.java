@@ -4,29 +4,27 @@ import edu.kis.vh.stacks.factory.StacksFactory;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
-import edu.kis.vh.stacks.StackInterface;
-import edu.kis.vh.stacks.basic.mechanisms.StackArray;
 import edu.kis.vh.stacks.basic.mechanisms.StackList;
 
 public class DefaultStacksFactory implements StacksFactory {
 
 	@Override
-	public StackInterface getStandardStack() {
-		return new Stack(new StackArray());
+	public Stack getStandardStack() {
+		return new Stack();
 	}
 
 	@Override
-	public StackInterface getFalseStack() {
+	public Stack getFalseStack() {
 		return new Stack(new StackList());
 	}
 
 	@Override
-	public StackInterface getFIFOStack() {
+	public StackFIFO getFIFOStack() {
 		return new StackFIFO();
 	}
 
 	@Override
-	public StackInterface getHanoiStack() {
+	public StackHanoi getHanoiStack() {
 		return new StackHanoi();
 	}
 

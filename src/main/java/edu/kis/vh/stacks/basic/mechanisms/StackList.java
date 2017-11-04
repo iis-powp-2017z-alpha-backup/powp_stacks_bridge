@@ -1,6 +1,5 @@
 package edu.kis.vh.stacks.basic.mechanisms;
 
-import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackInterface;
 
 public class StackList implements StackInterface {
@@ -9,9 +8,9 @@ public class StackList implements StackInterface {
 	private Node last;
 
 	public void push(int i) {
-		if (last == null)
+		if (last == null) {
 			last = new Node(i);
-		else {
+		} else {
 			last.setNext(new Node(i));
 			last.getNext().setPrev(last);
 			last = last.getNext();

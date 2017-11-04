@@ -23,13 +23,13 @@ public class StackArrayFactory implements StacksFactory {
 	@Override
 	public StackFIFO getFIFOStack() {
 		// TODO Auto-generated method stub
-		return new StackFIFO();
+		return new StackFIFO(new StackArray());
 	}
 
 	@Override
 	public StackHanoi getHanoiStack() {
 		// TODO Auto-generated method stub
-		return new StackHanoi();
+		return new StackHanoi(new StackArray());
 	}
 
 }
