@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import edu.kis.vh.stacks.Stack;
-import edu.kis.vh.stacks.basic.mechanisms.StackArray;
 import edu.kis.vh.stacks.basic.mechanisms.StackList;
 
 public class StackTest {
@@ -79,4 +78,15 @@ public class StackTest {
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
 
+	@Test
+	public void testStackInterface() {
+		Stack stackObj = new Stack(new StackList());
+		Assert.assertNotNull(stackObj);
+	}
+
+	@Test
+	public void testStack() {
+		Stack stackObj = new Stack();
+		Assert.assertNotNull(stackObj);
+	}
 }
