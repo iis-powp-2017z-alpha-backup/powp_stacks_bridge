@@ -14,6 +14,11 @@ class StacksDemo {
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
+		testStacks(factory);
+
+	}
+
+	private static void testStacks(DefaultStacksFactory factory) {
 		Stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
 				factory.GetHanoiStack() };
 
@@ -32,7 +37,6 @@ class StacksDemo {
 		}
 
 		System.out.println("total rejected is " + ((StackHanoi) stacks[NEXT_NUMBER]).reportRejected());
-
 	}
 
 }
