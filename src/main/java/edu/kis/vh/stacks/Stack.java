@@ -4,48 +4,39 @@ import edu.kis.vh.stacks.list.StackList;
 
 public class Stack {
 
-	private StackArray stackArray;
-	private StackList stackList;
+	private IStack stack;
 
 	public Stack() {
-		this.stackList = new StackList();
-		// this.stackArray = new StackArray();
+		this.stack = new StackList();
 	}
 
-	public Stack(StackList stackList) {
+	public Stack(IStack stack) {
 		super();
-		// this.stackArray = stackArray;
-		this.stackList = stackList;
+		this.stack = stack;
 	}
 	
 	public int getTotal() {
-		// return stackArray.getTotal();
-		return stackList.getI();
+		return stack.getTotal();
 	}
 
 	public void push(int i) {
-		// stackArray.push(i);
-		stackList.pushElement(i);
+		stack.push(i);
 	}
 
 	public boolean isEmpty() {
-		// return stackArray.isEmpty();
-		return stackList.empty();
+		return stack.isEmpty();
 	}
 
 	public boolean isFull() {
-		// return stackArray.isFull();
-		return stackList.full();
+		return stack.isFull();
 	}
 
 	public int top() {
-		// return stackArray.top();
-		return stackList.peek();
+		return stack.top();
 	}
 
 	public int pop() {
-		// return stackArray.pop();
-		return stackList.pop();
+		return stack.pop();
 	}
 
 }

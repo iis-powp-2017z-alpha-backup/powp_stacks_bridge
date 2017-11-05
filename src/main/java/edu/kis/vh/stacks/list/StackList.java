@@ -1,6 +1,8 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.IStack;
+
+public class StackList implements IStack {
 
 	// Refaktoryzacja do wzorca Bridge:
 	// Pkt 4. Nie użyłem żadnej opcji z Eclipse IDE, wszystkie niezbędne zmiany wprowadziłem ręcznie
@@ -14,7 +16,8 @@ public class StackList {
 		this.i = 0;
 	}
 
-	public void pushElement(int i) {
+	@Override
+	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -25,22 +28,26 @@ public class StackList {
 		this.i++;
 	}
 
-	public boolean empty() {
+	@Override
+	public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	@Override
+	public boolean isFull() {
 		return false;
 	}
 
-	public int peek() {
-		if (empty())
+	@Override
+	public int top() {
+		if (isEmpty())
 			return IS_EMPTY;
 		return last.getValue();
 	}
-
+	
+	@Override
 	public int pop() {
-		if (empty())
+		if (isEmpty())
 			return IS_EMPTY;
 		int ret = last.getValue();
 		last = last.getPrev();
@@ -48,7 +55,8 @@ public class StackList {
 		return ret;
 	}
 
-	public int getI() {
+	@Override
+	public int getTotal() {
 		return i;
 	}
 }
