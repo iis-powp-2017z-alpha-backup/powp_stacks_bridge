@@ -5,12 +5,11 @@ import edu.kis.vh.stacks.IStack;
 public class StackArray implements IStack {
 
 	private static final int TOTAL_FULL = 11;
-	private static final int TOTAL_EMPTY = -1;
 	private static final int ITEMS_SIZE = 12;
 
 	private final int[] ITEMS = new int[ITEMS_SIZE];
 
-	private int total = TOTAL_EMPTY;
+	private int total = IS_EMPTY;
 
 	@Override
 	public int getTotal() {
@@ -25,7 +24,7 @@ public class StackArray implements IStack {
 
 	@Override
 	public boolean isEmpty() {
-		return total == TOTAL_EMPTY;
+		return total == IS_EMPTY;
 	}
 
 	@Override
@@ -36,14 +35,14 @@ public class StackArray implements IStack {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return TOTAL_EMPTY;
+			return IS_EMPTY;
 		return ITEMS[total];
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return TOTAL_EMPTY;
+			return IS_EMPTY;
 		return ITEMS[total--];
 	}
 }

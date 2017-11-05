@@ -7,9 +7,7 @@ public class StackList implements IStack {
 	// Refaktoryzacja do wzorca Bridge:
 	// Pkt 4. Nie użyłem żadnej opcji z Eclipse IDE, wszystkie niezbędne zmiany wprowadziłem ręcznie
 	
-	private static final int IS_EMPTY = -1;
 	private Node last;
-
 	private int i;
 	
 	public StackList() {
