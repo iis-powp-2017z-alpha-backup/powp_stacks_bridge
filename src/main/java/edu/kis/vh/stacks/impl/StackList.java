@@ -5,11 +5,12 @@ import edu.kis.vh.stacks.IStack;
 public class StackList implements IStack {
 
 	// Refaktoryzacja do wzorca Bridge:
-	// Pkt 4. Nie użyłem żadnej opcji z Eclipse IDE, wszystkie niezbędne zmiany wprowadziłem ręcznie
-	
+	// Pkt 4. Nie użyłem żadnej opcji z Eclipse IDE, wszystkie niezbędne zmiany
+	// wprowadziłem ręcznie
+
 	private Node last;
 	private int i;
-	
+
 	public StackList() {
 		this.i = 0;
 	}
@@ -42,7 +43,7 @@ public class StackList implements IStack {
 			return IS_EMPTY;
 		return last.getValue();
 	}
-	
+
 	@Override
 	public int pop() {
 		if (isEmpty())
