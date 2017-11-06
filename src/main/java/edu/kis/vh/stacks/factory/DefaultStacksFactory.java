@@ -10,21 +10,25 @@ public class DefaultStacksFactory implements StacksFactory {
 
 	@Override
 	public Stack getStandardStack() {
+		// TODO Auto-generated method stub
 		return new Stack();
 	}
 
 	@Override
 	public Stack getFalseStack() {
+		// TODO Auto-generated method stub
 		return new Stack(new StackList());
 	}
 
 	@Override
 	public StackFIFO getFIFOStack() {
+		// TODO Auto-generated method stub
 		return new StackFIFO();
 	}
 
 	@Override
 	public StackHanoi getHanoiStack() {
+		// TODO Auto-generated method stub
 		return new StackHanoi();
 	}
 
