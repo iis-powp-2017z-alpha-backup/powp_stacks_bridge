@@ -2,13 +2,20 @@
 // Powyzsze skroty zmianiaja karty zgodnie z historia ich otwarcia
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackArray;
-import edu.kis.vh.stacks.list.StackImplementationIfU;
-import edu.kis.vh.stacks.list.StackList;
+import edu.kis.vh.stacks.stackRealization.StackArray;
+import edu.kis.vh.stacks.stackRealization.StackImplementationIfU;
+import edu.kis.vh.stacks.stackRealization.StackList;
 
 public class Stack {
 
-	//protected StackArray stackArray = new StackArray();
+	// W konsekwencji mamy referencje na interfejs ktora moze 
+	// przechowywac adres obiektu ArrayStack lub ListStack.
+	// Rozwiazanie jest uniwersalne i nie ogranicza programisty 
+	// do jednego typu realizacji.
+	// Ponadto ewentualne zmiany w implementacji czy nawet dodanie
+	// nowej klasy implementujacej interfejs nie wplynie na korzystanie
+	// z klasy Stack.
+	
 	protected StackImplementationIfU stack;
 	
 	public int pop() {

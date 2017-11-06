@@ -1,4 +1,4 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.stackRealization;
 
 public class StackArray implements StackImplementationIfU {
 	private static final int INITIAL_MAX_STACK_SIZE = 12;
