@@ -28,7 +28,7 @@ class StacksDemo {
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
 				stacks[j].push(i);
-
+			
 		java.util.Random rn = new java.util.Random();
 		for (int i = 1; i < 15; i++)
 			stacks[3].push(rn.nextInt(20));

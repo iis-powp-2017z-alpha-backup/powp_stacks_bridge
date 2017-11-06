@@ -16,4 +16,5 @@ public class StackFIFO extends Stack {
 
 		return ret;
 	}
+
 }

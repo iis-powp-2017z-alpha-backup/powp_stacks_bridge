@@ -1,11 +1,11 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+public class StackList implements StackImplementationIfU{
 
 	private static final int EMPTY_STACK = -1;
 	Node last;
-	
-	public void pushElement(int value) {
+		
+	public void push(int value) {
 		if (last == null)
 			last = new Node(value);
 		else {
@@ -15,22 +15,22 @@ public class StackList {
 		}
 	}
 
-	public boolean empty() {
+	public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	public boolean isFull() {
 		return false;
 	}
 
-	public int peek() {
-		if (empty())
+	public int top() {
+		if (isEmpty())
 			return EMPTY_STACK;
 		return last.getValue();
 	}
 
 	public int pop() {
-		if (empty())
+		if (isEmpty())
 			return EMPTY_STACK;
 		int ret = last.getValue();
 		last = last.getPrev();

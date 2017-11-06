@@ -2,37 +2,41 @@
 // Powyzsze skroty zmianiaja karty zgodnie z historia ich otwarcia
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackArray;
+import edu.kis.vh.stacks.list.StackImplementationIfU;
+import edu.kis.vh.stacks.list.StackList;
+
 public class Stack {
 
-	protected StackArray stackArray = new StackArray();
+	//protected StackArray stackArray = new StackArray();
+	protected StackImplementationIfU stack;
 	
-	public Stack(){
-	}
-	
-	public Stack(StackArray stackArray) {
-		this.stackArray = stackArray;
+	public int pop() {
+		return stack.pop();
 	}
 
-	public void push(int i) {
-		stackArray.push(i);
+	public void push(int value) {
+		stack.push(value);
 	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stack.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stack.isFull();
 	}
 
 	public int top() {
-		return stackArray.top();
+		return stack.top();
 	}
 
-	public int pop() {
-		return stackArray.pop();
+	public Stack(){
+		this.stack = new StackList();
 	}
 
-
-
+	public Stack(int nrOfElements) {
+		this.stack = new StackArray(nrOfElements);
+	}
 }
+

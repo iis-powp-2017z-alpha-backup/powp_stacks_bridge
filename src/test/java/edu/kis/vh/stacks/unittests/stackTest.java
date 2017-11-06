@@ -1,9 +1,11 @@
 package edu.kis.vh.stacks.unittests;
 
 import org.junit.Assert;
+
 import org.junit.Test;
 
 import edu.kis.vh.stacks.Stack;
+
 
 public class stackTest {
 	
@@ -31,8 +33,9 @@ public class stackTest {
 
 	@Test
 	public void testIsFull() {
-		Stack stackObj = new Stack();
-		final int STACK_CAPACITY = 12;
+		final int STACK_CAPACITY = 15;
+		Stack stackObj = new Stack(STACK_CAPACITY);
+		
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();		
 			Assert.assertEquals(false, result);
