@@ -7,19 +7,17 @@ import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.basic.mechanisms.StackList;
 
 public class StackFIFOTest {
+	
+	final int EMPTY_STACK_VALUE = 0;
+	final int TEST_VALUE = 4, TEST_VALUE_2 = 5;
 
 	@Test
 	public void testPop() {
 		StackFIFO stackObj = new StackFIFO(new StackList());
-		final int EMPTY_STACK_VALUE = 0;
-
 		int result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
-
-		final int TEST_VALUE = 4, TEST_VALUE_2 = 5;
 		stackObj.push(TEST_VALUE);
 		stackObj.push(TEST_VALUE_2);
-
 		result = stackObj.pop();
 		Assert.assertEquals(TEST_VALUE, result);
 		result = stackObj.pop();

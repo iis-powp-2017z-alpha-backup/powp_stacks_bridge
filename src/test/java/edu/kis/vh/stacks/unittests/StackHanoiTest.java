@@ -8,14 +8,16 @@ import edu.kis.vh.stacks.basic.mechanisms.StackList;
 
 public class StackHanoiTest {
 
+	final int TEST_VALUE = 4, TEST_VALUE_2 = 5;
+	int result = 0;
+	
 	@Test
 	public void testPush() {
 		StackHanoi stackObj = new StackHanoi();
-		final int TEST_VALUE = 4, TEST_VALUE_2 = 5;
 		stackObj.push(TEST_VALUE);
 		stackObj.push(TEST_VALUE_2);
 				
-		int result = stackObj.top();
+		result = stackObj.top();
 		System.out.println(result);
 		Assert.assertEquals(TEST_VALUE, result);
 	}
@@ -35,11 +37,10 @@ public class StackHanoiTest {
 	@Test
 	public void testReportRejected() {
 		StackHanoi stackObj = new StackHanoi();
-		final int TEST_VALUE = 4, TEST_VALUE_2 = 5;
 		stackObj.push(TEST_VALUE);
 		stackObj.push(TEST_VALUE_2);
 		
-		int result = stackObj.reportRejected();
+		result = stackObj.reportRejected();
 		Assert.assertEquals(1, result);
 	}
 

@@ -2,6 +2,8 @@ package edu.kis.vh.stacks.basic.mechanisms;
 
 import edu.kis.vh.stacks.StackInterface;
 
+//TODO: needs refactoring to the bridge pattern
+
 public class StackArray implements StackInterface {
 
 	final private int STACK_FULL = 11;

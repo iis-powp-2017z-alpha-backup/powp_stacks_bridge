@@ -2,6 +2,8 @@ package edu.kis.vh.stacks.basic.mechanisms;
 
 import edu.kis.vh.stacks.StackInterface;
 
+//TODO: needs refactoring to the bridge pattern
+
 public class StackList implements StackInterface {
 	// 3.1.4 - Open Declaration, Open Call Hierarchy, Open Type Hierarchy, Rename
 	// int i - nie jest potrzebne
