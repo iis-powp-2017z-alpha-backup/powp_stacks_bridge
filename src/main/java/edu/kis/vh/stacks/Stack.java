@@ -18,10 +18,6 @@ public class Stack {
         this.IStackImplementation = IStackImplementation;
     }
 
-    public Stack() {
-        IStackImplementation = new StackArray();
-    }
-
     public void push(int i) {
         IStackImplementation.push(i);
     }

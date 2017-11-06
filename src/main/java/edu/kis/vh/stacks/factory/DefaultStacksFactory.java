@@ -4,6 +4,7 @@ import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.list.StackArray;
+import edu.kis.vh.stacks.list.StackList;
 
 public class DefaultStacksFactory implements IstacksFactory {
     //Poprawa formatu całości 3.1
@@ -14,17 +15,17 @@ public class DefaultStacksFactory implements IstacksFactory {
 
     @Override
     public Stack GetFalseStack() {
-        return new Stack(new StackArray());
+        return new Stack(new StackList());
     }
 
     @Override
     public StackFIFO GetFIFOStack() {
-        return new StackFIFO();
+        return new StackFIFO(new StackArray());
     }
 
     @Override
     public StackHanoi GetHanoiStack() {
-        return new StackHanoi();
+        return new StackHanoi(new StackArray());
     }
 
 }

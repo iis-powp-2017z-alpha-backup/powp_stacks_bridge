@@ -11,6 +11,4 @@ public interface IStackImplementation {
 
      int pop();
 
-     boolean empty();
-
 }

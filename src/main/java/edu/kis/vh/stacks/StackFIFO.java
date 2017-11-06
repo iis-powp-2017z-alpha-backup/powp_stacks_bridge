@@ -1,18 +1,26 @@
 package edu.kis.vh.stacks;
 
-public class StackFIFO extends Stack {
-    //Poprawa formatu całości 3.1
+import edu.kis.vh.stacks.factory.IStackImplementation;
 
-    private Stack temp = new Stack();
+public class StackFIFO extends Stack {
+
+    private IStackImplementation IStackImplementation;
+
+
+    public StackFIFO(edu.kis.vh.stacks.factory.IStackImplementation IStackImplementation) {
+        super(IStackImplementation);
+        this.IStackImplementation = IStackImplementation;
+    }
+    //Poprawa formatu całości 3.1
 
     @Override
     public int pop() {
         while (!isEmpty()) {
-            temp.push(super.pop());
+            IStackImplementation.push(super.pop());
         }
-        int ret = temp.pop();
-        while (!temp.isEmpty()) {
-            push(temp.pop());
+        int ret = pop();
+        while (!IStackImplementation.isEmpty()) {
+            IStackImplementation.push(pop());
         }
         return ret;
     }

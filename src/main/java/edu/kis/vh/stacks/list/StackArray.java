@@ -52,9 +52,4 @@ public class StackArray implements IStackImplementation {
         return ITEMS[total--];
     }
 
-    @Override
-    public boolean empty() {
-        return false;
-    }
-
 }

@@ -17,13 +17,8 @@ public class StackList implements IStackImplementation {
         }
     }
 
-    @Override
     public boolean empty() {
         return last == null;
-    }
-
-    private boolean full() {
-        return false;
     }
 
     private int peek() {
@@ -44,12 +39,12 @@ public class StackList implements IStackImplementation {
 
     @Override
     public boolean isFull() {
-        return isFull();
+        return false;
     }
 
     @Override
     public int top() {
-        return top();
+        return 0;
     }
 
     @Override
