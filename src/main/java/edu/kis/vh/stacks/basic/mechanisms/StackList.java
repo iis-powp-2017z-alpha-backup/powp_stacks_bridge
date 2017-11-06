@@ -25,12 +25,6 @@ public class StackList implements StackInterface {
 		return false;
 	}
 
-	public int peek() {
-		if (isEmpty())
-			return STACK_EMPTY;
-		return last.getValue();
-	}
-
 	public int pop() {
 		if (isEmpty())
 			return STACK_EMPTY;

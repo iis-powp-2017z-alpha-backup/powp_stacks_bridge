@@ -6,7 +6,11 @@ public class Node {
 	private Node prev, next;
 
 	public Node(int i) {
-		this.setValue(i);
+		this.value = i;
+	}
+
+	public Node() {
+		this.value = 0;
 	}
 
 	public int getValue() {
