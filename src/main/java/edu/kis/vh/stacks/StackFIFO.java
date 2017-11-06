@@ -1,8 +1,15 @@
 package edu.kis.vh.stacks;
 
-public class StackFIFO extends Stack {
+import edu.kis.vh.stacks.stackRealization.StackList;
 
-	private Stack temp = new Stack();
+public class StackFIFO extends Stack {
+	
+// temp zostal zmieniony na StackList poniewaz przy duzej liczbe
+// elementow domyslna wielkosc tablicy (czyli 12) uniemozliwilaby realizacje.
+// Przy kazdej operacji pop konieczne byloby alokowanie nowej tablicy
+// na potrzeby przpisania i odworcenia kolejnosci
+	
+	private StackList temp = new StackList();
 
 	@Override
 	public int pop() {
