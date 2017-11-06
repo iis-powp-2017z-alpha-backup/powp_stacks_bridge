@@ -1,9 +1,9 @@
-# Laboratoria - jakość kodu i wzorzec bridge
+# Laboratoria - jakość kodu i wzorzec IStackImplementation
 
 ## instrukcje
 
 * powp-lab-kod.pdf - Podstawowe techniki utrzymania wysokiej jakości kodu
-* powp-lab-bridge.pdf - Refaktoryzacja do wzorca bridge
+* powp-lab-IStackImplementation.pdf - Refaktoryzacja do wzorca IStackImplementation
 
 ##  ogólne zasady oceny pracy na laboratoriach
 

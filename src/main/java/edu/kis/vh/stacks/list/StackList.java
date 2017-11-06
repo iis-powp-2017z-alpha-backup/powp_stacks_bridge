@@ -1,40 +1,59 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.factory.IStackImplementation;
 
-	Node last;
-	int i;
+public class StackList implements IStackImplementation {
+    //Poprawa formatu całości 3.1
+    // Pole Node moze byc prywane i int 3.6
+    // Moim zdaniem i nie jest konieczny.
+    private Node last;
 
-	public void pushElement(int i) {
-		if (last == null)
-			last = new Node(i);
-		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
-		}
-	}
+    private void pushElement(int i) {
+        if (last == null)
+            last = new Node(i);
+        else {
+            last.setNext(new Node(i));
+            last.setNext(last);
+        }
+    }
 
-	public boolean empty() {
-		return last == null;
-	}
+    public boolean empty() {
+        return last == null;
+    }
 
-	public boolean full() {
-		return false;
-	}
+    private int peek() {
+        if (empty())
+            return -1;
+        return last.getValue();
+    }
 
-	public int peek() {
-		if (empty())
-			return -1;
-		return last.value;
-	}
+    @Override
+    public void push(int i) {
+        pushElement(i);
+    }
 
-	public int pop() {
-		if (empty())
-			return -1;
-		int ret = last.value;
-		last = last.prev;
-		return ret;
-	}
+    @Override
+    public boolean isEmpty() {
+       return empty();
+    }
+
+    @Override
+    public boolean isFull() {
+        return false;
+    }
+
+    @Override
+    public int top() {
+        return 0;
+    }
+
+    @Override
+    public int pop() {
+        if (empty())
+            return -1;
+        int ret = last.getValue();
+        last = last.getPrev();
+        return ret;
+    }
 
 }

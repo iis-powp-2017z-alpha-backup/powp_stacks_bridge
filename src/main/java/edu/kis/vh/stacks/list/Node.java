@@ -1,12 +1,23 @@
 package edu.kis.vh.stacks.list;
 
-public class Node {
+class Node {
+    //Poprawa formatu całości 3.1
+    private int value;
+    private Node prev, next;
 
-	public int value;
-	public Node prev, next;
+     Node(int i) {
+        value = i;
+    }
 
-	public Node(int i) {
-		value = i;
-	}
-	
+    int getValue() {
+        return value;
+    }
+
+    Node getPrev() {
+        return prev;
+    }
+
+    void setNext(Node next) {
+        this.next = next;
+    }
 }
