@@ -2,7 +2,7 @@ package edu.kis.vh.stacks.stackRealization;
 
 public class StackList implements StackImplementationIfU{
 
-	private static final int EMPTY_STACK = -1;
+	
 	Node last;
 		
 	public void push(int value) {
