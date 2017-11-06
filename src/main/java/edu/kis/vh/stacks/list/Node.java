@@ -5,8 +5,8 @@ class Node {
 	private int value;
 	private Node prev, next;
 
-	public Node(int i) {
-		setValue(i);
+	public Node(int value) {
+		setValue(value);
 	}
 
 	public int getValue() {

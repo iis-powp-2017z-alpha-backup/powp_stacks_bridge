@@ -1,6 +1,5 @@
 package edu.kis.vh.stacks.unittests;
 
-import static org.junit.Assert.*;
 
 import org.junit.Test;
 

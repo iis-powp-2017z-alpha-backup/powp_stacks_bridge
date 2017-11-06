@@ -1,16 +1,15 @@
 package edu.kis.vh.stacks.list;
 
-class StackList {
+public class StackList {
 
 	private static final int EMPTY_STACK = -1;
 	Node last;
-	private int i;
-
-	public void pushElement(int i) {
+	
+	public void pushElement(int value) {
 		if (last == null)
-			last = new Node(i);
+			last = new Node(value);
 		else {
-			last.setNext(new Node(i));    // Before last.next = new Node(i)
+			last.setNext(new Node(value));    // Before last.next = new Node(i)
 			last.getNext().setPrev(last); // Before last.next.prev = last;
 			last = last.getNext();
 		}
@@ -37,13 +36,4 @@ class StackList {
 		last = last.getPrev();
 		return ret;
 	}
-
-	int getI() {
-		return i;
-	}
-
-//	void setI(int i) {
-//		this.i = i;
-//	}
-
 }
