@@ -1,8 +1,8 @@
 package edu.kis.vh.stacks.list;
 
-import edu.kis.vh.stacks.factory.BridgeInterface;
+import edu.kis.vh.stacks.factory.IStackImplementation;
 
-public class StackArray implements BridgeInterface {
+public class StackArray implements IStackImplementation {
 
     /**
      * Radoslaw Subczynski 3.3.2

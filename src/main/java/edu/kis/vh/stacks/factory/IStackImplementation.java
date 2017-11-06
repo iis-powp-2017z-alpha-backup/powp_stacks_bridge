@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks.factory;
 
-public interface BridgeInterface {
+public interface IStackImplementation {
      void push(int i );
 
      boolean isEmpty();

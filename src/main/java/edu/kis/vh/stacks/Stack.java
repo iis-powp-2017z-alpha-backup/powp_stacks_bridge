@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks;
 
 
-import edu.kis.vh.stacks.factory.BridgeInterface;
+import edu.kis.vh.stacks.factory.IStackImplementation;
 import edu.kis.vh.stacks.list.StackArray;
 
 public class Stack {
@@ -11,35 +11,35 @@ public class Stack {
 
     //Poprawa formatu całości 3.1
     //Zmiana nazwy klasy, nazwa klasy nie powinna byc byc z malych liter 3.4
-    private BridgeInterface bridgeInterface;
+    private IStackImplementation IStackImplementation;
 
-    public Stack(BridgeInterface bridgeInterface) {
+    public Stack(IStackImplementation IStackImplementation) {
         super();
-        this.bridgeInterface = bridgeInterface;
+        this.IStackImplementation = IStackImplementation;
     }
 
     public Stack() {
-        bridgeInterface = new StackArray();
+        IStackImplementation = new StackArray();
     }
 
     public void push(int i) {
-        bridgeInterface.push(i);
+        IStackImplementation.push(i);
     }
 
     public boolean isEmpty() {
-        return bridgeInterface.isEmpty();
+        return IStackImplementation.isEmpty();
     }
 
     public boolean isFull() {
-        return bridgeInterface.isFull();
+        return IStackImplementation.isFull();
     }
 
     public int top() {
-        return bridgeInterface.top();
+        return IStackImplementation.top();
     }
 
     public int pop() {
-        return bridgeInterface.pop();
+        return IStackImplementation.pop();
     }
 
 }
