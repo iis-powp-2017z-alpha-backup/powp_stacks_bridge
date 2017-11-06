@@ -45,5 +45,11 @@ public class Stack {
 	public Stack(int nrOfElements) {
 		this.stack = new StackArray(nrOfElements);
 	}
+	public Stack(StackArray stackArrray){
+		this.stack = stackArrray;
+	}
+	public Stack(StackList stackList){
+		this.stack = stackList;
+	}
 }
 
