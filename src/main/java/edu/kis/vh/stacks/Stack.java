@@ -1,5 +1,6 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.StackArray;
 
 /**
  * @author Piotr Nitecki 199111
