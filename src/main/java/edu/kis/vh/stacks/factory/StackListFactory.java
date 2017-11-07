@@ -27,5 +27,6 @@ public class StackListFactory implements IstacksFactory {
 	public StackHanoi GetHanoiStack() {
 		return new StackHanoi(new StackList());
 	}
+	
 
 }
