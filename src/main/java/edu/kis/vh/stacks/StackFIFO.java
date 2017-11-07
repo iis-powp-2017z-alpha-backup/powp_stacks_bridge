@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.list.StackList;
 
 public class StackFIFO extends Stack {
 
-	private StackList LocalStackList;
+	private StackAL LocalStackList;
 
 	public StackFIFO() {
 		super();
@@ -23,22 +23,22 @@ public class StackFIFO extends Stack {
 
 	@Override
 	public void push(int i) {
-		LocalStackList.pushElement(i);
+		LocalStackList.push(i);
 	}
 
 	@Override
 	public boolean isEmpty() {
-		return LocalStackList.empty();
+		return LocalStackList.isEmpty();
 	}
 
 	@Override
 	public boolean isFull() {
-		return LocalStackList.full();
+		return LocalStackList.isFull();
 	}
 
 	@Override
 	public int top() {
-		return LocalStackList.peek();
+		return LocalStackList.top();
 	}
 	
 	

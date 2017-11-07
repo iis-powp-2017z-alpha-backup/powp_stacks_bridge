@@ -4,7 +4,8 @@ import edu.kis.vh.stacks.list.StackList;
 
 public class StackHanoi extends Stack {
 
-	private StackList LocalStackList;
+	private StackAL LocalStackList;
+	
 	 	int totalRejected = 0;
 	 
 	 	public StackHanoi() {
@@ -12,7 +13,7 @@ public class StackHanoi extends Stack {
 	 		LocalStackList = new StackList();
 	 	}
 	 
-	 	public StackHanoi(StackList LocalStackList) {
+	 	public StackHanoi(StackAL LocalStackList) {
 	 		super();
 	 		this.LocalStackList = LocalStackList;
 	 	}
@@ -29,7 +30,7 @@ public class StackHanoi extends Stack {
 				totalRejected++;
 		else
 			super.push(in);
-			LocalStackList.pushElement(in);
+			LocalStackList.push(in);
 	}
 	
 	
