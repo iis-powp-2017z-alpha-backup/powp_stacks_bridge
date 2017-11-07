@@ -4,7 +4,6 @@ import edu.kis.vh.stacks.StackAL;
 
 public class StackList implements StackAL {
 
-	private static final int EMPTY_STACK = -1;
 	private Node last;
 	private int i;
 
