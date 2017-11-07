@@ -68,4 +68,8 @@ public class Stack implements StackAL {
 
 }
 
-
+/*
+ Konstruktor  klasy Stack przyjmuje interfejs StackAL jako parametr.
+ Pole prywatne LocalStack jest typu StackAL.
+ Klasa Stack może korzystać ze stosu opartej na tablicy lub liscie.
+*/
