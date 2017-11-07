@@ -73,3 +73,10 @@ public class Stack implements StackAL {
  Pole prywatne LocalStack jest typu StackAL.
  Klasa Stack może korzystać ze stosu opartej na tablicy lub liscie.
 */
+
+/*
+Zadanie 13 Wnioski 
+*Navigate -> Open declaration  Po wykonaniu na metodzie zostaję przeniesiony do  StackAL.
+*Navigate -> Quick type Hierarchy  Otwiera się okno z wyborem przejścia do jednej z klas implementującej metodę. 
+*Ctrl + praca myszki  Połączenie 2 poprzednuich punktów (operacje dają takie same wyniki jak opisano powyżej)
+*/
