@@ -4,6 +4,12 @@ import edu.kis.vh.stacks.implementation.StackList;
 
 public class StackHanoi extends Stack {
 
+	
+	public StackHanoi(int[] iTEMS, int total) {
+		super(iTEMS, total);
+		// TODO Auto-generated constructor stub
+	}
+
 	private StackAL LocalStackList;
 	
 	 	int totalRejected = 0;
