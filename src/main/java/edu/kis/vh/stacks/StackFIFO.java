@@ -15,7 +15,7 @@ public class StackFIFO extends Stack {
 		super(LocalStack);
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	public StackFIFO() {
 		super();
 		LocalStackList = new StackList();
