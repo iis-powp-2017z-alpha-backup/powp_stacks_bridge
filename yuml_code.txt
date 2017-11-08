@@ -1,0 +1,2 @@
+[<<IstacksFactory>>]^-.-[DefaultStacksFactory],[DefaultStacksFactory]<>-[Stack|INITIAL_MAX_STACK_SIZE:int; -STACK_INTERATOR_EMPTY_STACK:int;-ITEMS:int;-total:int;|isEmpty();isFull();pop();push();top()],[Stack|INITIAL_MAX_STACK_SIZE:int; -STACK_INTERATOR_EMPTY_STACK:int;-ITEMS:int;-total:int;|isEmpty();isFull();pop();push();top()]<-[StackFIFO],
+[Stack|-INITIAL_MAX_STACK_SIZE:int; -STACK_INTERATOR_EMPTY_STACK:int;-ITEMS:int;-total:int;|isEmpty();isFull();pop();push();top()]<-[StackHanoi]
