@@ -9,12 +9,12 @@ import edu.kis.vh.stacks.StackHanoi;
 public class DefaultStacksFactory implements IstacksFactory {
 
 	@Override
-	public StackAL GetStandardStack() {
+	public Stack GetStandardStack() {
 		return new Stack();
 	}
 
 	@Override
-	public StackAL GetFalseStack() {
+	public Stack GetFalseStack() {
 		return new Stack();
 	}
 
