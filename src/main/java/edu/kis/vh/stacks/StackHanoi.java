@@ -1,17 +1,43 @@
 package edu.kis.vh.stacks;
 
-public class StackHanoi extends stack {
+import edu.kis.vh.stacks.implementation.StackList;
 
-int totalRejected = 0;
+public class StackHanoi extends Stack {
+
+	
+	public StackHanoi(int[] iTEMS, int total) {
+		super(iTEMS, total);
+		// TODO Auto-generated constructor stub
+	}
+
+	private StackAL LocalStackList;
+	
+	 	int totalRejected = 0;
+	 
+	 	public StackHanoi() {
+	 		super();
+	 		LocalStackList = new StackList();
+	 	}
+	 
+	 	public StackHanoi(StackAL LocalStackList) {
+	 		super();
+	 		this.LocalStackList = LocalStackList;
+	 	}
 
 	public int reportRejected() {
-	return totalRejected;
+		return totalRejected;
 	}
 
+	@Override
 	public void push(int in) {
-	if (!isEmpty() && in > top())
-		totalRejected++;
+		if (!isEmpty() && in > top())
+			totalRejected++;
+			if (!isEmpty() && in > top())
+				totalRejected++;
 		else
 			super.push(in);
+			LocalStackList.push(in);
 	}
+	
+	
 }
