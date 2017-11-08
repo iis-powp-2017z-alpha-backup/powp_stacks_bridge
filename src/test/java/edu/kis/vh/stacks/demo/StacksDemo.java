@@ -2,7 +2,8 @@ package edu.kis.vh.stacks.demo;
 
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
-import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.*;
+
 
 //Zle sformatowane wiersze:
 // StackDemo.java : 12, 20, 24, 26, 29
@@ -16,12 +17,18 @@ class StacksDemo {
 
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
-
+		ArrayStacksFactory factory2 = new ArrayStacksFactory(15);
+		ListStacksFactory factory3 = new ListStacksFactory(15);
+		
 		testStacks(factory);
-
+		testStacks(factory2);
+		testStacks(factory3);
 	}
 
-	private static void testStacks(DefaultStacksFactory factory) {
+	private static void testStacks(IstacksFactory factory) {
+		
+		System.out.println("\n Running with " + factory.getClass() + " class");
+		
 		Stack[] stacks = { factory.createStandardStack(), factory.createFalseStack(), factory.createFIFOStack(),
 				factory.createHanoiStack() };
 
@@ -41,5 +48,4 @@ class StacksDemo {
 
 		System.out.println(TOTAL_REJECTED_IS + ((StackHanoi) stacks[3]).reportRejected());
 	}
-
 }

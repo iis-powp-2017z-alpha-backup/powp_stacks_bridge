@@ -1,15 +1,17 @@
 package edu.kis.vh.stacks.stackRealization;
 
 public class StackArray implements StackImplementationIfU {
-	private static final int INITIAL_MAX_STACK_SIZE = 12;
-
-	private int[] ITEMS = new int[INITIAL_MAX_STACK_SIZE];	
-
-	private int total = EMPTY_STACK;
 	
+	private static final int INITIAL_MAX_STACK_SIZE = 12;
+	private int[] ITEMS;	
+	private int total;
 	private int nrOfElements;
 	
-	public StackArray(){}
+	public StackArray(){
+		nrOfElements = INITIAL_MAX_STACK_SIZE;
+		ITEMS = new int[INITIAL_MAX_STACK_SIZE];
+		total = EMPTY_STACK;
+	}
 	
 	public StackArray(int nrOfElements){
 		this.setNrOfElements(nrOfElements);
@@ -47,7 +49,7 @@ public class StackArray implements StackImplementationIfU {
 	public int top() {
 		if (isEmpty())
 			return EMPTY_STACK;
-		return ITEMS[total];
+		return ITEMS[total-1];
 	}
 
 	/* (non-Javadoc)
@@ -57,7 +59,7 @@ public class StackArray implements StackImplementationIfU {
 	public int pop() {
 		if (isEmpty())
 			return EMPTY_STACK;
-		return ITEMS[total--];
+		return ITEMS[--total];
 	}
 
 	public int getNrOfElements() {

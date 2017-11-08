@@ -1,6 +1,25 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.stackRealization.StackArray;
+import edu.kis.vh.stacks.stackRealization.StackList;
+
 public class StackHanoi extends Stack {
+
+	public StackHanoi() {
+		super();
+	}
+
+	public StackHanoi(int nrOfElements) {
+		super(nrOfElements);
+	}
+
+	public StackHanoi(StackArray stackArrray) {
+		super(stackArrray);
+	}
+
+	public StackHanoi(StackList stackList) {
+		super(stackList);
+	}
 
 	private int totalRejected = 0;
 

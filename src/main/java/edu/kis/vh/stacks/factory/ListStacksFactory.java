@@ -6,33 +6,32 @@ import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.stackRealization.StackArray;
 import edu.kis.vh.stacks.stackRealization.StackList;
 
-public class ArrayStacksFactory implements IstacksFactory {
-	int nrOfElements = 15;
+public class ListStacksFactory implements IstacksFactory{
 	
-	public ArrayStacksFactory(){}
+	int nrOfElements;
 	
-	public ArrayStacksFactory(int nrOfElements){
+	public ListStacksFactory(){}
+	
+	public ListStacksFactory(int nrOfElements){
 		this.nrOfElements = nrOfElements;
 	}
-	
 	@Override
 	public Stack createStandardStack() {
-		return new Stack(new StackArray(nrOfElements));
-	}
-
-	@Override
-	public Stack createFalseStack() {
 		return new Stack(new StackList());
 	}
 
 	@Override
+	public Stack createFalseStack() {
+		return new Stack(new StackArray(nrOfElements));
+	}
+
+	@Override
 	public StackFIFO createFIFOStack() {
-		return new StackFIFO(new StackArray(nrOfElements));
+		return new StackFIFO(new StackList());
 	}
 
 	@Override
 	public StackHanoi createHanoiStack() {
-		return new StackHanoi(new StackArray(nrOfElements));
+		return new StackHanoi(new StackList());
 	}
-
 }
