@@ -79,3 +79,5 @@ public class StackTest {
 	}
 
 }
+
+// 3.2.1 Błędy dotyczące testPop oraz testPop
