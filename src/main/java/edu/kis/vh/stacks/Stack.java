@@ -80,3 +80,9 @@ Zadanie 13 Wnioski
 *Navigate -> Quick type Hierarchy  Otwiera się okno z wyborem przejścia do jednej z klas implementującej metodę. 
 *Ctrl + praca myszki  Połączenie 2 poprzednuich punktów (operacje dają takie same wyniki jak opisano powyżej)
 */
+
+/*
+Zadanie 17:
+	 klasa StackFIFO łamie zasadę izolacji, prywatne plole temp wczesniej było obiektem klasy stack.
+	 Uważam, że najlepszym rozwiązaniem jest zmiana typu obiektu z Stack na StackAL
+*/
