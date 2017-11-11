@@ -2,7 +2,7 @@ package edu.kis.vh.stacks.list;
 
 public class Node {
 
-	private int value;	//w klasie StackList zmiana na last.getValue()
+	private final int value;	//w klasie StackList zmiana na last.getValue()
 	private Node prev;	//w klasie StackList zmiana na last.setPrev oraz last.getPrev
 	private Node next;	//w klasie StackList zmiana na last.setNext oraz last.getNext
 
