@@ -34,5 +34,13 @@ public class Stack {
 							return EMPTY;
 						return ITEMS[total--];
 					}
+
+					public int getTotal() {
+						return total;
+					}
+
+					public void setTotal(int total) {
+						this.total = total;
+					}
 				
 }
