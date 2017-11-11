@@ -1,9 +1,17 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackList;
+
 public class Stack {
 
 	private StackArray stackArray = new StackArray();
+	private StackList stackList = new StackList();
 	
+	public Stack(StackList stackList) {
+		super();
+		this.stackList = stackList;
+	}
+
 	public Stack(StackArray stackArray) {
 		super();
 		this.stackArray = stackArray;
