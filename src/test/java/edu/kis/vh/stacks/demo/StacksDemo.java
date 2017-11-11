@@ -19,8 +19,8 @@ class StacksDemo {
 	}
 
 	private static void testStacks(DefaultStacksFactory factory) {
-		Stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
-				factory.GetHanoiStack() };
+		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFifoStack(),
+				factory.getHanoiStack() };
 
 		for (int i = MIN_NUMBER; i < MAX_NUMBER; i++)
 			for (int j = 0; j < BETWEEN_NUMBER; j++)
