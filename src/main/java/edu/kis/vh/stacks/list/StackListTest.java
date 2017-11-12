@@ -22,6 +22,7 @@ public class StackListTest {
 	@Test
 	public void testEmpty() {
 		StackList stackListObj = new StackList();
+		
 		assertTrue(stackListObj.empty());
 	}
 
