@@ -19,6 +19,7 @@ class StacksDemo {
 	}
 
 	private static void testStacks(DefaultStacksFactory factory) {
+		//TODO: there is enough place for "factory.getHanoiStack()" in the upper line. So it shoudn't be moved to the lower line 
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFifoStack(),
 				factory.getHanoiStack() };
 
@@ -40,8 +41,3 @@ class StacksDemo {
 	}
 
 }
-// 3.1.1 żle sformatowane były liniki od 26 do 29
-// 3.1.2 wykonany
-// 3.1.3 po zastosowaniu komend z instrukcji w pliku StackFIFO pojawiły się
-// znaki specjalne. Przy drugiej komendzie wrociło do pliku StacksDemo i też
-// pojawił się znak specjalny

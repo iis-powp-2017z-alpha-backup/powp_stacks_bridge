@@ -9,7 +9,7 @@ public class Stack {
 	private final int[] ITEMS = new int[TABLE_SIZE];
 
 	private int total = -1;
-
+	//TODO: method getTotal isn't used in any way. Maybe it would be better to remove it.
 	public int getTotal() {
 		return total;
 	}
@@ -40,4 +40,3 @@ public class Stack {
 	}
 
 }
-// zmiany wprowadzamy i zobaczymy jak to bedzie
