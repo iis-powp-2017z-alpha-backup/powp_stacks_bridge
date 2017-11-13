@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.implementations.StackArray;
+
 /**
  * @author 191838
  *
@@ -9,7 +11,7 @@ public class StackFIFO extends Stack {
 	/**
 	 * Temporary stack
 	 */
-	private final Stack temp = new Stack();
+	private final StackArray temp = new StackArray();
 
 	/* (non-Javadoc)
 	 * @see edu.kis.vh.stacks.Stack#pop()
