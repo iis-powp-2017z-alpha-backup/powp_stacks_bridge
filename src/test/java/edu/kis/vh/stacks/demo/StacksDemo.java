@@ -2,14 +2,21 @@ package edu.kis.vh.stacks.demo;
 
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.factory.ArrayStacksFactory;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 import edu.kis.vh.stacks.factory.IstacksFactory;
+import edu.kis.vh.stacks.factory.ListStacksFactory;
 
 class StacksDemo {
 
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
-		testStacks(factory);
+		DefaultStacksFactory defaultFactory = new DefaultStacksFactory();
+		ListStacksFactory listStacksfactory = new ListStacksFactory();
+		ArrayStacksFactory arrayStacksfactory = new ArrayStacksFactory();
+		
+		testStacks(defaultFactory);
+		testStacks(listStacksfactory);
+		testStacks(arrayStacksfactory);
 	}
 	//TODO throw this code into garbage can
 	private static void testStacks(IstacksFactory factory){
@@ -33,5 +40,7 @@ class StacksDemo {
 		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());// przedwczesne zalamanie
 																								// lini
 	}
+	
+	
 
 }
