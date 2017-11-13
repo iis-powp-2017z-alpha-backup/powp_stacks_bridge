@@ -3,12 +3,6 @@ package edu.kis.vh.stacks.implementations;
 import edu.kis.vh.stacks.StackImplementation;
 
 public class StackArray implements StackImplementation {
-	private static final int FULL_STACK_VALUE = 11;
-
-	private static final int STACK_SIZE = 12;
-
-	private static final int EMPTY_STACK_VALUE = -1;
-
 	private final int[] items = new int[STACK_SIZE];
 
 	private int total = EMPTY_STACK_VALUE;
