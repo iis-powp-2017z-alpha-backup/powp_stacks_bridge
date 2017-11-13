@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.kis.vh.stacks.list.Node;
+import edu.kis.vh.stacks.implementations.Node;
 
 public class NodeTest {
 

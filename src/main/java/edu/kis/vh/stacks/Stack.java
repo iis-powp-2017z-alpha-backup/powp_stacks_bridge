@@ -1,9 +1,19 @@
 package edu.kis.vh.stacks;
 
-public class Stack {
-	private final StackArray items = new StackArray();
+import edu.kis.vh.stacks.implementations.StackArray;
 
-	// nie widze potrzeby generowania konstruktora
+public class Stack {
+	// Stack is now using abstraction instead of concrete implementation. 
+	
+	private final StackImplementation items;
+	
+	public Stack(StackImplementation items) {
+		this.items = items;
+	}
+	
+	public Stack() {
+		items = new StackArray();
+	}
 	
 	public int getTotal() {
 		return items.getTotal();
@@ -29,7 +39,7 @@ public class Stack {
 		return getItems().pop();
 	}
 
-	private StackArray getItems() {
+	private StackImplementation getItems() {
 		return items;
 	}
 }

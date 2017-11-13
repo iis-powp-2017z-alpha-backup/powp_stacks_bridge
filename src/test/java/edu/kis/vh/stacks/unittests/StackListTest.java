@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.kis.vh.stacks.list.StackList;
+import edu.kis.vh.stacks.implementations.StackList;
 
 public class StackListTest {
 
@@ -18,7 +18,7 @@ public class StackListTest {
 
 	@Test
 	public void pushElementShouldPush() {
-		stackList.pushElement(2);
+		stackList.push(2);
 
 		assertEquals(2, stackList.pop());
 	}
