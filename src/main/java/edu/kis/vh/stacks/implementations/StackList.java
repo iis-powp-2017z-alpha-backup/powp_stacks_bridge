@@ -7,15 +7,18 @@ public class StackList implements StackInterface{
 	Nie korzystam z Eclipsa tylko z ItelliJ. Nie wykorzystałem opcji innych niz podpowiedzi w trakcie pisnaia.
 	 */
 	Node last;
-	int i;
+	int i = -1;
 
 	public void pushElement(int i) {
-		if (last == null)
-			last = new Node(i);
-		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
+		if(!isFull()){
+			if (last == null)
+				last = new Node(i);
+			else {
+				last.next = new Node(i);
+				last.next.prev = last;
+				last = last.next;
+			}
+			this.i++;
 		}
 	}
 
@@ -24,7 +27,7 @@ public class StackList implements StackInterface{
 	}
 
 	private boolean full() {
-		return false;
+		return i==11;
 	}
 
 	private int peek() {
@@ -58,6 +61,7 @@ public class StackList implements StackInterface{
 			return emptyStack;
 		int ret = last.value;
 		last = last.prev;
+		i--;
 		return ret;
 	}
 

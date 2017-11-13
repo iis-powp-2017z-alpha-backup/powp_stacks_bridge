@@ -21,7 +21,7 @@ public class StackHanoi extends stack {
 	public void push(int in) {
 	if (!isEmpty() && in > top())
 		totalRejected++;
-		else
-			super.push(in);
+	else
+		super.push(in);
 	}
 }
