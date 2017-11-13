@@ -1,47 +1,35 @@
 package edu.kis.vh.stacks;
 
 public class Stack {
+	private final StackArray items = new StackArray();
 
-	private static final int FULL_STACK_VALUE = 11;
-
-	private static final int STACK_SIZE = 12;
-
-	private static final int EMPTY_STACK_VALUE = -1;
-
-	private final int[] items = new int[STACK_SIZE];
-
-	private int total = EMPTY_STACK_VALUE;
-
+	// nie widze potrzeby generowania konstruktora
+	
 	public int getTotal() {
-		return total;
+		return items.getTotal();
 	}
 
 	public void push(int i) {
-		if (!isFull())
-			getItems()[++total] = i;
+		getItems().push(i);
 	}
 
 	public boolean isEmpty() {
-		return total == EMPTY_STACK_VALUE;
+		return items.isEmpty();
 	}
 
 	public boolean isFull() {
-		return total == FULL_STACK_VALUE;
+		return items.isFull();
 	}
 
 	public int top() {
-		if (isEmpty())
-			return EMPTY_STACK_VALUE;
-		return getItems()[total];
+		return getItems().top();
 	}
 
 	public int pop() {
-		if (isEmpty())
-			return EMPTY_STACK_VALUE;
-		return getItems()[total--];
+		return getItems().pop();
 	}
 
-	private int[] getItems() {
+	private StackArray getItems() {
 		return items;
 	}
 }

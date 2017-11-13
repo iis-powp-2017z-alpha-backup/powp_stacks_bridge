@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.StackArray;
 
 public class StackTest {
 
@@ -13,7 +14,7 @@ public class StackTest {
 
 	@Test
 	public void testPush() {
-		Stack stackObj = new Stack();
+		StackArray stackObj = new StackArray();
 		stackObj.push(DEFAULT_TEST_VALUE);
 
 		int result = stackObj.top();
@@ -22,7 +23,7 @@ public class StackTest {
 
 	@Test
 	public void testIsEmpty() {
-		Stack stackObj = new Stack();
+		StackArray stackObj = new StackArray();
 		boolean result = stackObj.isEmpty();
 		Assert.assertEquals(true, result);
 
@@ -34,7 +35,7 @@ public class StackTest {
 
 	@Test
 	public void testIsFull() {
-		Stack stackObj = new Stack();
+		StackArray stackObj = new StackArray();
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();
 			Assert.assertEquals(false, result);
@@ -47,7 +48,7 @@ public class StackTest {
 
 	@Test
 	public void testTop() {
-		Stack stackObj = new Stack();
+		StackArray stackObj = new StackArray();
 
 		int result = stackObj.top();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
@@ -62,7 +63,7 @@ public class StackTest {
 
 	@Test
 	public void testPop() {
-		Stack stackObj = new Stack();
+		StackArray stackObj = new StackArray();
 
 		int result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
