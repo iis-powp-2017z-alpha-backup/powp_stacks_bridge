@@ -5,7 +5,7 @@ public interface StackImplementation {
 
 	static final int STACK_SIZE = 12;
 
-	static final int EMPTY_STACK_VALUE = -1;
+	static final int EMPTY_STACK_VALUE = 0;// tak bylo easy
 
 	int getTotal();
 

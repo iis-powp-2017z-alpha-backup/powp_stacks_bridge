@@ -10,8 +10,8 @@ import edu.kis.vh.stacks.implementations.StackArray;
 public class StackTest {
 
 	private static final int DEFAULT_TEST_VALUE = 4;
-	private static final int EMPTY_STACK_VALUE = -1;
-	private static final int STACK_CAPACITY = 12;
+	private static final int EMPTY_STACK_VALUE = 0;
+	private static final int STACK_CAPACITY = 11;
 
 	@Test
 	public void testPush() {
