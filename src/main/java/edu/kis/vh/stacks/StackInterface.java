@@ -6,7 +6,7 @@ Dzięki realizacji punktu 10 musiałem zmienić wartość tylko w jednym miejscu
 
 public interface StackInterface {
 
-    public static final int emptyStack = 0;
+    public static final int EMPTY_STACK = 0;
 
     void push(int i);
 

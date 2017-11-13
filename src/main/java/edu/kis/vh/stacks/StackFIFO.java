@@ -8,12 +8,12 @@ wielkości i jest optymalna, gdyż ilość pamieci jaka zajmuje stos jest zależ
  a nie zdefinowana z góry.
  */
 
-public class StackFIFO extends stack {
+public class StackFIFO extends Stack {
 
     /*Punt 17
     Zasade izolacji abstrakcji od implementacji łamie pole temp w tej klasie. Jest to obiekt klasy StackList wymuszając
     użycie tej implementacji.
-    Abynaprawić ten błąd pole temp powinno być obiektem klasy StackInterface.
+    Aby naprawić ten błąd pole temp powinno być obiektem klasy StackInterface.
     */
     public StackList temp;
 

@@ -1,15 +1,15 @@
 package edu.kis.vh.stacks.unittests;
 
+import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.implementations.StackArray;
-import edu.kis.vh.stacks.stack;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class HanoiStackArrayTest {
     @Test
     public void testPush() {
-        stack stackObj = new StackHanoi(new StackArray());
+        Stack stackObj = new StackHanoi(new StackArray());
         int testValue = 4;
         stackObj.push(testValue);
 
@@ -19,7 +19,7 @@ public class HanoiStackArrayTest {
 
     @Test
     public void testIsEmpty() {
-        stack stackObj = new StackHanoi(new StackArray());
+        Stack stackObj = new StackHanoi(new StackArray());
         boolean result = stackObj.isEmpty();
         Assert.assertEquals(true, result);
 
@@ -31,7 +31,7 @@ public class HanoiStackArrayTest {
 
     @Test
     public void testIsFull() {
-        stack stackObj = new StackHanoi(new StackArray());
+        Stack stackObj = new StackHanoi(new StackArray());
         final int STACK_CAPACITY = 12;
         for (int i = 0; i < STACK_CAPACITY; i++) {
             boolean result = stackObj.isFull();
@@ -45,7 +45,7 @@ public class HanoiStackArrayTest {
 
     @Test
     public void testTop() {
-        stack stackObj = new StackHanoi(new StackArray());
+        Stack stackObj = new StackHanoi(new StackArray());
         final int EMPTY_STACK_VALUE = 0;
 
         int result = stackObj.top();
@@ -62,7 +62,7 @@ public class HanoiStackArrayTest {
 
     @Test
     public void testPop() {
-        stack stackObj = new StackHanoi(new StackArray());
+        Stack stackObj = new StackHanoi(new StackArray());
         final int EMPTY_STACK_VALUE = 0;
 
         int result = stackObj.pop();
