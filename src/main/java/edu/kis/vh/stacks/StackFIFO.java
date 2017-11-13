@@ -1,21 +1,33 @@
 package edu.kis.vh.stacks;
 
-public class StackFIFO extends stack {
+import edu.kis.vh.stacks.implementations.StackArray;
 
-	public stack temp = new stack();
-	
+/**
+ * @author 191838
+ *
+ */
+public class StackFIFO extends Stack {
+
+	/**
+	 * Temporary stack
+	 */
+	private final StackArray temp = new StackArray();
+
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.Stack#pop()
+	 */
 	@Override
 	public int pop() {
 		while (!isEmpty())
-		
-		temp.push(super.pop());
-		
+
+			temp.push(super.pop());
+
 		int ret = temp.pop();
-		
+
 		while (!temp.isEmpty())
-	
-		push(temp.pop());
-		
+
+			push(temp.pop());
+
 		return ret;
 	}
 }
