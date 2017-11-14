@@ -9,6 +9,10 @@ public class Stack {
 
 	private int total = EMPTY_STACK_INDICATOR;
 	
+	public int geTotal() {
+		return total;
+	}
+	
 	public void push(int i) {
 		if (!isFull()) {
 			items[++total] = i;
