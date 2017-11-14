@@ -5,7 +5,7 @@ import static edu.kis.vh.stacks.Stack.EMPTY_STACK_INDICATOR;
 public class StackList {
 
 	private Node last;
-	private int i;
+	private int total = 0;
 
 	public void pushElement(int i) {
 		if (last == null) {
@@ -15,6 +15,7 @@ public class StackList {
 			last.getNext().setPrev(last);
 			last = last.getNext();
 		}
+		total++;
 	}
 
 	public boolean empty() {
@@ -38,7 +39,14 @@ public class StackList {
 		}
 		int ret = last.getValue();
 		last = last.getPrev();
+		total--;
 		return ret;
+	}
+	public int getTotal() {
+		if (empty()) {
+			return EMPTY_STACK_INDICATOR;
+		}
+		return total;
 	}
 
 }
