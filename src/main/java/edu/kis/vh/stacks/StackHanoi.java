@@ -1,23 +1,17 @@
 package edu.kis.vh.stacks;
 
-/**
- * @author student
- *
- */
-public class StackHanoi extends Stack {
+public class StackHanoi extends stack {
 
-	private int totalRejected = 0;
+	int totalRejected = 0;
 
 	public int reportRejected() {
 		return totalRejected;
 	}
 
-	@Override
 	public void push(int in) {
 		if (!isEmpty() && in > top())
 			totalRejected++;
 		else
 			super.push(in);
 	}
-
 }

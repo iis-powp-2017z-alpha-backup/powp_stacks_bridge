@@ -2,77 +2,41 @@ package edu.kis.vh.stacks.list;
 
 public class StackList {
 
-	private static final int STACK_EMPTY = -1;
-	private Node last;
-	private int i;
+	Node last;
+	int i;
 
 	public void pushElement(int i) {
-		if (last == null)
+		if (last == null) {
 			last = new Node(i);
-		else {
-			last.setNext(new Node(i));
-			last.getNext().setPrev(last);
-			last = last.getNext();
+		} else {
+			last.next = new Node(i);
+			last.next.prev = last;
+			last = last.next;
 		}
 	}
 
-	private boolean empty() {
+	public boolean empty() {
 		return last == null;
-	}  
+	}
 
 	public boolean full() {
 		return false;
 	}
 
 	public int peek() {
-		if (empty())
-			return STACK_EMPTY;
-		return last.getValue();
+		if (empty()) {
+			return -1;
+		}
+		return last.value;
 	}
 
 	public int pop() {
-		if (empty())
-			return STACK_EMPTY;
-		int ret = last.getValue();
-		last = last.getPrev();
+		if (empty()) {
+			return -1;
+		}
+		int ret = last.value;
+		last = last.prev;
 		return ret;
 	}
 
-	public int getI() {
-		return i;
-	}
-
-	class Node {
-
-		// ustawienie tych pol jako prywatne i wygenerowanie dla nich setterow i getterow powoduje, ze odowujac sie do tych
-		// wartosci, nalezy skorzystac z metod setX lub getX np. last.getValue() zamiast last.value w klasie StackList
-		private int value;
-		private Node prev, next;
-
-		public Node(int i) {
-			value = i;
-		}
-
-		public int getValue() {
-			return value;
-		}
-
-		public Node getPrev() {
-			return prev;
-		}
-
-		public void setPrev(Node prev) {
-			this.prev = prev;
-		}
-
-		public Node getNext() {
-			return next;
-		}
-
-		public void setNext(Node next) {
-			this.next = next;
-		}
-
-	}
-	
 }

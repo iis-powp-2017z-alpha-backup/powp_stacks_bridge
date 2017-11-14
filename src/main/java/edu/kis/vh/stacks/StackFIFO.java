@@ -1,20 +1,19 @@
 package edu.kis.vh.stacks;
 
-public class StackFIFO extends Stack {
+public class StackFIFO extends stack {
 
-	private final Stack temp = new Stack();
-
+	public stack temp = new stack();
+	
 	@Override
 	public int pop() {
 		while (!isEmpty())
 			temp.push(super.pop());
-
+		
 		int ret = temp.pop();
-
+		
 		while (!temp.isEmpty())
 			push(temp.pop());
-
+		
 		return ret;
 	}
-
 }
