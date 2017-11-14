@@ -32,3 +32,6 @@ class StacksDemo {
 	}
 	
 }
+
+
+//alt+left/alt+right  przełączanie pomiędzy ostatnimi zmianami w plikach
