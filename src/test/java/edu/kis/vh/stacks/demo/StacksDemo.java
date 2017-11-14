@@ -7,8 +7,12 @@ import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 class StacksDemo {
 
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
 		
+		testStacks(new DefaultStacksFactory()); 
+		
+	}
+
+	private static void testStacks(DefaultStacksFactory factory) {
 		Stack[] stacks = {factory.getStandardStack(), factory.getFalseStack(),
 			factory.getFIFOStack(), factory.getHanoiStack()};
 		
@@ -23,12 +27,11 @@ class StacksDemo {
 		for (int i = 0; i < stacks.length; i++) {
 			while (!stacks[i].isEmpty())
 				System.out.print(stacks[i].pop() + "  ");
-			System.out.println(); 
+			System.out.println();
 		}
 		
 		System.out.println("total rejected is "
-			+ ((StackHanoi) stacks[3]).reportRejected());
-		
+				+ ((StackHanoi) stacks[3]).reportRejected());
 	}
 	
 }
