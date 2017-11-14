@@ -1,21 +1,21 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackList;
-
+import edu.kis.vh.stacks.methods.IStackMethod;
+import edu.kis.vh.stacks.methods.StackList;
 
 public class Stack {
 
 	private static final int STACK_SIZE = 12;
 	public static final int EMPTY_STACK_INDICATOR = -1;
 
-	private StackList stackList;
+	private IStackMethod stackItems;
 
 	public Stack() {
 		this(new StackList());
 	}
 
-	public Stack(StackList stackList) {
-		this.stackList = stackList;
+	public Stack(IStackMethod stackItems) {
+		this.stackItems = stackItems;
 	}
 
 	/**
@@ -23,7 +23,7 @@ public class Stack {
 	 * @return 
 	 */
 	public int getTotal() {
-		return stackList.getTotal();
+		return stackItems.getTotal();
 	}
 	
 	/**
@@ -31,7 +31,7 @@ public class Stack {
 	 * @param 
 	 */
 	public void push(int i) {
-		stackList.pushElement(i);
+		stackItems.push(i);
 	}
 
 	/**
@@ -39,7 +39,7 @@ public class Stack {
 	 * @return 
 	 */
 	public boolean isEmpty() {
-		return stackList.empty();
+		return stackItems.isEmpty();
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class Stack {
 	 * @return 
 	 */
 	public boolean isFull() {
-		return stackList.full();
+		return stackItems.isFull();
 	}
 
 	/**
@@ -55,7 +55,7 @@ public class Stack {
 	 * @return 
 	 */
 	public int top() {
-		return stackList.peek();
+		return stackItems.top();
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class Stack {
 	 * @return 
 	 */
 	public int pop() {
-		return stackList.pop();
+		return stackItems.pop();
 	}
 
 }

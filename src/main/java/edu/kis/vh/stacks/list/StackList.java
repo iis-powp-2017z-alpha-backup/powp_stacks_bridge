@@ -1,13 +1,12 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.methods;
 
-import static edu.kis.vh.stacks.Stack.EMPTY_STACK_INDICATOR;
-
-public class StackList {
+public class StackList implements IStackMethod{
 
 	private Node last;
 	private int total = 0;
 
-	public void pushElement(int i) {
+	@Override
+	public void push(int i) {
 		if (last == null) {
 			last = new Node(i);
 		} else {
@@ -18,23 +17,27 @@ public class StackList {
 		total++;
 	}
 
-	public boolean empty() {
+	@Override
+	public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	@Override
+	public boolean isFull() {
 		return false;
 	}
 
-	public int peek() {
-		if (empty()) {
+	@Override
+	public int top() {
+		if (isEmpty()) {
 			return EMPTY_STACK_INDICATOR;
 		}
 		return last.getValue();
 	}
 
+	@Override
 	public int pop() {
-		if (empty()) {
+		if (isEmpty()) {
 			return -1;
 		}
 		int ret = last.getValue();
@@ -42,8 +45,10 @@ public class StackList {
 		total--;
 		return ret;
 	}
+
+	@Override
 	public int getTotal() {
-		if (empty()) {
+		if (isEmpty()) {
 			return EMPTY_STACK_INDICATOR;
 		}
 		return total;
