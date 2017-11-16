@@ -13,7 +13,7 @@ public class Stack {
 	}
 
 	
-	private StackList stackList;
+	private IStack stackList;
 
 	public void push(int i) {
 		stackList.push(i);
