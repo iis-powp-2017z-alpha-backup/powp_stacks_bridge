@@ -6,15 +6,12 @@ import org.junit.Test;
 import edu.kis.vh.stacks.Stack;
 
 public class StackTest {
-
-	private static final int minusOne2 = -1;
-
+	
 	@Test
 	public void testPush() {
 		Stack stackObj = new Stack();
 		int testValue = 4;
 		stackObj.push(testValue);
-
 		int result = stackObj.top();
 		Assert.assertEquals(testValue, result);
 	}
@@ -22,11 +19,9 @@ public class StackTest {
 	@Test
 	public void testIsEmpty() {
 		Stack stackObj = new Stack();
-		boolean result = stackObj.isEmpty();
+		boolean result = stackObj.isEmpty();		
 		Assert.assertEquals(true, result);
-
-		stackObj.push(888);
-
+		stackObj.push(888);		
 		result = stackObj.isEmpty();
 		Assert.assertEquals(false, result);
 	}
@@ -36,26 +31,25 @@ public class StackTest {
 		Stack stackObj = new Stack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
-			boolean result = stackObj.isFull();
+			boolean result = stackObj.isFull();		
 			Assert.assertEquals(false, result);
 			stackObj.push(888);
 		}
-
 		boolean result = stackObj.isFull();
-		Assert.assertEquals(true, result);
+		Assert.assertEquals(false, result);
 	}
 
 	@Test
 	public void testTop() {
 		Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = minusOne2;
-
+		final int EMPTY_STACK_VALUE = 0;
+		
 		int result = stackObj.top();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
-
+		
 		int testValue = 4;
 		stackObj.push(testValue);
-
+		
 		result = stackObj.top();
 		Assert.assertEquals(testValue, result);
 		result = stackObj.top();
@@ -65,14 +59,14 @@ public class StackTest {
 	@Test
 	public void testPop() {
 		Stack stackObj = new Stack();
-		final int EMPTY_STACK_VALUE = minusOne2;
-
+		final int EMPTY_STACK_VALUE = 0;
+		
 		int result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
-
+		
 		int testValue = 4;
 		stackObj.push(testValue);
-
+		
 		result = stackObj.pop();
 		Assert.assertEquals(testValue, result);
 		result = stackObj.pop();
