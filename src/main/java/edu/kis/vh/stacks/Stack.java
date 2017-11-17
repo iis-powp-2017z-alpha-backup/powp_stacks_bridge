@@ -11,6 +11,7 @@ public class Stack {
 	public Stack(){
 		this.stackList = new StackList();
 	}
+
 	
 	private IStack stackList;
 
@@ -36,4 +37,5 @@ public class Stack {
 			
 }
 
-//Dzieki tej zmianie mamy mozliwosc wykorzystania dowolnej klasy implementującej interface IStack
+//F3 przenosi do metody w znajdujacej sie interface. Ctrl + t pokazuje interface'y i klasy w ktorych zaimplementowano metody.
+//Po najechaniu kursorem myszy i wcisnieciu ctrl, możemy przeniesc się w miejsce, gdzie metoda została zadeklarowana.
