@@ -1,4 +1,3 @@
-
 package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.types.StackList;
@@ -10,7 +9,7 @@ public class StackFIFO extends Stack {
 		// TODO Auto-generated constructor stub
 	}
 
-	public StackFIFO(StackList stackList) {
+	public StackFIFO(IStack stackList) {
 		super(stackList);
 		// TODO Auto-generated constructor stub
 	}
@@ -30,5 +29,4 @@ public class StackFIFO extends Stack {
 		return poppedOutValue;
 	}
 }
-
 //Najlepszym wyborem bedzie StackList z uwagi na mozliwosc usuwania elementow
