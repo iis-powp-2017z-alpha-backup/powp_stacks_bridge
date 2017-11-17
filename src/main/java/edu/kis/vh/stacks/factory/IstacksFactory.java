@@ -14,3 +14,5 @@ public interface IStacksFactory {
 	
 	StackHanoi getHanoiStack();
 }
+
+// Zasade izolacji łamią fabryki abstrakcyjne
