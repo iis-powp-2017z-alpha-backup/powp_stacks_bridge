@@ -30,3 +30,6 @@ public class StackFifo extends Stack {
 		return ret;
 	}
 }
+/*
+ I think that class StackFifo breaks isolation rule because in this class we find an object that doesn't belong to any class that is connected in any way with StackFifo 
+ */  
