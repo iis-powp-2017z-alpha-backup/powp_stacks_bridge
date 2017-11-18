@@ -1,13 +1,15 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.StacksInterface;
+
+public class StackList implements StacksInterface {
 
 	private static final int RETURN_NUMBER = -1;
 	Node last;
 	int i;
 	private int total = 0;
 
-	public void pushElement(int i) {
+	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -18,22 +20,22 @@ public class StackList {
 		total++;
 	}
 
-	public boolean empty() {
+	public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	public boolean isFull() {
 		return false;
 	}
 
-	public int peek() {
-		if (empty())
+	public int top() {
+		if (isEmpty())
 			return RETURN_NUMBER;
 		return last.value;
 	}
 
 	public int pop() {
-		if (empty())
+		if (isEmpty())
 			return RETURN_NUMBER;
 		int ret = last.value;
 		last = last.prev;
@@ -42,7 +44,7 @@ public class StackList {
 	}
 	
 	public int getTotal() {
-		if (empty()) {
+		if (isEmpty()) {
 			return RETURN_NUMBER; 
 		}
 		return total;

@@ -13,8 +13,8 @@ public class StackListTest {
 		int testValue12 = 12;
 		int testValue15 = 15;
 		
-		stackListObj.pushElement(testValue12);
-		stackListObj.pushElement(testValue15);
+		stackListObj.push(testValue12);
+		stackListObj.push(testValue15);
 		Assert.assertEquals(testValue15, stackListObj.pop());
 		Assert.assertEquals(testValue12, stackListObj.pop());
 	}
@@ -23,14 +23,14 @@ public class StackListTest {
 	public void testEmpty() {
 		StackList stackListObj = new StackList();
 		
-		assertTrue(stackListObj.empty());
+		assertTrue(stackListObj.isEmpty());
 	}
 
 	@Test
 	public void testFull() {
 		StackList stackListObj = new StackList();
 		
-		assertFalse(stackListObj.full());
+		assertFalse(stackListObj.isFull());
 	}
 
 	@Test
@@ -39,10 +39,10 @@ public class StackListTest {
 		int testValue12 = 12;
 		int testValue15 = 15;
 		
-		stackListObj.pushElement(testValue12);
-		stackListObj.pushElement(testValue15);
-		Assert.assertEquals(testValue15, stackListObj.peek());
-		Assert.assertEquals(testValue15, stackListObj.peek());
+		stackListObj.push(testValue12);
+		stackListObj.push(testValue15);
+		Assert.assertEquals(testValue15, stackListObj.top());
+		Assert.assertEquals(testValue15, stackListObj.top());
 	}
 
 	@Test
@@ -52,8 +52,8 @@ public class StackListTest {
 		int testValue12 = 12;
 		int testValue15 = 15;
 		
-		stackListObj.pushElement(testValue12);
-		stackListObj.pushElement(testValue15);
+		stackListObj.push(testValue12);
+		stackListObj.push(testValue15);
 		Assert.assertEquals(testValue15, stackListObj.pop());
 		Assert.assertEquals(testValue12, stackListObj.pop());
 		Assert.assertEquals(RETURN_NUMBER, stackListObj.pop());
