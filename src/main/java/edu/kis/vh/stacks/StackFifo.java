@@ -1,8 +1,10 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.stacksinterfaces.StackList;
+
 public class StackFifo extends Stack {
 
-	private final Stack temp = new Stack();
+	private final StackList temp = new StackList(); // in this situation class StackList is a better choice than StackArray
 	
 	public StackFifo() {
 		super();
