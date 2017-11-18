@@ -1,13 +1,11 @@
 package edu.kis.vh.stacks.list;
 
-//TODO: This class doesn't have any impact on main method in class StacksDemo 
-//or on others classes that are connected to class StackDemo or are used by this class.
-//Maybe it would be better to remove it from this project
-class StackList {
+public class StackList {
 
 	private static final int RETURN_NUMBER = -1;
 	Node last;
 	int i;
+	private int total = 0;
 
 	public void pushElement(int i) {
 		if (last == null)
@@ -17,6 +15,7 @@ class StackList {
 			last.next.prev = last;
 			last = last.next;
 		}
+		total++;
 	}
 
 	public boolean empty() {
@@ -38,7 +37,15 @@ class StackList {
 			return RETURN_NUMBER;
 		int ret = last.value;
 		last = last.prev;
+		total--;
 		return ret;
+	}
+	
+	public int getTotal() {
+		if (empty()) {
+			return RETURN_NUMBER; 
+		}
+		return total;
 	}
 
 }
