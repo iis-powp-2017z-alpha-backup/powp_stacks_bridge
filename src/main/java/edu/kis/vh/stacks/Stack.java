@@ -1,42 +1,44 @@
 package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.list.StackList;
+import edu.kis.vh.stacks.StacksInterface;
 
 public class Stack {
-
-	private StackList stackList;
+	/* Because stackInter is of StacksInterface type (also of Interface type) it means that i can give to methods classes objects
+	that implements Interface "StacksInterface". In my code those are object of StacksArray and StacksList classes*/
+	private StacksInterface stackInter;
 	
 	public Stack() {
 		this(new StackList());
 	}
 	
-	public Stack(StackList stackList) {
+	public Stack(StacksInterface stackInter) {
 		super();
-		this.stackList = stackList;
+		this.stackInter = stackInter;
 	}
 
 	public int getTotal() {
-		return stackList.getTotal();
+		return stackInter.getTotal();
 	}
 
 	public void push(int i) {
-		stackList.push(i);
+		stackInter.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackList.isEmpty();
+		return stackInter.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackList.isFull();
+		return stackInter.isFull();
 	}
 
 	public int top() {
-		return stackList.top();
+		return stackInter.top();
 	}
 
 	public int pop() {
-		return stackList.pop();
+		return stackInter.pop();
 	}
 
 }
