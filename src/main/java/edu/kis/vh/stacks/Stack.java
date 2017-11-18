@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackList;
 import edu.kis.vh.stacks.StacksInterface;
+import edu.kis.vh.stacks.stacksinterfaces.StackList;
 
 public class Stack {
 	/* Because stackInter is of StacksInterface type (also of Interface type) it means that i can give to methods classes objects

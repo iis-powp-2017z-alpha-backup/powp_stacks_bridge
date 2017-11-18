@@ -1,4 +1,6 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.stacksinterfaces;
+
+import edu.kis.vh.stacks.StacksInterface;
 
 public class StackArray implements StacksInterface {
 	private static final int NUMB_NNEXT = 11;

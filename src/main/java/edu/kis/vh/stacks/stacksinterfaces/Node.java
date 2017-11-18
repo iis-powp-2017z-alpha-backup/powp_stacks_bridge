@@ -1,4 +1,4 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.stacksinterfaces;
 
 //TODO: This class doesn't have any impact on main method in class StacksDemo 
 //or on others classes that are connected to class StackDemo or are used by this class.
