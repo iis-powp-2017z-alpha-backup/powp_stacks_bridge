@@ -42,3 +42,11 @@ public class Stack {
 	}
 
 }
+
+/*
+ Navigate -> Open Declaration: it moves me to StacksInterface methode. 
+ Navigate -> Quick Type Hierarchy: It open window where I can choose one of classes that implements the selected methode. 
+ 			 It moves me directly to methode in chosen class. So in a way it goes one step farther than Navigate -> Open Declaration.
+ ctrl + mouse working: On my computer it doesn't change anything. But it can be caused by my keyboard because it has only one ctrl key and it sometimes
+ 			 doesn't work at it should in some programs.
+ */	    
