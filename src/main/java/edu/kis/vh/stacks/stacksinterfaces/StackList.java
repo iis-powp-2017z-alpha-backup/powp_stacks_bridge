@@ -4,10 +4,9 @@ import edu.kis.vh.stacks.StacksInterface;
 
 public class StackList implements StacksInterface {
 
-	private static final int RETURN_NUMBER = -1;
 	Node last;
 	int i;
-	private int total = 0;
+	private int total = -1;
 
 	public void push(int i) {
 		if (last == null)
@@ -30,13 +29,13 @@ public class StackList implements StacksInterface {
 
 	public int top() {
 		if (isEmpty())
-			return RETURN_NUMBER;
+			return EMPTY_STACK;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return RETURN_NUMBER;
+			return EMPTY_STACK;
 		int ret = last.value;
 		last = last.prev;
 		total--;
@@ -45,7 +44,7 @@ public class StackList implements StacksInterface {
 	
 	public int getTotal() {
 		if (isEmpty()) {
-			return RETURN_NUMBER; 
+			return EMPTY_STACK; 
 		}
 		return total;
 	}

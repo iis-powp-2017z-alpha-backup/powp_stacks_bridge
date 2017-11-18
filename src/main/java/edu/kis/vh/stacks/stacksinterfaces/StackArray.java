@@ -3,12 +3,10 @@ package edu.kis.vh.stacks.stacksinterfaces;
 import edu.kis.vh.stacks.StacksInterface;
 
 public class StackArray implements StacksInterface {
+	
 	private static final int NUMB_NNEXT = 11;
-
 	private static final int TABLE_SIZE = 12;
-
 	private final int[] ITEMS = new int[TABLE_SIZE];
-
 	private int total = -1;
 
 	/* (non-Javadoc)
@@ -33,7 +31,7 @@ public class StackArray implements StacksInterface {
 	 */
 	@Override
 	public boolean isEmpty() {
-		return total == -1;
+		return total == EMPTY_STACK;
 	}
 
 	/* (non-Javadoc)
@@ -50,7 +48,7 @@ public class StackArray implements StacksInterface {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return EMPTY_STACK;
 		return ITEMS[total];
 	}
 
@@ -60,7 +58,7 @@ public class StackArray implements StacksInterface {
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return EMPTY_STACK;
 		return ITEMS[total--];
 	}
 
