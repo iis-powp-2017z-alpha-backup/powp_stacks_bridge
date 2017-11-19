@@ -9,6 +9,11 @@ class StacksDemo {
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 		
+		testStacks(factory);
+		
+	}
+
+	private static void testStacks(DefaultStacksFactory factory) {
 		stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(),
 				factory.GetFIFOStack(), factory.GetHanoiStack()};
 		
@@ -28,7 +33,8 @@ class StacksDemo {
 		
 		System.out.println("total rejected is "
 				+ ((StackHanoi) stacks[3]).reportRejected());
-		
 	}
 	
 }
+
+//17. Zasadę łamię StackHanoi i StackFIFO, należałoby zaimplementować w tych klasach wspólny ze StackArray i StackList interface.

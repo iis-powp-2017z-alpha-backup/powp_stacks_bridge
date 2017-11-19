@@ -18,7 +18,7 @@ public class StackFIFO extends stack {
 	
 	@Override
 	public int pop() {
-		while (!isEmpty())
+		while (!isEmpty())//
 		
 		temp.push(super.pop());
 		

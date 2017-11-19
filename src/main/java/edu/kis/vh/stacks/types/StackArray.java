@@ -4,9 +4,17 @@ import edu.kis.vh.stacks.StackInterface;
 
 public class StackArray implements StackInterface {
 
-	private int[] ITEMS = new int[12];
+	private static final int howMuchItems = 12;
 
-	public int total = -1;
+	private static final int emptyStack = -1;
+
+	private int[] ITEMS = new int[howMuchItems];
+
+	private int total = emptyStack; // wewnątrz klasy nie zmieniono dostępu do atrybutu poprzez setter i getter.
+
+	public int getTotal() {
+		return total;
+	}
 
 	/* (non-Javadoc)
 	 * @see edu.kis.vh.stacks.StackInterface#push(int)
@@ -52,6 +60,10 @@ public class StackArray implements StackInterface {
 		if (isEmpty())
 			return emptyStack;
 		return ITEMS[total--];
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
 	}
 
 }

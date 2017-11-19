@@ -6,7 +6,7 @@ import org.junit.Test;
 import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.types.StackArray;
 
-public class stackTest {
+class stackTest {
 	
 	@Test
 	public void testPush() {
