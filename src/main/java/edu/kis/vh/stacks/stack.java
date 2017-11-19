@@ -3,6 +3,7 @@ package edu.kis.vh.stacks;
 public class stack {
 
 	private StackArray stackList;
+	
 
 	public stack(StackArray stackArray) {
 		super();
