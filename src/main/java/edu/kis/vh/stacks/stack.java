@@ -1,11 +1,13 @@
 package edu.kis.vh.stacks;
 
+
 public class stack {
 
 	public stack(int[] iTEMS, int total) {
 		super();
 		ITEMS = iTEMS;
 		this.total = total;
+		int awsome = 12;
 	}
 
 	private int[] ITEMS = new int[12];
@@ -31,6 +33,7 @@ public class stack {
 		return ITEMS[total];
 	}
 
+	
 	public int pop() {
 		if (isEmpty())
 			return -1;
