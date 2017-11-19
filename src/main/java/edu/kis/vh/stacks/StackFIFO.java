@@ -1,8 +1,10 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.types.StackList;
+
 public class StackFIFO extends Stack {
 
-	private Stack temp = new Stack();
+	public StackList temp = new StackList();
 	
 	public StackFIFO() {
 		super();
