@@ -1,40 +1,68 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.implementations;
 
-public class StackList {
+import edu.kis.vh.stacks.StackInterface;
 
-	Node last;
-	int i;
+public class StackList implements StackInterface {
+    /* Punkt 4.
+    Nie korzystam z Eclipsa tylko z ItelliJ. Nie wykorzystałem opcji innych niz podpowiedzi w trakcie pisnaia.
+     */
+    Node last;
+    int i = -1;
 
-	public void pushElement(int i) {
-		if (last == null)
-			last = new Node(i);
-		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
-		}
-	}
+    public void pushElement(int i) {
+        if (!isFull()) {
+            if (last == null)
+                last = new Node(i);
+            else {
+                last.next = new Node(i);
+                last.next.prev = last;
+                last = last.next;
+            }
+            this.i++;
+        }
+    }
 
-	public boolean empty() {
-		return last == null;
-	}
+    private boolean empty() {
+        return last == null;
+    }
 
-	public boolean full() {
-		return false;
-	}
+    private boolean full() {
+        return i == 11;
+    }
 
-	public int peek() {
-		if (empty())
-			return -1;
-		return last.value;
-	}
+    private int peek() {
+        if (empty())
+            return EMPTY_STACK;
+        return last.value;
+    }
 
-	public int pop() {
-		if (empty())
-			return -1;
-		int ret = last.value;
-		last = last.prev;
-		return ret;
-	}
+    @Override
+    public void push(int i) {
+        this.pushElement(i);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return this.empty();
+    }
+
+    @Override
+    public boolean isFull() {
+        return this.full();
+    }
+
+    @Override
+    public int top() {
+        return this.peek();
+    }
+
+    public int pop() {
+        if (empty())
+            return EMPTY_STACK;
+        int ret = last.value;
+        last = last.prev;
+        i--;
+        return ret;
+    }
 
 }
