@@ -6,7 +6,8 @@ import edu.kis.vh.stacks.types.StackList;
 public class Stack {
 
 	private IStack stackArray = new StackArray();
-	//3.1.7 Mozna teraz przekazac dowolny obiekt implementujacy interfejs IStack
+
+	// 3.1.7 Mozna teraz przekazac dowolny obiekt implementujacy interfejs IStack
 	public Stack(IStack stackArray) {
 		super();
 		this.stackArray = stackArray;
@@ -16,9 +17,9 @@ public class Stack {
 		super();
 		this.stackArray = stackArray;
 	}
-	
+
 	public Stack() {
-		
+
 	}
 
 	public void push(int i) {
@@ -40,5 +41,5 @@ public class Stack {
 	public int pop() {
 		return stackArray.pop();
 	}
-				
+
 }
