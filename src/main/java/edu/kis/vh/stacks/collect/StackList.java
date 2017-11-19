@@ -26,13 +26,13 @@ public class StackList implements Stackable {
 
 	public int top() {
 		if (isEmpty())
-			return 0;
+			return EMPTY_VALUE;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return 0;
+			return EMPTY_VALUE;
 		int ret = last.value;
 		last = last.prev;
 		return ret;

@@ -1,38 +1,37 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.collect.StackArray;
+import edu.kis.vh.stacks.collect.*;
 
 public class Stack {
 
-	private Stackable stackArray = new StackArray();
+	private Stackable stack;
 
-	public Stack(Stackable stackArray) {
-		super();
-		this.stackArray = stackArray;
+	public Stack(Stackable stack) {
+		this.stack = stack;
 	}
 
 	public Stack() {
-		// TODO Auto-generated constructor stub
+		stack = new StackArray();
 	}
 
 	public void push(int i) {
-		stackArray.push(i);
+		stack.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stack.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stack.isFull();
 	}
 
 	public int top() {
-		return stackArray.top();
+		return stack.top();
 	}
 
 	public int pop() {
-		return stackArray.pop();
+		return stack.pop();
 	}
 
 }
