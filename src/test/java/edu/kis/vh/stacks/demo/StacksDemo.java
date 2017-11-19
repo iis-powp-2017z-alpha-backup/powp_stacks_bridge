@@ -1,33 +1,31 @@
 package edu.kis.vh.stacks.demo;
 
-import edu.kis.vh.stacks.StackHanoi;
-import edu.kis.vh.stacks.stack;
+import edu.kis.vh.stacks.factory.ArrayStackFactory;
+import edu.kis.vh.stacks.factory.IstacksFactory;
+import edu.kis.vh.stacks.factory.ListStackFactory;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 class StacksDemo {
 
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
-		
-		stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(),
-				factory.GetFIFOStack(), factory.GetHanoiStack()};
-		
-		for (int i = 1; i < 15; i++)
-			for (int j = 0; j < 3; j++)
-				stacks[j].push(i);
-			
-			java.util.Random rn = new java.util.Random();
-			for (int i = 1; i < 15; i++)
-				stacks[3].push(rn.nextInt(20));
-			
-			for (int i = 0; i < stacks.length; i++) {
-				while (!stacks[i].isEmpty())
-					System.out.print(stacks[i].pop() + "  ");
-					System.out.println();
-			}
-		
-		System.out.println("total rejected is "
-				+ ((StackHanoi) stacks[3]).reportRejected());
+		StackDemoWorker stackDemoWorker = new StackDemoWorker();
+		IstacksFactory defaultStacksFactory= new DefaultStacksFactory();
+		IstacksFactory arrayStackFactory = new ArrayStackFactory();
+		IstacksFactory listStackFactory = new ListStackFactory();
+
+		System.out.println("DefaultStackFactory \n");
+		stackDemoWorker.work(defaultStacksFactory);
+		System.out.println("End \n");
+
+		System.out.println("ArrayStackFactory \n");
+		stackDemoWorker.work(arrayStackFactory);
+		System.out.println("End \n");
+
+		System.out.println("ListStackFactory \n");
+		stackDemoWorker.work(listStackFactory);
+		System.out.println("End \n");
+
+
 		
 	}
 	
