@@ -1,8 +1,8 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.implementations.StackList;
+import edu.kis.vh.stacks.list.StackList;
 
-public class Stack {
+public class stack {
     /*Punkt 7
 	Dokonana modyfikacja pozwala na wykorzystanie jako atrybutu obiektu dowolnej klasy implementującej interfejs
 	StackInterface. Dzięki temu zmieniając przekazany obiekt możemy szybko zmienić wykorzystywaną implementacje stosu.
@@ -16,11 +16,11 @@ public class Stack {
 
     private StackInterface stackInterface;
 
-    public Stack() {
+    public stack() {
         this.stackInterface = new StackList();
     }
 
-    public Stack(StackInterface stackInterface) {
+    public stack(StackInterface stackInterface) {
         this.stackInterface = stackInterface;
     }
 

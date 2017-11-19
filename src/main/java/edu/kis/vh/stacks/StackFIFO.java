@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.implementations.StackList;
+import edu.kis.vh.stacks.list.StackList;
 
 /*Punkt 14
 Wybrałem implementacje StackList, gdyż w przeciwieństwie do StackArray pozwala na zbudowanie stosu bez ograniczneia

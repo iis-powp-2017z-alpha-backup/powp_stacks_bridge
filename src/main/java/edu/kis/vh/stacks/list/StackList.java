@@ -1,4 +1,4 @@
-package edu.kis.vh.stacks.implementations;
+package edu.kis.vh.stacks.list;
 
 import edu.kis.vh.stacks.StackInterface;
 
