@@ -5,17 +5,17 @@ import edu.kis.vh.stacks.types.StackList;
 
 public class Stack {
 
-	private IStack stackArray = new StackArray();
+	private IStack stackImplementation = new StackArray();
 
 	// 3.1.7 Mozna teraz przekazac dowolny obiekt implementujacy interfejs IStack
 	public Stack(IStack stackArray) {
 		super();
-		this.stackArray = stackArray;
+		this.stackImplementation = stackArray;
 	}
 
 	public Stack(StackArray stackArray) {
 		super();
-		this.stackArray = stackArray;
+		this.stackImplementation = stackArray;
 	}
 
 	public Stack() {
@@ -23,23 +23,23 @@ public class Stack {
 	}
 
 	public void push(int i) {
-		stackArray.push(i);
+		stackImplementation.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stackImplementation.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stackImplementation.isFull();
 	}
 
 	public int top() {
-		return stackArray.top();
+		return stackImplementation.top();
 	}
 
 	public int pop() {
-		return stackArray.pop();
+		return stackImplementation.pop();
 	}
 
 }
