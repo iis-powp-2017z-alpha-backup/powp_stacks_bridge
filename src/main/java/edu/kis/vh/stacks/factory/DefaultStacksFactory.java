@@ -2,6 +2,7 @@ package edu.kis.vh.stacks.factory;
 
 import edu.kis.vh.stacks.factory.IstacksFactory;
 import edu.kis.vh.stacks.types.StackArray;
+import edu.kis.vh.stacks.types.StackList;
 import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
@@ -11,12 +12,12 @@ public class DefaultStacksFactory implements IstacksFactory {
 
 	@Override
 	public stack GetStandardStack() {
-		return new stack();
+		return new stack(new StackList());
 	}
 
 	@Override
 	public stack GetFalseStack() {
-		return new stack();
+		return new stack(new StackArray());
 	}
 
 	@Override

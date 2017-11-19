@@ -3,33 +3,34 @@ package edu.kis.vh.stacks.factory;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.StackInterface;
+import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.types.StackArray;
 import edu.kis.vh.stacks.types.StackList;
 
 public class StackFactoryList implements IstacksFactory {
 
 	@Override
-	public StackInterface GetStandardStack() {
+	public stack GetStandardStack() {
 		// TODO Auto-generated method stub
-		return new StackList();
+		return new stack(new StackList());
 	}
 
 	@Override
-	public StackInterface GetFalseStack() {
+	public stack GetFalseStack() {
 		// TODO Auto-generated method stub
-		return new StackArray();
+		return new stack(new StackArray());
 	}
 
 	@Override
 	public StackFIFO GetFIFOStack() {
 		// TODO Auto-generated method stub
-		return null;
+		return new StackFIFO();
 	}
 
 	@Override
 	public StackHanoi GetHanoiStack() {
 		// TODO Auto-generated method stub
-		return null;
+		return new StackHanoi();
 	}
 
 }

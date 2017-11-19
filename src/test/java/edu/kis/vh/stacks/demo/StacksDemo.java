@@ -1,19 +1,27 @@
 package edu.kis.vh.stacks.demo;
 
+import java.util.Stack;
+
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.StackInterface;
 import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.IstacksFactory;
+import edu.kis.vh.stacks.factory.StackFactoryArray;
+import edu.kis.vh.stacks.factory.StackFactoryList;
 
 class StacksDemo {
 
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
-		
+		IstacksFactory factory = new DefaultStacksFactory();
 		testStacks(factory);
-		
+		factory = new StackFactoryArray();
+		testStacks(factory);
+		factory = new StackFactoryList();
+		testStacks(factory);
 	}
 
-	private static void testStacks(DefaultStacksFactory factory) {
+	private static void testStacks(IstacksFactory factory) {
 		stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(),
 				factory.GetFIFOStack(), factory.GetHanoiStack()};
 		

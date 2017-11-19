@@ -6,8 +6,7 @@ import org.junit.Test;
 import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.types.StackArray;
 
-class stackTest {
-	
+public class stackTest {	
 	@Test
 	public void testPush() {
 		stack stackObj = new stack();

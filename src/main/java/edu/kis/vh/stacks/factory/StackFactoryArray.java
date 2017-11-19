@@ -10,15 +10,15 @@ import edu.kis.vh.stacks.types.StackList;
 public class StackFactoryArray implements IstacksFactory {
 
 	@Override
-	public StackInterface GetStandardStack() {
+	public stack GetStandardStack() {
 		// TODO Auto-generated method stub
-		return new StackArray();
+		return new stack(new StackArray());
 	}
 
 	@Override
-	public StackInterface GetFalseStack() {
+	public stack GetFalseStack() {
 		// TODO Auto-generated method stub
-		return new StackList();
+		return new stack(new StackList());
 	}
 
 	@Override

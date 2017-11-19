@@ -4,36 +4,37 @@ import edu.kis.vh.stacks.types.StackArray;
 
 public class stack {
 
-	private StackInterface stackArray = new StackArray(); // 7. przez utworzony obiekt będzie można przekazać dowolny
+	private StackInterface stackI; // 7. przez utworzony obiekt będzie można przekazać dowolny
 															// obiekt implementujący interfejs StackInterface
 
 	public stack(StackInterface stackArray) {
 		super();
-		this.stackArray = stackArray;
+		this.stackI = stackArray;
 	}
 
 	public stack() {
 		super();
+		stackI = new StackArray();
 	}
 
 	public void push(int i) {
-		stackArray.push(i);
+		stackI.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stackI.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stackI.isFull();
 	}
 
 	public int top() {
-		return stackArray.top();
+		return stackI.top();
 	}
 
 	public int pop() {
-		return stackArray.pop();
+		return stackI.pop();
 	}
 
 }
