@@ -1,33 +1,46 @@
 package edu.kis.vh.stacks;
 
-public class stack {
+import edu.kis.vh.stacks.implementations.StackList;
 
-	private StackArray stackList;
-	
+public class Stack {
+    /*Punkt 7
+	Dokonana modyfikacja pozwala na wykorzystanie jako atrybutu obiektu dowolnej klasy implementującej interfejs
+	StackInterface. Dzięki temu zmieniając przekazany obiekt możemy szybko zmienić wykorzystywaną implementacje stosu.
+	 */
+	/* punkt 13
+	Z racji tego że korzystam z IntelliJ pewne opcje sie różnią.
+	Opcja Navigate->Declaration przneosi mnie do klasy StackInterface
+	Opcja Navigate-> TypeHierarchy pokazuje okno z hierarchią klasy Stack.
+	Wciśniety ctrl podczas klikania w wywołanie metody przneosi do deklaracji tej metody
+	 */
 
-	public stack(StackArray stackArray) {
-		super();
-		this.stackList = stackArray;
-	}
+    private StackInterface stackInterface;
 
-	public void push(int i) {
-		stackList.push(i);
-	}
+    public Stack() {
+        this.stackInterface = new StackList();
+    }
 
-	public boolean isEmpty() {
-		return stackList.isEmpty();
-	}
+    public Stack(StackInterface stackInterface) {
+        this.stackInterface = stackInterface;
+    }
 
-	public boolean isFull() {
-		return stackList.isFull();
-	}
+    public void push(int i) {
+        stackInterface.push(i);
+    }
 
-	public int top() {
-		return stackList.top();
-	}
+    public boolean isEmpty() {
+        return stackInterface.isEmpty();
+    }
 
-	public int pop() {
-		return stackList.pop();
-	}
-	
+    public boolean isFull() {
+        return stackInterface.isFull();
+    }
+
+    public int top() {
+        return stackInterface.top();
+    }
+
+    public int pop() {
+        return stackInterface.pop();
+    }
 }

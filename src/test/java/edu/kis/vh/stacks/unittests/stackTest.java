@@ -10,7 +10,7 @@ public class stackTest {
 	@Test
 	public void testPush() {
 		stack stackObj = new stack();
-		int testValue = 5;
+		int testValue = 4;
 		stackObj.push(testValue);
 		
 		int result = stackObj.top();
