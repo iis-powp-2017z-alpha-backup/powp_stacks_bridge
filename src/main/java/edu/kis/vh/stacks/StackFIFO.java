@@ -1,21 +1,32 @@
 package edu.kis.vh.stacks;
 
-public class StackFIFO extends stack {
+import edu.kis.vh.stacks.types.StackList;
 
-	public stack temp = new stack();
+public class StackFIFO extends Stack {
+
+	public StackFIFO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackFIFO(IStack stackList) {
+		super(stackList);
+		// TODO Auto-generated constructor stub
+	}
+
+	private final Stack temp = new Stack(new StackList());
 	
 	@Override
 	public int pop() {
 		while (!isEmpty())
+			temp.push(super.pop());
 		
-		temp.push(super.pop());
-		
-		int ret = temp.pop();
+		int poppedOutValue = temp.pop();
 		
 		while (!temp.isEmpty())
-	
-		push(temp.pop());
+			push(temp.pop());
 		
-		return ret;
+		return poppedOutValue;
 	}
 }
+//Najlepszym wyborem bedzie StackList z uwagi na mozliwosc usuwania elementow
