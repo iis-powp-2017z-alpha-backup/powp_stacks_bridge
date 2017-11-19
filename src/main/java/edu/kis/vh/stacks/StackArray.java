@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-public class StackArray {
+public class StackArray implements IStack {
 	
 	private static final int EMPTY = -1;
 
@@ -10,25 +10,30 @@ public class StackArray {
 
 	private int total = EMPTY;
 	
+	@Override
 	public void push(int i) {
 		if (!isFull())
 		ITEMS[++total] = i;
 	}
 	
+		@Override
 		public boolean isEmpty() {
 			return total == EMPTY;
 		}
 		
+			@Override
 			public boolean isFull() {
 				return total == NUMBER_OF_ITEMS-1;
 			}
 			
+				@Override
 				public int top() {
 					if (isEmpty())
 						return EMPTY;
 					return ITEMS[total];
 				}
 				
+					@Override
 					public int pop() {
 						if (isEmpty())
 							return EMPTY;
