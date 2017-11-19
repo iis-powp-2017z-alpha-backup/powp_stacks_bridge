@@ -43,3 +43,9 @@ public class Stack {
 	}
 
 }
+
+/* Bridge 3.1.13
+ * F3 przenosi do deklaracji
+ * CTRL+T pokazuje hierarchie klas
+ * CTRL otwiera menu z obiema opcjami
+ */
