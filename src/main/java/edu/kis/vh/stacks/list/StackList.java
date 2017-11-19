@@ -1,8 +1,13 @@
 package edu.kis.vh.stacks.list;
 
+/**
+ * @author Aliaksei
+ *
+ */
 public class StackList {
 
-	Node last;
+	private static final int EMPTY = -1;
+	private Node last;
 	int i;
 
 	public void pushElement(int i) {
@@ -25,13 +30,13 @@ public class StackList {
 
 	public int peek() {
 		if (empty())
-			return -1;
+			return EMPTY;
 		return last.value;
 	}
 
 	public int pop() {
 		if (empty())
-			return -1;
+			return EMPTY;
 		int ret = last.value;
 		last = last.prev;
 		return ret;

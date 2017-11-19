@@ -1,5 +1,9 @@
 package edu.kis.vh.stacks.list;
 
+/**
+ * @author Aliaksei
+ *
+ */
 public class Node {
 
 	public int value;
@@ -8,5 +12,5 @@ public class Node {
 	public Node(int i) {
 		value = i;
 	}
-	
+
 }
