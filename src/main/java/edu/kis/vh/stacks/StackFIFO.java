@@ -1,21 +1,32 @@
 package edu.kis.vh.stacks;
 
-public class StackFIFO extends stack {
+import edu.kis.vh.stacks.collect.StackList;
 
-	public stack temp = new stack();
-	
+public class StackFIFO extends Stack {
+
+	public StackFIFO() {
+		super();
+	}
+
+	public StackFIFO(Stackable stackArray) {
+		super(stackArray);
+	}
+
+	private StackList temp = new StackList(); 
+	//StackList jest tutaj lepszym rozwiązaniem od StackArray, gdyż nie jest ograniczona rozmiarem stosu
+
 	@Override
 	public int pop() {
 		while (!isEmpty())
-		
-		temp.push(super.pop());
-		
+
+			temp.push(super.pop());
+
 		int ret = temp.pop();
-		
+
 		while (!temp.isEmpty())
-	
-		push(temp.pop());
-		
+
+			push(temp.pop());
+
 		return ret;
 	}
 }
