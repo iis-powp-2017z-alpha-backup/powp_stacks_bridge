@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.collect.*;
 
 public class Stack {
 
-	private Stackable stack;
+	private Stackable stack; // Możliwość przekazania dowolnego obiektu implementującego Stackable
 
 	public Stack(Stackable stack) {
 		this.stack = stack;

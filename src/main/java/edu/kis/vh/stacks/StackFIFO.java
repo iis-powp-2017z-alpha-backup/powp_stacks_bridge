@@ -12,7 +12,8 @@ public class StackFIFO extends Stack {
 		super(stackArray);
 	}
 
-	private StackList temp = new StackList();
+	private StackList temp = new StackList(); 
+	//StackList jest tutaj lepszym rozwiązaniem od StackArray, gdyż nie jest ograniczona rozmiarem stosu
 
 	@Override
 	public int pop() {
