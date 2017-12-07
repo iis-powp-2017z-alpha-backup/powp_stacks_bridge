@@ -16,7 +16,9 @@ public class StackArray implements StackInterface {
 		return total;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see edu.kis.vh.stacks.StackInterface#push(int)
 	 */
 	@Override
@@ -25,7 +27,9 @@ public class StackArray implements StackInterface {
 			ITEMS[++total] = i;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see edu.kis.vh.stacks.StackInterface#isEmpty()
 	 */
 	@Override
@@ -33,8 +37,9 @@ public class StackArray implements StackInterface {
 		return total == -1;
 	}
 
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see edu.kis.vh.stacks.StackInterface#isFull()
 	 */
 	@Override
@@ -42,7 +47,9 @@ public class StackArray implements StackInterface {
 		return total == 11;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see edu.kis.vh.stacks.StackInterface#top()
 	 */
 	@Override
@@ -52,7 +59,9 @@ public class StackArray implements StackInterface {
 		return ITEMS[total];
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see edu.kis.vh.stacks.StackInterface#pop()
 	 */
 	@Override

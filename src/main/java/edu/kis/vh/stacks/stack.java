@@ -5,7 +5,7 @@ import edu.kis.vh.stacks.types.StackArray;
 public class stack {
 
 	private StackInterface stackI; // 7. przez utworzony obiekt będzie można przekazać dowolny
-															// obiekt implementujący interfejs StackInterface
+									// obiekt implementujący interfejs StackInterface
 
 	public stack(StackInterface stackArray) {
 		super();
