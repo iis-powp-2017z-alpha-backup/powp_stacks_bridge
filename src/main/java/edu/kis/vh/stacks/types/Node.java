@@ -1,6 +1,6 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.types;
 
-public class Node {
+class Node {
 
 	public int value;
 	public Node prev, next;
@@ -8,5 +8,5 @@ public class Node {
 	public Node(int i) {
 		value = i;
 	}
-	
+
 }
