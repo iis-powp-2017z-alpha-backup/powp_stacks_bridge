@@ -1,4 +1,4 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.stackIImpl;
 
 public class Node {
 
@@ -8,5 +8,5 @@ public class Node {
 	public Node(int i) {
 		value = i;
 	}
-	
+
 }

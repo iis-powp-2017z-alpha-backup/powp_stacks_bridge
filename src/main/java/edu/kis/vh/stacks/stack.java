@@ -1,34 +1,44 @@
 package edu.kis.vh.stacks;
 
-public class stack {
+import edu.kis.vh.stacks.stackIImpl.StackArray;
 
-	private int[] ITEMS = new int[12];	
+public class Stack implements StackI {
 
-	public int total = -1;
-	
-	public void push(int i) {
-		if (!isFull())
-		ITEMS[++total] = i;
+	private StackI stack; // przekazanie w konstruktorze dowolnego obiektu
+							// implementującego StackI
+
+	public Stack(StackI stack) {
+		this.stack = stack;
 	}
-	
-		public boolean isEmpty() {
-			return total == -1;
-		}
-		
-			public boolean isFull() {
-				return total == 11;
-			}
-			
-				public int top() {
-					if (isEmpty())
-						return -1;
-					return ITEMS[total];
-				}
-				
-					public int pop() {
-						if (isEmpty())
-							return -1;
-						return ITEMS[total--];
-					}
-				
+
+	public Stack() {
+		stack = new StackArray();
+	}
+
+	@Override
+	public void push(int i) {
+		stack.push(i);
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return stack.isEmpty();
+	}
+
+	@Override
+	public boolean isFull() {
+		return stack.isFull();
+	}
+
+	@Override
+	public int pop() {
+		return stack.pop();
+
+	}
+
+	@Override
+	public int top() {
+		return stack.top();
+	}
+
 }
