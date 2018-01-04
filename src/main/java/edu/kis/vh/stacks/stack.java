@@ -1,26 +1,25 @@
 package edu.kis.vh.stacks;
 
-
 import edu.kis.vh.stacks.stackIImpl.StackArray;
 
+public class Stack implements StackI {
 
+	private StackI stack; // przekazanie w konstruktorze dowolnego obiektu
+							// implementującego StackI
 
-public class stack implements StackI {
+	public Stack(StackI stack) {
+		this.stack = stack;
+	}
 
-private StackI stack;	//przekazanie w konstruktorze dowolnego obiektu implementującego StackI
-
-public stack(StackI stack) {
-	 		this.stack = stack;
-	  	}
-	public stack(){
+	public Stack() {
 		stack = new StackArray();
 	}
 
 	@Override
 	public void push(int i) {
-		stack.push(i);		
+		stack.push(i);
 	}
-	
+
 	@Override
 	public boolean isEmpty() {
 		return stack.isEmpty();
@@ -33,7 +32,7 @@ public stack(StackI stack) {
 
 	@Override
 	public int pop() {
-		return stack.pop(); 
+		return stack.pop();
 
 	}
 
@@ -41,6 +40,5 @@ public stack(StackI stack) {
 	public int top() {
 		return stack.top();
 	}
-	
-	
+
 }

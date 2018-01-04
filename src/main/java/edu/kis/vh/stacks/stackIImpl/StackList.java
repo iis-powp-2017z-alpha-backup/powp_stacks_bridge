@@ -3,7 +3,7 @@ package edu.kis.vh.stacks.stackIImpl;
 import edu.kis.vh.stacks.StackI;
 
 // opcja uzyteczna do wykonania pkt 4- (ctrl+spacja)-podpowiedz nazyw metody
-public class StackList implements StackI{
+public class StackList implements StackI {
 
 	private Node last;
 	int i;
@@ -40,5 +40,4 @@ public class StackList implements StackI{
 		return ret;
 	}
 
-	
 }
