@@ -2,6 +2,14 @@ package edu.kis.vh.stacks;
 
 public class StackHanoi extends stack {
 
+	public StackHanoi() {
+		 		super();
+		 	}
+		 
+		 	public StackHanoi(StackI stackArray) {
+		 		super(stackArray);
+		 	}
+	
 int totalRejected = 0;
 
 	public int reportRejected() {

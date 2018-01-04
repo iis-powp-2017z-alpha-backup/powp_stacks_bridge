@@ -1,7 +1,6 @@
 package edu.kis.vh.stacks.stackIImpl;
 
 import edu.kis.vh.stacks.StackI;
-import edu.kis.vh.stacks.stack;
 
 // opcja uzyteczna do wykonania pkt 4- (ctrl+spacja)-podpowiedz nazyw metody
 public class StackList implements StackI{
@@ -29,13 +28,13 @@ public class StackList implements StackI{
 
 	public int top() {
 		if (isEmpty())
-			return 0;
+			return EMPTY;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return 0;
+			return EMPTY;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
