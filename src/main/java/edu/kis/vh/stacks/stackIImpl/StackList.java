@@ -6,7 +6,7 @@ import edu.kis.vh.stacks.stack;
 // opcja uzyteczna do wykonania pkt 4- (ctrl+spacja)-podpowiedz nazyw metody
 public class StackList implements StackI{
 
-	Node last;
+	private Node last;
 	int i;
 
 	public void push(int i) {
@@ -29,13 +29,13 @@ public class StackList implements StackI{
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return 0;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return 0;
 		int ret = last.value;
 		last = last.prev;
 		return ret;

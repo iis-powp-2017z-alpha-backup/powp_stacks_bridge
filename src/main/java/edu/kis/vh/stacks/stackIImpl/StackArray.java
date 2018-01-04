@@ -6,31 +6,37 @@ public class StackArray implements StackI{
 
 	private int[] ITEMS = new int[12];
 
-	public int total = -1;
 
+	private static final int FULL = 11;
+	private static final int EMPTY = -1;
+	private int total = EMPTY;
+	
 	public void push(int i) {
 		if (!isFull())
 			ITEMS[++total] = i;
 	}
 
 	public boolean isEmpty() {
-		return total == -1;
+		return total == EMPTY;
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return total == FULL;
 	}
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return EMPTY;
 		return ITEMS[total];
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return EMPTY;
 		return ITEMS[total--];
 	}
+	public int getTotal() {
+		return total;
+		  	}
 
 }

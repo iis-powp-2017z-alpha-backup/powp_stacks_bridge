@@ -6,9 +6,9 @@ import edu.kis.vh.stacks.StackI;
 
 	public interface IstacksFactory {
 	
-		public StackI GetStandardStack();
+		public StackI GetStandardStack();//stack?
 		
-		public StackI GetFalseStack();
+		public StackI GetFalseStack();//stack?
 		
 		public StackFIFO GetFIFOStack();
 		
