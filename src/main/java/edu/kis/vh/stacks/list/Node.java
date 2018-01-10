@@ -6,11 +6,19 @@ package edu.kis.vh.stacks.list;
  */
 public class Node {
 
-	public int value;
+	private static int value;
 	public Node prev, next;
 
 	public Node(int i) {
-		value = i;
+		setValue(i);
+	}
+
+	public static int getValue() {
+		return value;
+	}
+
+	public static void setValue(int value) {
+		Node.value = value;
 	}
 
 }

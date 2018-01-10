@@ -31,13 +31,13 @@ public class StackList {
 	public int peek() {
 		if (empty())
 			return EMPTY;
-		return last.value;
+		return last.getValue();
 	}
 
 	public int pop() {
 		if (empty())
 			return EMPTY;
-		int ret = last.value;
+		int ret = last.getValue();
 		last = last.prev;
 		return ret;
 	}
