@@ -13,7 +13,7 @@ public class Node {
 		setValue(i);
 	}
 
-	public static int getValue() {
+	public int getValue() {
 		return value;
 	}
 

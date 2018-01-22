@@ -11,9 +11,9 @@ public class Stack { // Kombinacja klawisz alt + <- / -> daja mozliwosc przemies
 
 	private static final int TOTAL = -1;
 
-	private static int[] ITEMS = new int[12];
+	public int[] ITEMS = new int[12];
 
-	private static int total = TOTAL;
+	public int total = TOTAL;
 
 	public static int getTotal() {
 		return TOTAL;
@@ -43,14 +43,6 @@ public class Stack { // Kombinacja klawisz alt + <- / -> daja mozliwosc przemies
 		if (isEmpty())
 			return TOTAL;
 		return ITEMS[total--];
-	}
-
-	/**
-	 * @param total
-	 *            the total to set
-	 */
-	public void setTotal(int total) {
-		Stack.total = total;
 	}
 
 }
