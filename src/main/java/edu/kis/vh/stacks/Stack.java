@@ -4,45 +4,41 @@ package edu.kis.vh.stacks;
  * @author Aliaksei
  *
  */
-public class Stack { // Kombinacja klawisz alt + <- / -> daja mozliwosc przemieszczenia sie po
-						// otworzonym plikam wlewo lub wprawo
+public class Stack {
 
-	private static final int FULL = 11;
-
-	private static final int TOTAL = -1;
-
-	public int[] ITEMS = new int[12];
-
-	public int total = TOTAL;
-
-	public static int getTotal() {
-		return TOTAL;
-	}
-
-	public void push(int i) {
-		if (!isFull())
-			ITEMS[++total] = i;
-	}
-
-	// Zle wciecia nizej byli poprawione
 	public boolean isEmpty() {
-		return total == TOTAL;
+		return stackArray.isEmpty();
 	}
 
 	public boolean isFull() {
-		return total == FULL;
+		return stackArray.isFull();
 	}
 
 	public int top() {
-		if (isEmpty())
-			return TOTAL;
-		return ITEMS[total];
+		return stackArray.top();
 	}
 
 	public int pop() {
-		if (isEmpty())
-			return TOTAL;
-		return ITEMS[total--];
+		return stackArray.pop();
+	}
+
+	private StackArray stackArray;
+
+	public Stack() {
+		this.stackArray = new StackArray();
+	}
+
+	public Stack(StackArray stackArray) {
+		super();
+		this.stackArray = new StackArray();
+	}
+
+	public int getTotal() {
+		return stackArray.getTotal();
+	}
+
+	public void push(int i) {
+		stackArray.push(i);
 	}
 
 }
