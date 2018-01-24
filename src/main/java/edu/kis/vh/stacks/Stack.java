@@ -1,44 +1,46 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackList;
+
 /**
  * @author Aliaksei
  *
  */
 public class Stack {
+	
+	private StackList stackList;
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stackList.empty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stackList.full();
 	}
 
 	public int top() {
-		return stackArray.top();
+		return stackList.peek();
 	}
 
 	public int pop() {
-		return stackArray.pop();
+		return stackList.pop();
 	}
 
-	private StackArray stackArray;
-
 	public Stack() {
-		this.stackArray = new StackArray();
+		this.stackList = new StackList();
 	}
 
 	public Stack(StackArray stackArray) {
 		super();
-		this.stackArray = new StackArray();
+		this.stackList = new StackList();
 	}
 
 	public int getTotal() {
-		return stackArray.getTotal();
+		return stackList.getTotal();
 	}
 
 	public void push(int i) {
-		stackArray.push(i);
+		stackList.pushElement(i);
 	}
 
 }
