@@ -6,22 +6,26 @@ import edu.kis.vh.stacks.list.StackList;
  * @author Aliaksei
  *
  */
-public class Stack {
+public class Stack implements InterStackFace {
 	
 	private StackList stackList;
 
+	@Override
 	public boolean isEmpty() {
 		return stackList.empty();
 	}
 
+	@Override
 	public boolean isFull() {
 		return stackList.full();
 	}
 
+	@Override
 	public int top() {
 		return stackList.peek();
 	}
 
+	@Override
 	public int pop() {
 		return stackList.pop();
 	}
@@ -39,6 +43,7 @@ public class Stack {
 		return stackList.getTotal();
 	}
 
+	@Override
 	public void push(int i) {
 		stackList.pushElement(i);
 	}

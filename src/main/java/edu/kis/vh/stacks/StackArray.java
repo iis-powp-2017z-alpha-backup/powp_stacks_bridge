@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks;
 
-public class StackArray {
-	
+public class StackArray implements InterStackFace {
+
 	private static final int FULL = 11;
 
 	private static final int TOTAL = -1;

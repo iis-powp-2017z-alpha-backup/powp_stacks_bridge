@@ -1,6 +1,7 @@
 package edu.kis.vh.stacks.factory;
 
 import edu.kis.vh.stacks.factory.StacksFactory;
+import edu.kis.vh.stacks.InterStackFace;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
@@ -12,12 +13,12 @@ import edu.kis.vh.stacks.StackHanoi;
 public class DefaultStacksFactory implements StacksFactory {
 
 	@Override
-	public Stack getStandardStack() {
+	public InterStackFace getStandardStack() {
 		return new Stack();
 	}
 
 	@Override
-	public Stack getFalseStack() {
+	public InterStackFace getFalseStack() {
 		return new Stack();
 	}
 
