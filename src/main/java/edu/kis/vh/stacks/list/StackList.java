@@ -1,11 +1,19 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.InterStackFace;
 
-	Node last;
+/**
+ * @author Aliaksei
+ *
+ */
+public class StackList implements InterStackFace {
+
+	private static final int EMPTY = -1;
+	private Node last;
 	int i;
+	private int total;
 
-	public void pushElement(int i) {
+	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -13,28 +21,37 @@ public class StackList {
 			last.next.prev = last;
 			last = last.next;
 		}
+		total = total + 1;
 	}
 
-	public boolean empty() {
+	public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	public boolean isFull() {
 		return false;
 	}
 
-	public int peek() {
-		if (empty())
-			return -1;
-		return last.value;
+	public int top() {
+		if (isEmpty())
+			return EMPTY;
+		return last.getValue();
 	}
 
 	public int pop() {
-		if (empty())
-			return -1;
-		int ret = last.value;
+		if (isEmpty())
+			return EMPTY;
+		int ret = last.getValue();
 		last = last.prev;
+		total = total - 1;
 		return ret;
+	}
+
+	public int getTotal() {
+		if (isEmpty()) {
+			return EMPTY;
+		}
+		return total;
 	}
 
 }
