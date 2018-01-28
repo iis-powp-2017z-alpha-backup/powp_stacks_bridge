@@ -14,7 +14,7 @@ public class StackFIFO extends Stack {
 		// TODO Auto-generated constructor stub
 	}
 
-	private final Stack temp = new Stack();
+	private final Stack temp = new Stack(new StackList());
 	
 	@Override
 	public int pop() {
@@ -29,3 +29,5 @@ public class StackFIFO extends Stack {
 		return poppedOutValue;
 	}
 }
+
+//Najlepszym wyborem bedzie StackList z uwagi na mozliwosc usuwania elementow
