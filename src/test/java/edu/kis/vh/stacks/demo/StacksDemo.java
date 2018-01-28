@@ -1,3 +1,4 @@
+
 package edu.kis.vh.stacks.demo;
 
 import edu.kis.vh.stacks.StackHanoi;
@@ -5,8 +6,7 @@ import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 class StacksDemo {
-	// błędnie sformatowane wiersze: 11:14 , 18:30, 32
-	// alt + -> lub alt + <- jest to skrót do przechodzenia do ostatnio edytowanej pozycji
+
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
@@ -15,24 +15,16 @@ class StacksDemo {
 	}
 
 	private static void testStacks(DefaultStacksFactory factory) {
-		Stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
-				factory.GetHanoiStack() };
-
-		for (int i = 1; i < 15; i++)
-			for (int j = 0; j < 3; j++)
-				stacks[j].push(i);
-
-		java.util.Random rn = new java.util.Random();
-		for (int i = 1; i < 15; i++)
-			stacks[3].push(rn.nextInt(20));
-
-		for (int i = 0; i < stacks.length; i++) {
-			while (!stacks[i].isEmpty())
-				System.out.print(stacks[i].pop() + "  ");
-			System.out.println();
-		}
+		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
+				factory.getHanoiStack() };
 
 		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
+
 	}
 
 }
+
+// W pliku StacksDemo zmianie ulegly linie 26 - 29
+// Usunieto bledy formatowania
+// Skrot klawiszowy "alt + <-" pozwala na przechodzenie pomiedzy kartami
+// polecenie 8 - brak pol do enkapsulacji

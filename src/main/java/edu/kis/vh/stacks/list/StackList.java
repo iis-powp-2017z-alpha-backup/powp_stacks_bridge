@@ -9,13 +9,13 @@ public class StackList {
 		if (last == null)
 			last = new Node(i);
 		else {
-			last.setNext(new Node(i));
-			last.getNext().setPrev(last);
-			last = last.getNext();
+			last.next = new Node(i);
+			last.next.prev = last;
+			last = last.next;
 		}
 	}
 
-	public boolean empty() {
+	private boolean empty() {
 		return last == null;
 	}
 
@@ -23,17 +23,17 @@ public class StackList {
 		return false;
 	}
 
-	public int peek() {
+	private int peek() {
 		if (empty())
 			return -1;
-		return last.getValue();
+		return last.value;
 	}
 
 	public int pop() {
 		if (empty())
 			return -1;
-		int ret = last.getValue();
-		last = last.getPrev();
+		int ret = last.value;
+		last = last.prev;
 		return ret;
 	}
 
