@@ -11,7 +11,6 @@ public class Stack {
 	public Stack(){
 		this.stackList = new StackList();
 	}
-
 	
 	private IStack stackList;
 
@@ -36,3 +35,5 @@ public class Stack {
 	}
 			
 }
+
+//Dzieki tej zmianie mamy mozliwosc wykorzystania dowolnej klasy implementującej interface IStack
