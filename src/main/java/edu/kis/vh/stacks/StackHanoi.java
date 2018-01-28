@@ -9,7 +9,7 @@ public StackHanoi() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public StackHanoi(StackList stackList) {
+	public StackHanoi(IStack stackList) {
 		super(stackList);
 		// TODO Auto-generated constructor stub
 	}

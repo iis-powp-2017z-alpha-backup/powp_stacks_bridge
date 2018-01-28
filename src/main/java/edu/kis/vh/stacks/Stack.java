@@ -3,7 +3,7 @@ package edu.kis.vh.stacks;
 import edu.kis.vh.stacks.types.StackList;
 
 public class Stack {
-	public Stack(StackList stackList) {
+	public Stack(IStack stackList) {
 		super();
 		this.stackList = stackList;
 	}
@@ -11,7 +11,6 @@ public class Stack {
 	public Stack(){
 		this.stackList = new StackList();
 	}
-
 	
 	private IStack stackList;
 
