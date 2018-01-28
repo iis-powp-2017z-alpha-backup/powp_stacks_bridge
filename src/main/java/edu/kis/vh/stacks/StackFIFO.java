@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.Stack;
+
 public class StackFIFO extends Stack {
 
 	private final Stack temp = new Stack();

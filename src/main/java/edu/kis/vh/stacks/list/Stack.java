@@ -1,6 +1,7 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.list;
 
-import edu.kis.vh.stacks.list.StackList;
+import edu.kis.vh.stacks.IStack;
+import edu.kis.vh.stacks.types.StackList;
 
 public class Stack {
 	public Stack(StackList stackList) {
