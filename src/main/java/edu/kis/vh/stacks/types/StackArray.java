@@ -1,9 +1,7 @@
 package edu.kis.vh.stacks.types;
-
 import edu.kis.vh.stacks.IStack;
 
 public class StackArray implements IStack {
-	final int EMPTY_STACK_VALUE = -1;
 	final int FULL_STACK_VALUE = 11;
 
 	private final int[] ITEMS = new int[12];	
@@ -43,4 +41,5 @@ public class StackArray implements IStack {
 			return EMPTY_STACK_VALUE;
 		return ITEMS[total--];
 	}
+
 }
