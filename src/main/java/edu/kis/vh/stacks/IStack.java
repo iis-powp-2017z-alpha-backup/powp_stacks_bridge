@@ -1,8 +1,8 @@
 package edu.kis.vh.stacks;
 
 public interface IStack {
-
-	final int EMPTY_STACK_VALUE = -1;
+	
+	final int EMPTY_STACK_VALUE = 0;
 
 	void push(int i);
 
@@ -15,3 +15,5 @@ public interface IStack {
 	int pop();
 
 }
+
+//Realizacja zadania 10 pomogla, poniewaz wystarczyło zmienic wartosc we wspolnym interface.
