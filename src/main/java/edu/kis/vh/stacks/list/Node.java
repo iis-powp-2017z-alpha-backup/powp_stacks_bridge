@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks.list;
 
-public class Node {
+class Node {
 
     int value;
     Node prev, next;
