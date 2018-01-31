@@ -15,22 +15,22 @@ public class StackList {
         }
     }
 
-    public boolean empty() {
+    private boolean empty() {
         return last == null;
     }
 
-    public boolean full() {
+    private boolean full() {
         return false;
     }
 
-    public int peek() {
+    private int peek() {
         if (empty()) {
             return -1;
         }
         return last.value;
     }
 
-    public int pop() {
+    private int pop() {
         if (empty()) {
             return -1;
         }
