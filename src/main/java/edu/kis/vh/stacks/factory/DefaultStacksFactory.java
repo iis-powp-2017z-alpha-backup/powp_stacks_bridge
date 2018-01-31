@@ -1,8 +1,8 @@
 package edu.kis.vh.stacks.factory;
 
+import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
-import edu.kis.vh.stacks.Stack;
 
 public class DefaultStacksFactory implements IstacksFactory {
 
@@ -18,12 +18,12 @@ public class DefaultStacksFactory implements IstacksFactory {
 
     @Override
     public StackFIFO getFIFOStack() {
-        return new StackFIFO();
+        return new StackFIFO(null);
     }
 
     @Override
     public StackHanoi getHanoiStack() {
-        return new StackHanoi();
+        return new StackHanoi(null);
     }
 
 }

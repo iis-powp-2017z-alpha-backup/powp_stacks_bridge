@@ -4,6 +4,11 @@ public class StackHanoi extends Stack {
 
     int totalRejected = 0;
 
+    public StackHanoi(StackImp items) {
+        super(items);
+        // TODO Auto-generated constructor stub
+    }
+
     public int reportRejected() {
         return totalRejected;
     }

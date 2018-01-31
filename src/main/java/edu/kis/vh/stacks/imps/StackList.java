@@ -2,7 +2,7 @@ package edu.kis.vh.stacks.imps;
 
 import edu.kis.vh.stacks.StackImp;
 
-public abstract class StackList implements StackImp {
+public class StackList implements StackImp {
 
     private Node last;
 
@@ -54,6 +54,12 @@ public abstract class StackList implements StackImp {
             return 0;
         }
         return last.value;
+    }
+
+    @Override
+    public int[] getItems() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }
