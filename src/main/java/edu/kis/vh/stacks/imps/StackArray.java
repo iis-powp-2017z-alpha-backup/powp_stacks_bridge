@@ -4,13 +4,9 @@ import edu.kis.vh.stacks.StackImp;
 
 public class StackArray implements StackImp {
 
-    private static final int _twelve = 12;  // final
+    private int[] items = new int[StackImp._twelve];
 
-    private static final int MINUSONE = -1; // final
-
-    private int[] items = new int[_twelve];
-
-    private int total = MINUSONE;
+    private int total = StackImp.MINUSONE;
 
     @Override
     public int getTotal() {
@@ -30,7 +26,7 @@ public class StackArray implements StackImp {
 
     @Override
     public boolean isEmpty() {
-        return total == MINUSONE;
+        return total == StackImp.MINUSONE;
     }
 
     @Override
@@ -42,7 +38,7 @@ public class StackArray implements StackImp {
     @Override
     public int top() {
         if (isEmpty()) {
-            return MINUSONE;
+            return StackImp.MINUSONE;
         }
         return getItems()[total];
     }
@@ -50,7 +46,7 @@ public class StackArray implements StackImp {
     @Override
     public int pop() {
         if (isEmpty()) {
-            return MINUSONE;
+            return StackImp.MINUSONE;
         }
         return getItems()[total--];
     }
