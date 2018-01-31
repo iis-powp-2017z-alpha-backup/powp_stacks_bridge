@@ -1,6 +1,8 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.imps;
 
-public class StackArray {
+import edu.kis.vh.stacks.StackImp;
+
+public class StackArray implements StackImp {
 
     private static final int _twelve = 12;  // final
 
@@ -10,10 +12,12 @@ public class StackArray {
 
     private int total = MINUSONE;
 
+    @Override
     public int getTotal() {
         return total;
     }
 
+    @Override
     public void push(int i) {
         if (!isFull()) {
             getItems()[++total] = i;
@@ -24,15 +28,18 @@ public class StackArray {
         return items;
     }
 
+    @Override
     public boolean isEmpty() {
         return total == MINUSONE;
     }
 
+    @Override
     public boolean isFull() {
 
         return total == 11;
     }
 
+    @Override
     public int top() {
         if (isEmpty()) {
             return MINUSONE;
@@ -40,6 +47,7 @@ public class StackArray {
         return getItems()[total];
     }
 
+    @Override
     public int pop() {
         if (isEmpty()) {
             return MINUSONE;

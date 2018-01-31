@@ -1,8 +1,19 @@
 package edu.kis.vh.stacks;
 
-public class Stack {
+import edu.kis.vh.stacks.imps.StackArray;
 
-    private final StackArray items = new StackArray();
+public class Stack {
+    // Stack uzywa abstrakcji
+
+    private final StackImp items;
+
+    public Stack(StackImp items) {
+        this.items = items;
+    }
+
+    public Stack() {
+        items = new StackArray();
+    }
 
     public int getTotal() {
         return items.getTotal();
@@ -33,4 +44,7 @@ public class Stack {
         return items.pop();
     }
 
+    public StackImp getItems() {
+        return items;
+    }
 }
