@@ -20,7 +20,7 @@ public class StackArray {
         }
     }
 
-    private int[] getItems() {
+    public int[] getItems() {
         return items;
     }
 
