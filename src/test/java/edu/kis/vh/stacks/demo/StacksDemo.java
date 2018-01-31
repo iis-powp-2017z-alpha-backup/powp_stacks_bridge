@@ -1,21 +1,36 @@
 package edu.kis.vh.stacks.demo;
 
-import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.factory.ArrayStacksFactory;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.ListStacksFactory;
 
 class StacksDemo {
 
     public static void main(String[] args) {
-        DefaultStacksFactory factory = new DefaultStacksFactory();
+        DefaultStacksFactory defaultFactory = new DefaultStacksFactory();
+        ListStacksFactory listStacksfactory = new ListStacksFactory();
+        ArrayStacksFactory arrayStacksfactory = new ArrayStacksFactory();
 
-        testStack(factory);
+        testStack(defaultFactory);
+        testStack(listStacksfactory);
+        testStack(arrayStacksfactory);
+    }
+
+    private static void testStack(ListStacksFactory listStacksfactory) {
+        // TODO Auto-generated method stub
 
     }
 
-    private static void testStack(DefaultStacksFactory factory) {
-        Stack[] stacks = {factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
-                factory.getHanoiStack()};
+    private static void testStack(DefaultStacksFactory defaultFactory) {
+        // TODO Auto-generated method stub
+
+    }
+
+    private static void testStack(ArrayStacksFactory arrayStacksfactory) {
+        Stack[] stacks = {arrayStacksfactory.getStandardStack(), arrayStacksfactory.getFalseStack(),
+                arrayStacksfactory.getFIFOStack(), arrayStacksfactory.getHanoiStack()};
 
         for (int i = 1; i < 15; i++) {
             for (int j = 0; j < 3; j++) {
