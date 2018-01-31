@@ -9,7 +9,7 @@ public abstract class StackList implements StackImp {
     @Override
     public int pop() {
         if (isEmpty()) {
-            return -1;
+            return 0;
         }
         int ret = last.value;
         last = last.prev;
@@ -51,7 +51,7 @@ public abstract class StackList implements StackImp {
     @Override
     public int top() {
         if (isEmpty()) {
-            return -1;
+            return 0;
         }
         return last.value;
     }
