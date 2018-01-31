@@ -2,9 +2,9 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 
-    private static final int _twelve = 12;
+    private static final int _twelve = 12;  // final
 
-    private static final int MINUSONE = -1;
+    private static final int MINUSONE = -1; // final
 
     private int[] items = new int[_twelve];
 
