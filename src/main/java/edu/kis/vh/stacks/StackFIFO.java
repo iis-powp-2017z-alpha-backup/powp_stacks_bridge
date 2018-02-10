@@ -7,6 +7,11 @@ import edu.kis.vh.stacks.implementations.StackList;
  	a ilosc pamieci jaka zajmuje jest zalezna od wielkosci samego stosu a nie narzucona
  	oddgornie
  */
+/* zad 17
+ 	Zasade izolacji abstrakcji od implementacji lamie pole temp w tej klasie .Jest to obiekt klasy StackList
+ 	wymuszajacy uzycie tej implementacji . W celu naprawienia tego bledu nalezy zastapic pole temp  obiektem klasy 
+ 	StackInterface.
+ */
 
 public class StackFIFO extends stack {
 
