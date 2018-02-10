@@ -1,12 +1,19 @@
 package edu.kis.vh.stacks;
-// test
+
+import edu.kis.vh.stacks.implementations.StackList;
+/* zad 14
+ 	Wybralem StackList, poniewaz pozwala na uzycie stosu bez ograniczenia wielkosci,
+ 	a ilosc pamieci jaka zajmuje jest zalezna od wielkosci samego stosu a nie narzucona
+ 	oddgornie
+ */
+
 public class StackFIFO extends stack {
 
-	public stack temp;
+	public StackList temp;
 	
 		public StackFIFO() {
 			super();
-			temp = new stack();
+			temp = new StackList();
 		}
 	
 		
