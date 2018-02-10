@@ -7,16 +7,18 @@ public class StackList implements StackInterface{
   Korzystam z intellij. Wykorzystalem opcje tylko z podpowiedzi
 */
 	Node last;
-	int i;
+	int i=-1;
 
 	public void pushElement(int i) {
-		if (last == null)
-			last = new Node(i);
-		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
-		}
+		if(!isFull()){
+			if (last == null)
+				last = new Node(i);
+			else {
+				last.next = new Node(i);
+				last.next.prev = last;
+				last = last.next;
+				}
+					this.i++;		}
 	}
 
 	private boolean empty() {
@@ -24,7 +26,7 @@ public class StackList implements StackInterface{
 	}
 
 	private boolean full() {
-		return false;
+		return i==11;
 	}
 
 	private int peek() {
@@ -32,7 +34,7 @@ public class StackList implements StackInterface{
 			return emptyStack;
 		return last.value;
 	}
-	@Override
+		@Override
 		public void push(int i) {
 			this.pushElement(i);
 		}
@@ -58,6 +60,7 @@ public class StackList implements StackInterface{
 			return emptyStack;
 		int ret = last.value;
 		last = last.prev;
+		i--;
 		return ret;
 	}
 
