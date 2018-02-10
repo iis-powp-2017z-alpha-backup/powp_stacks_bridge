@@ -3,41 +3,36 @@ package edu.kis.vh.stacks;
 
 public class stack {
 
-	public stack(int[] iTEMS, int total) {
-		super();
-		ITEMS = iTEMS;
-		this.total = total;
-		int awsome = 12;
-	}
 
-	private int[] ITEMS = new int[12];
+	
+	private StackArray stackArray;
+	
+		public stack () {
+			this.stackArray = new StackArray();
+		}
+	
+		public stack(StackArray stackArray) {
+			this.stackArray = stackArray;
+		}
 
-	public int total = -1;
-
+	
 	public void push(int i) {
-		if (!isFull())
-			ITEMS[++total] = i;
+		stackArray.push(i);
 	}
 
 	public boolean isEmpty() {
-		return total == -1;
+		return stackArray.isEmpty();
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return stackArray.isFull();
 	}
 
 	public int top() {
-		if (isEmpty())
-			return -1;
-		return ITEMS[total];
+		return stackArray.top();
 	}
-
-	
 	public int pop() {
-		if (isEmpty())
-			return -1;
-		return ITEMS[total--];
+		return stackArray.pop();
 	}
 
 }
