@@ -8,6 +8,13 @@ public class StackHanoi extends stack {
 				totalRejected = 0;
 			}
 	
+//poprawka punktu 12
+		public StackHanoi(StackInterface stackInterface){
+			super(stackInterface);
+			totalRejected = 0;
+		}
+	
+	
 	public int reportRejected() {
 	return totalRejected;
 	}

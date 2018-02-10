@@ -1,5 +1,6 @@
 package edu.kis.vh.stacks;
 
+
 import edu.kis.vh.stacks.implementations.StackList;
 /* zad 14
  	Wybralem StackList, poniewaz pozwala na uzycie stosu bez ograniczenia wielkosci,
@@ -15,7 +16,12 @@ public class StackFIFO extends stack {
 			super();
 			temp = new StackList();
 		}
-	
+		
+	// poprawka punktu 12
+			public StackFIFO(StackInterface stackInterface){
+				super(stackInterface);
+				temp = new StackList();
+			}
 		
 	@Override
 	public int pop() {
