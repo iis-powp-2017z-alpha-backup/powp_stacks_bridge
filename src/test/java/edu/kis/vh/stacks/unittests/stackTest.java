@@ -17,7 +17,7 @@ public class stackTest {
 	
 	@Test
 	public void testPush() {
-		stack stackObj = new stack(new StackArray());
+		stack stackObj = new stack();
 		int testValue = 4;
 		stackObj.push(testValue);
 		
@@ -39,7 +39,7 @@ public class stackTest {
 
 	@Test
 	public void testIsFull() {
-		stack stackObj = new stack(new StackList());
+		stack stackObj = new stack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();		
@@ -53,7 +53,7 @@ public class stackTest {
 
 	@Test
 	public void testTop() {
-		stack stackObj = new stack(new StackArray());
+		stack stackObj = new stack();
 		final int EMPTY_STACK_VALUE = 0;
 		
 		int result = stackObj.top();
@@ -70,7 +70,7 @@ public class stackTest {
 
 	@Test
 	public void testPop() {
-		stack stackObj = new stack(new StackArray());
+		stack stackObj = new stack();
 		final int EMPTY_STACK_VALUE = 0;
 		
 		int result = stackObj.pop();
