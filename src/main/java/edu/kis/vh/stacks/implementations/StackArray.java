@@ -32,7 +32,8 @@ public class StackArray implements StackInterface {
 	@Override
     public int top() {
         if (isEmpty())
-            return -1;
+            //return -1;
+        	return emptyStack;
         return ITEMS[total];
     	
     	//return stackList.peek();
@@ -41,7 +42,8 @@ public class StackArray implements StackInterface {
 	@Override 
     public int pop() {
         if (isEmpty())
-            return -1;
+            //return -1;
+        	return emptyStack;
         return ITEMS[total--];
         
     	//return stackList.pop();
