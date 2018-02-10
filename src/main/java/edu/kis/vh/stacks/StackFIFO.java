@@ -2,8 +2,14 @@ package edu.kis.vh.stacks;
 // test
 public class StackFIFO extends stack {
 
-	public stack temp = new stack();
+	public stack temp;
 	
+		public StackFIFO() {
+			super();
+			temp = new stack();
+		}
+	
+		
 	@Override
 	public int pop() {
 		while (!isEmpty())
