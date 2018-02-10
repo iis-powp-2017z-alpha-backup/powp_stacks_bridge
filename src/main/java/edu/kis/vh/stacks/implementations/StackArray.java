@@ -8,12 +8,12 @@ public class StackArray implements StackInterface {
 	
     
 	public int total = -1;
-	private int[] ITEMS = new int[12];
+	private int[] items = new int[12];
 	
 	@Override
 	public void push(int i) {
         if (!isFull())
-            ITEMS[++total] = i;
+        	items[++total] = i;
     	
     }
 	
@@ -33,8 +33,8 @@ public class StackArray implements StackInterface {
 	@Override
     public int top() {
         if (isEmpty())
-        	return emptyStack;
-        return ITEMS[total];
+        	return EMPTY_STACK;
+        return items[total];
     	
     	
     }
@@ -42,10 +42,9 @@ public class StackArray implements StackInterface {
 	@Override 
     public int pop() {
         if (isEmpty())
-        	return emptyStack;
-        return ITEMS[total--];
+        	return EMPTY_STACK;
+        return items[total--];
         
     }
 
 }
-//

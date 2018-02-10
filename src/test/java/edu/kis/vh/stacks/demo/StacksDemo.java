@@ -1,7 +1,5 @@
 package edu.kis.vh.stacks.demo;
 
-//import edu.kis.vh.stacks.StackHanoi;
-//import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 import edu.kis.vh.stacks.factory.ArrayStackFactory;
 import edu.kis.vh.stacks.factory.IstacksFactory;

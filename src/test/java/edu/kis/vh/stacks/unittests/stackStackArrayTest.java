@@ -1,14 +1,14 @@
 package edu.kis.vh.stacks.unittests;
 
 import edu.kis.vh.stacks.implementations.StackArray;
-import edu.kis.vh.stacks.stack;
+import edu.kis.vh.stacks.Stack;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class stackStackArrayTest {
     @Test
     public void testPush() {
-        stack stackObj = new stack(new StackArray());
+        Stack stackObj = new Stack(new StackArray());
         int testValue = 4;
         stackObj.push(testValue);
 
@@ -18,7 +18,7 @@ public class stackStackArrayTest {
 
     @Test
     public void testIsEmpty() {
-        stack stackObj = new stack(new StackArray());
+        Stack stackObj = new Stack(new StackArray());
         boolean result = stackObj.isEmpty();
         Assert.assertEquals(true, result);
 
@@ -30,7 +30,7 @@ public class stackStackArrayTest {
 
     @Test
     public void testIsFull() {
-        stack stackObj = new stack(new StackArray());
+        Stack stackObj = new Stack(new StackArray());
         final int STACK_CAPACITY = 12;
         for (int i = 0; i < STACK_CAPACITY; i++) {
             boolean result = stackObj.isFull();
@@ -44,7 +44,7 @@ public class stackStackArrayTest {
 
     @Test
     public void testTop() {
-        stack stackObj = new stack(new StackArray());
+        Stack stackObj = new Stack(new StackArray());
         final int EMPTY_STACK_VALUE = 0;
 
         int result = stackObj.top();
@@ -61,7 +61,7 @@ public class stackStackArrayTest {
 
     @Test
     public void testPop() {
-        stack stackObj = new stack(new StackArray());
+        Stack stackObj = new Stack(new StackArray());
         final int EMPTY_STACK_VALUE = 0;
 
         int result = stackObj.pop();

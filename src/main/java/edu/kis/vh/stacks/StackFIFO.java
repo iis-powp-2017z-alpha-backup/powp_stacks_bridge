@@ -13,7 +13,7 @@ import edu.kis.vh.stacks.implementations.StackList;
 	StackInterface.
 	 */
 
-public class StackFIFO extends stack {
+public class StackFIFO extends Stack {
 
 	public StackList temp;
 	

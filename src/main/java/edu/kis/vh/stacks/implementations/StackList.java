@@ -32,7 +32,7 @@ public class StackList implements StackInterface {
 
 	private int peek() {
 		if (empty())
-			return emptyStack;
+			return EMPTY_STACK;
 		return last.value;
 	}
 		@Override
@@ -57,7 +57,7 @@ public class StackList implements StackInterface {
 
 	public int pop() {
 		if (empty())
-			return emptyStack;
+			return EMPTY_STACK;
 		int ret = last.value;
 		last = last.prev;
 		i--;

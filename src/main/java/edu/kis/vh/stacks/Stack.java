@@ -2,7 +2,7 @@ package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.implementations.StackList;
 
-public class stack {
+public class Stack {
 	/* zad7
 	Wykonana zmiana pozwala na wykorzystanie jako atrybutu obiektu dowolnej klasy 
 	implementujacej interfejs StackInterface. Daje to mozliwosc przy zmianie 
@@ -12,17 +12,17 @@ public class stack {
 	/* zad13
 	Z racji tego że korzystam z Intellij pewne opcje sie różnią.
 	Opcja Navigate->Declaration przneosi mnie do klasy StackInterface
-	Opcja Navigate-> TypeHierarchy pokazuje okno z hierarchią klasy stack.
+	Opcja Navigate-> TypeHierarchy pokazuje okno z hierarchią klasy Stack.
 	Wciśniety ctrl podczas klikania w wywołanie metody przneosi do deklaracji tej metody 
 	*/
 
 	private StackInterface stackInterface;
 	
-	public stack () {
+	public Stack () {
 		this.stackInterface = new StackList();
 	}
 	
-	public stack(StackInterface stackInterface) {
+	public Stack(StackInterface stackInterface) {
 		this.stackInterface = stackInterface;
 	}
 

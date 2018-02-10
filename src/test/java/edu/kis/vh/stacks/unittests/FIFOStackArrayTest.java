@@ -2,14 +2,14 @@ package edu.kis.vh.stacks.unittests;
 
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.implementations.StackArray;
-import edu.kis.vh.stacks.stack;
+import edu.kis.vh.stacks.Stack;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class FIFOStackArrayTest {
     @Test
     public void testPush() {
-        stack stackObj = new StackFIFO(new StackArray());
+        Stack stackObj = new StackFIFO(new StackArray());
         int testValue = 4;
         stackObj.push(testValue);
 
@@ -19,7 +19,7 @@ public class FIFOStackArrayTest {
 
     @Test
     public void testIsEmpty() {
-        stack stackObj = new StackFIFO(new StackArray());
+        Stack stackObj = new StackFIFO(new StackArray());
         boolean result = stackObj.isEmpty();
         Assert.assertEquals(true, result);
 
@@ -31,7 +31,7 @@ public class FIFOStackArrayTest {
 
     @Test
     public void testIsFull() {
-        stack stackObj = new StackFIFO(new StackArray());
+        Stack stackObj = new StackFIFO(new StackArray());
         final int STACK_CAPACITY = 12;
         for (int i = 0; i < STACK_CAPACITY; i++) {
             boolean result = stackObj.isFull();
@@ -45,7 +45,7 @@ public class FIFOStackArrayTest {
 
     @Test
     public void testTop() {
-        stack stackObj = new StackFIFO(new StackArray());
+        Stack stackObj = new StackFIFO(new StackArray());
         final int EMPTY_STACK_VALUE = 0;
 
         int result = stackObj.top();
@@ -62,7 +62,7 @@ public class FIFOStackArrayTest {
 
     @Test
     public void testPop() {
-        stack stackObj = new StackFIFO(new StackArray());
+        Stack stackObj = new StackFIFO(new StackArray());
         final int EMPTY_STACK_VALUE = 0;
 
         int result = stackObj.pop();
