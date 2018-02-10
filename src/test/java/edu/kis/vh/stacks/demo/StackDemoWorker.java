@@ -5,8 +5,11 @@ import edu.kis.vh.stacks.factory.IstacksFactory;
 import edu.kis.vh.stacks.stack;
 
 public class StackDemoWorker {
+	/*
+	Klawisze alt plus strzałka powodują przechodzneie między otwartymi w edytorze plikami
+	*/
 
-    public void work (IstacksFactory factory) {
+    public void work(IstacksFactory factory) {
         stack[] stacks = {factory.GetStandardStack(), factory.GetFalseStack(),
                 factory.GetFIFOStack(), factory.GetHanoiStack()};
 

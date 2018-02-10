@@ -2,10 +2,10 @@ package edu.kis.vh.stacks.implementations;
 
 import edu.kis.vh.stacks.StackInterface;
 
-public class StackList implements StackInterface{
-/*
-  Korzystam z intellij. Wykorzystalem opcje tylko z podpowiedzi
-*/
+public class StackList implements StackInterface {
+	/*
+	Korzystalem z intellij w tym pnkcie. Wykorzystalem opcje tylko z podpowiedzi
+	*/
 	Node last;
 	int i=-1;
 
@@ -17,8 +17,9 @@ public class StackList implements StackInterface{
 				last.next = new Node(i);
 				last.next.prev = last;
 				last = last.next;
-				}
-					this.i++;		}
+			}
+			this.i++;
+		}
 	}
 
 	private boolean empty() {
@@ -56,7 +57,6 @@ public class StackList implements StackInterface{
 
 	public int pop() {
 		if (empty())
-			
 			return emptyStack;
 		int ret = last.value;
 		last = last.prev;
@@ -65,4 +65,3 @@ public class StackList implements StackInterface{
 	}
 
 }
-//
