@@ -56,6 +56,7 @@ public class stackTest {
 		
 		result = stackObj.top();
 		Assert.assertEquals(testValue, result);
+		
 		result = stackObj.top();
 		Assert.assertEquals(testValue, result);
 	}
@@ -73,6 +74,7 @@ public class stackTest {
 		
 		result = stackObj.pop();
 		Assert.assertEquals(testValue, result);
+		
 		result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
