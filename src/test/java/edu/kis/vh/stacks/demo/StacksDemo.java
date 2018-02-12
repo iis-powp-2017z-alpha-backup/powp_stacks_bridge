@@ -30,3 +30,8 @@ class StacksDemo {
 	}
 	
 }
+
+//linie 12-13: dodano spacje przy klamerce zamykajacej
+//linie 19-27: za duzo wciec
+//linia 26: wcięta byla o 2 taby za duzo
+//linie 29-30: polaczono w jeden wiersz
