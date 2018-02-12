@@ -6,6 +6,8 @@ public class Stack {
 
 	private static final int STACK_CAPACITY = 12;
 
+	private static final int STACK_MAX_INDEX = STACK_CAPACITY - 1;
+
 	private int[] items = new int[STACK_CAPACITY];
 
 	public int total = STACK_EMPTY;
@@ -20,7 +22,7 @@ public class Stack {
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return total == STACK_MAX_INDEX;
 	}
 
 	public int top() {
