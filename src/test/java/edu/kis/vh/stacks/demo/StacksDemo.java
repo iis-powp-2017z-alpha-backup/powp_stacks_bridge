@@ -35,3 +35,4 @@ class StacksDemo {
 // linie 19-27: za duzo wciec
 // linia 26: wcięta byla o 2 taby za duzo
 // linie 29-30: polaczono w jeden wiersz
+// alt + strzalki: poruszanie sie do tylu lub przodu w sensie poprzednio/nastepny ogladany plik
