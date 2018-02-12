@@ -38,4 +38,12 @@ public class StackList {
 		return ret;
 	}
 
+	public int getI() {
+		return i;
+	}
+
+	public void setI(int i) {
+		this.i = i;
+	}
+
 }
