@@ -2,43 +2,34 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 
-	private static final int STACK_EMPTY = -1;
-
-	private static final int STACK_CAPACITY = 12;
-
-	private static final int STACK_MAX_INDEX = STACK_CAPACITY - 1;
-
-	private final int[] items = new int[STACK_CAPACITY];
-
-	private int total = STACK_EMPTY;
+	private StackArray stack;
+	
+	public Stack() {
+		this.stack = new StackArray();
+	}
 
 	public int getTotal() {
-		return total;
+		return stack.getTotal();
 	}
 
 	public void push(int i) {
-		if (!isFull())
-			items[++total] = i;
+		stack.push(i);
 	}
 
 	public boolean isEmpty() {
-		return total == STACK_EMPTY;
+		return stack.isEmpty();
 	}
 
 	public boolean isFull() {
-		return total == STACK_MAX_INDEX;
+		return stack.isFull();
 	}
 
 	public int top() {
-		if (isEmpty())
-			return STACK_EMPTY;
-		return items[total];
+		return stack.top();
 	}
 
 	public int pop() {
-		if (isEmpty())
-			return STACK_EMPTY;
-		return items[total--];
+		return stack.pop();
 	}
 
 }
