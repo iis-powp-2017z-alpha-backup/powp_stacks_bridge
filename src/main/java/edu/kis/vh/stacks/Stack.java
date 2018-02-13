@@ -37,3 +37,7 @@ public class Stack {
 	}
 
 }
+
+// F3 - przejscie do deklaracji
+// ctrl - lista do wyboru (deklaracja / implementacja)
+// ctrl+t - wyswietla hierarchie
