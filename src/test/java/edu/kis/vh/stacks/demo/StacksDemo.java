@@ -3,6 +3,9 @@ package edu.kis.vh.stacks.demo;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.IStacksFactory;
+import edu.kis.vh.stacks.factory.StackArrayFactory;
+import edu.kis.vh.stacks.factory.StackListFactory;
 
 /**
  * @author damian.stepnik
@@ -17,19 +20,23 @@ class StacksDemo {
 	 * zainicjowanie obiektu factory jako DefaultStacksFactory i przekazanie go do metody testStacks
 	 */
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
-		
-		testStacks(factory);
+		DefaultStacksFactory factory = new DefaultStacksFactory();	
+		StackListFactory stackListFactory = new StackListFactory();
+		StackArrayFactory stackArrayFactory = new StackArrayFactory();
+
+		testStacks(factory);	
+		testStacks(stackListFactory);
+		testStacks(stackArrayFactory);
 		
 	}
 	
 	/**
-	 * @param factory
+	 * @param stackListFactory
 	 * wylistowanie (pintln) stosow
 	 */
-	private static void testStacks(DefaultStacksFactory factory) {
-		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
-				factory.getHanoiStack() };
+	private static void testStacks(IStacksFactory stackListFactory) {
+		Stack[] stacks = { stackListFactory.getStandardStack(), stackListFactory.getFalseStack(), stackListFactory.getFIFOStack(),
+				stackListFactory.getHanoiStack() };
 
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
