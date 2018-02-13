@@ -1,7 +1,11 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.types.StackList;
+
 public class StackFIFO extends Stack {
 
+	private final StackList temp = new StackList();
+	
 	public StackFIFO() {
 		super();
 	}
@@ -9,8 +13,6 @@ public class StackFIFO extends Stack {
 	public StackFIFO(IStack stackArray) {
 		super(stackArray);
 	}
-
-	private final Stack temp = new Stack();
 
 	@Override
 	public int pop() {
