@@ -3,8 +3,6 @@ package edu.kis.vh.stacks.types;
 import edu.kis.vh.stacks.IStack;
 
 public class StackArray implements IStack {
-	
-	private static final int STACK_EMPTY = -1;
 
 	private static final int STACK_CAPACITY = 12;
 
