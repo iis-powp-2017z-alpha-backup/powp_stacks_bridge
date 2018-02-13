@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.types.StackArray;
+
 public class Stack {
 
 	// moze byc przekazany obiekt implementujacy interfejs IStack 
