@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-public class StackArray {
+public class StackArray implements IStack {
 	
 	private static final int STACK_EMPTY = -1;
 

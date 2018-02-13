@@ -1,6 +1,8 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.IStack;
+
+public class StackList implements IStack{
 
 	private static final int STACK_EMPTY = -1;
 	private Node last;
@@ -74,5 +76,32 @@ public class StackList {
 		}
 
 	}
+
+	@Override
+	public void push(int i) {
+		if (last == null)
+			last = new Node(i);		
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return last == null;
+	}
+
+	@Override
+	public boolean isFull() {
+		return false;
+	}
+
+	@Override
+	public int top() {
+		if (isEmpty())
+			return -1;
+		return last.getValue();
+	}
 	
 }
+
+// przydatna opcje:
+// Source -> Override/Implement Methods
+// Source -> Generate Delegate Methods
