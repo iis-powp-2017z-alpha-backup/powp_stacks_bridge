@@ -17,7 +17,7 @@ class StacksDemo {
 
 	/**
 	 * @param args
-	 * zainicjowanie obiektu factory jako DefaultStacksFactory i przekazanie go do metody testStacks
+	 * zainicjowanie obiektow roznych fabryk i przekazanie ich do metody testStacks
 	 */
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();	
