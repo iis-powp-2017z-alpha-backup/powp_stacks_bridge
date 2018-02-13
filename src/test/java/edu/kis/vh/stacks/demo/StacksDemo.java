@@ -4,10 +4,18 @@ import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
+/**
+ * @author damian.stepnik
+ * klasa demonstrujaca dzialanie programu
+ */
 class StacksDemo {
 
 	private static final String MESSAGE_TOTAL_REJECTED = "total rejected is ";
 
+	/**
+	 * @param args
+	 * zainicjowanie obiektu factory jako DefaultStacksFactory i przekazanie go do metody testStacks
+	 */
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 		
@@ -15,6 +23,10 @@ class StacksDemo {
 		
 	}
 	
+	/**
+	 * @param factory
+	 * wylistowanie (pintln) stosow
+	 */
 	private static void testStacks(DefaultStacksFactory factory) {
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
