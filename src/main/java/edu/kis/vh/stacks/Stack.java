@@ -2,14 +2,16 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 
-	private StackArray stack;
+	// moze byc przekazany obiekt implementujacy interfejs IStack 
+	private IStack stack;
+	
+	public Stack(IStack stackArray) {
+		super();
+		this.stack = stackArray;
+	}
 	
 	public Stack() {
 		this.stack = new StackArray();
-	}
-
-	public int getTotal() {
-		return stack.getTotal();
 	}
 
 	public void push(int i) {
