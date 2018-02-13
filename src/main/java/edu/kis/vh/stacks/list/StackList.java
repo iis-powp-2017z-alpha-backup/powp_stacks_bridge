@@ -42,8 +42,4 @@ public class StackList {
 		return i;
 	}
 
-	public void setI(int i) {
-		this.i = i;
-	}
-
 }

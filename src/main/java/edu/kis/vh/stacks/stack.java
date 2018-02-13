@@ -12,10 +12,6 @@ public class Stack {
 
 	private int total = STACK_EMPTY;
 
-	public void setTotal(int total) {
-		this.total = total;
-	}
-
 	public int getTotal() {
 		return total;
 	}
