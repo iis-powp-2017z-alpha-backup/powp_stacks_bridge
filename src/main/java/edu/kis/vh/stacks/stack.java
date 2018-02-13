@@ -8,7 +8,7 @@ public class Stack {
 
 	private static final int STACK_MAX_INDEX = STACK_CAPACITY - 1;
 
-	private int[] items = new int[STACK_CAPACITY];
+	private final int[] items = new int[STACK_CAPACITY];
 
 	private int total = STACK_EMPTY;
 
