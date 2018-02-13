@@ -78,5 +78,18 @@ public class StackTest {
 		result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
+	
+	@Test
+	public void isContainsValues() {
+		Stack stackObj = new Stack();
+		final int STACK_CAPACITY = 3;
+		final int STACK_VALUE = 99;
+		
+		for (int i = 0; i < STACK_CAPACITY; i++) 
+			stackObj.push(STACK_VALUE);
+	
+		for (int i = 0; i < STACK_CAPACITY; i++) 		
+			Assert.assertEquals(STACK_VALUE, stackObj.pop());
+	}
 
 }
