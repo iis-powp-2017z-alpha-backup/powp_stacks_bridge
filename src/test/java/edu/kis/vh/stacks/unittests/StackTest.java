@@ -4,10 +4,11 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.types.StackList;
 
 public class StackTest {
 
-	private static final int STACK_CAPACITY = 11;
+	private static final int STACK_CAPACITY = 12;
 	private static final int EMPTY_STACK_VALUE = 0;
 	
 	@Test
@@ -65,6 +66,7 @@ public class StackTest {
 	@Test
 	public void testPop() {
 		Stack stackObj = new Stack();
+		//final int EMPTY_STACK_VALUE = -1;
 
 		int result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
